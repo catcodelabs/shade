@@ -7,7 +7,7 @@
 <div align="right"><a id=-design-by-t2></a><sub>// design by t2</sub></div>
 
 ![shade_banner](Source/assets/shade_banner.png)
-
+### Note: This is catcodelabs/shade, not HyDE-Project/HyDE. shade is a modification of HyDE, and is currently reliant on some assets that haven't been transferred and/or replaced, so some stuff (like the above logo, as well as all wiki links) are from HyDE. We are also expecting edge-cases that will occur during install and usage.
 <!--
 Multi-language README support
 -->
@@ -70,7 +70,6 @@ Check this out for the full note:
 The installation script is designed for a minimal [Arch Linux](https://wiki.archlinux.org/title/Arch_Linux) install, but **may** work on some [Arch-based distros](https://wiki.archlinux.org/title/Arch-based_distributions).
 While installing shade alongside another [DE](https://wiki.archlinux.org/title/Desktop_environment)/[WM](https://wiki.archlinux.org/title/Window_manager) should work, due to it being a heavily customized setup, it **will** conflict with your [GTK](https://wiki.archlinux.org/title/GTK)/[Qt](https://wiki.archlinux.org/title/Qt) theming, [Shell](https://wiki.archlinux.org/title/Command-line_shell), [SDDM](https://wiki.archlinux.org/title/SDDM), [GRUB](https://wiki.archlinux.org/title/GRUB), etc. and is at your own risk.
 
-For NixOS support there is a separate project being maintained @ [shadenix](https://github.com/richen604/shadenix/tree/main)
 
 > [!IMPORTANT]
 > The install script will auto-detect an NVIDIA card and install a matching DKMS driver path for your kernel.
@@ -112,7 +111,7 @@ View installation instructions for shade in [shade-cli - Usage](https://github.c
 -->
 
 Please reboot after the install script completes and takes you to the SDDM login screen (or black screen) for the first time.
-For more details, please refer to the [installation wiki](https://shadeproject.pages.dev/en/getting-started/installation).
+For more details, please refer to the [installation wiki](https://hydeproject.pages.dev/en/getting-started/installation).
 
 Quick checklist for Arch-based distros such as BigLinux / Manjaro:
 
@@ -157,7 +156,7 @@ Whether you're helping with code, testing, or documentation, we appreciate your 
 ---
 
 > [!NOTE]
-> If you are upgrading from an older version to the new Lua configuration, please follow the [Lua Migration Guide](https://shadeproject.pages.dev/en/help/lua/) in the shade wiki.
+> If you are upgrading from an older version to the new Lua configuration, please follow the [Lua Migration Guide](https://hydeproject.pages.dev/en/help/lua/) in the hyde wiki.
 
 To update shade, you will need to pull the latest changes from GitHub and restore the configs by running the following commands:
 
@@ -177,7 +176,7 @@ git reset --hard origin/master
 
 <!--
 As a second update option, you can use `shade restore ...`, which does have a better way of managing restore and backup options.
-For more details, you can refer to [shade-cli - dots management wiki](https://github.com/kRHYME7/shade-cli/wiki/Dots-Management).
+For more details, you can refer to [hyde-cli - dots management wiki](https://github.com/kRHYME7/hyde-cli/wiki/Dots-Management).
 -->
 
 <div align="right">
@@ -231,18 +230,18 @@ For more information, visit [catcodelabs/shade-themes](https://github.com/catcod
 <div align="center">
   <table><tr><td>
 
-[![Catppuccin-Latte](https://placehold.co/130x30/dd7878/eff1f5?text=Catppuccin-Latte&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Catppuccin-Latte)
-[![Catppuccin-Mocha](https://placehold.co/130x30/b4befe/11111b?text=Catppuccin-Mocha&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Catppuccin-Mocha)
-[![Decay-Green](https://placehold.co/130x30/90ceaa/151720?text=Decay-Green&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Decay-Green)
-[![Edge-Runner](https://placehold.co/130x30/fada16/000000?text=Edge-Runner&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Edge-Runner)
-[![Frosted-Glass](https://placehold.co/130x30/7ed6ff/1e4c84?text=Frosted-Glass&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Frosted-Glass)
-[![Graphite-Mono](https://placehold.co/130x30/a6a6a6/262626?text=Graphite-Mono&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Graphite-Mono)
-[![Gruvbox-Retro](https://placehold.co/130x30/475437/B5CC97?text=Gruvbox-Retro&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Gruvbox-Retro)
-[![Material-Sakura](https://placehold.co/130x30/f2e9e1/b4637a?text=Material-Sakura&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Material-Sakura)
-[![Nordic-Blue](https://placehold.co/130x30/D9D9D9/476A84?text=Nordic-Blue&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Nordic-Blue)
-[![Rosé-Pine](https://placehold.co/130x30/c4a7e7/191724?text=Rosé-Pine&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Rose-Pine)
-[![Synth-Wave](https://placehold.co/130x30/495495/ff7edb?text=Synth-Wave&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Synth-Wave)
-[![Tokyo-Night](https://placehold.co/130x30/7aa2f7/24283b?text=Tokyo-Night&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Tokyo-Night)
+[![Catppuccin-Latte](https://placehold.co/130x30/dd7878/eff1f5?text=Catppuccin-Latte&font=Oswald)](https://github.com/HyDE-Project/HyDE-themes/tree/Catppuccin-Latte)
+[![Catppuccin-Mocha](https://placehold.co/130x30/b4befe/11111b?text=Catppuccin-Mocha&font=Oswald)](https://github.com/HyDE-Project/HyDE-themes/tree/Catppuccin-Mocha)
+[![Decay-Green](https://placehold.co/130x30/90ceaa/151720?text=Decay-Green&font=Oswald)](https://github.com/HyDE-Project/HyDE-themes/tree/Decay-Green)
+[![Edge-Runner](https://placehold.co/130x30/fada16/000000?text=Edge-Runner&font=Oswald)](https://github.com/HyDE-Project/HyDE-themes/tree/Edge-Runner)
+[![Frosted-Glass](https://placehold.co/130x30/7ed6ff/1e4c84?text=Frosted-Glass&font=Oswald)](https://github.com/HyDE-Project/HyDE-themes/tree/Frosted-Glass)
+[![Graphite-Mono](https://placehold.co/130x30/a6a6a6/262626?text=Graphite-Mono&font=Oswald)](https://github.com/HyDE-Project/HyDE-themes/tree/Graphite-Mono)
+[![Gruvbox-Retro](https://placehold.co/130x30/475437/B5CC97?text=Gruvbox-Retro&font=Oswald)](https://github.com/HyDE-Project/HyDE-themes/tree/Gruvbox-Retro)
+[![Material-Sakura](https://placehold.co/130x30/f2e9e1/b4637a?text=Material-Sakura&font=Oswald)](https://github.com/HyDE-Project/HyDE-themes/tree/Material-Sakura)
+[![Nordic-Blue](https://placehold.co/130x30/D9D9D9/476A84?text=Nordic-Blue&font=Oswald)](https://github.com/HyDE-Project/HyDE-themes/tree/Nordic-Blue)
+[![Rosé-Pine](https://placehold.co/130x30/c4a7e7/191724?text=Rosé-Pine&font=Oswald)](https://github.com/HyDE-Project/HyDE-themes/tree/Rose-Pine)
+[![Synth-Wave](https://placehold.co/130x30/495495/ff7edb?text=Synth-Wave&font=Oswald)](https://github.com/HyDE-Project/HyDE-themes/tree/Synth-Wave)
+[![Tokyo-Night](https://placehold.co/130x30/7aa2f7/24283b?text=Tokyo-Night&font=Oswald)](https://github.com/HyDE-Project/HyDE-themes/tree/Tokyo-Night)
 
   </td></tr></table>
 </div>
@@ -250,7 +249,7 @@ For more information, visit [catcodelabs/shade-themes](https://github.com/catcod
 > [!TIP]
 > Everyone, including you can create, maintain, and share additional themes, all of which can be installed using themepatcher!
 > To create your own custom theme, please refer to the [theming wiki](https://github.com/prasanthrangan/hyprdots/wiki/Theming).
-> If you wish to have your shade theme showcased, or you want to find some non-official themes, visit [kRHYME7/shade-gallery](https://github.com/kRHYME7/shade-gallery)!
+> If you wish to have your shade theme showcased, or you want to find some non-official themes, visit [kRHYME7/hyde-gallery](https://github.com/kRHYME7/hyde-gallery)!
 
 <div align="right">
   <br>
@@ -306,7 +305,7 @@ For more information, visit [catcodelabs/shade-themes](https://github.com/catcod
 <a id="star_history"></a>
 <img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=STARS" width="450"/>
                         
-[![Stargazers over time](https://starchart.cc/catcodelabs/shade.svg?background=%231f2226&axis=%23ebbcba&line=%23c79bf0)](https://starchart.cc/catcodelabs/shade)
+[![Stargazers over time](https://starchart.cc/hyde-project/hyde.svg?background=%231f2226&axis=%23ebbcba&line=%23c79bf0)](https://starchart.cc/hyde-project/hyde)
 
                     
 
@@ -328,7 +327,7 @@ For more information, visit [catcodelabs/shade-themes](https://github.com/catcod
 </div>
 
 <div align="right">
-  <sub>Last edited on: 27/02/2025<span id="last-edited"></span></sub>
+  <sub>Last edited on: 21/09/2026<span id="last-edited"></span></sub>
 </div>
 
 
