@@ -1,32 +1,36 @@
-[dolphin]
-    action      = "sync"
+[nemo]
+    action = "sync"
     description = "KDE File Manager"
-    owner       = "The shade Project"
-    version     = "0.1.0"
+    owner = "The HyDE Project"
+    version = "0.1.0"
 
-[[dolphin.dependency]]
-    dnf  = [ "dolphin" ]
-    pacman = [ "dolphin" ]
 
-[[dolphin.files]]
+[[nemo.dependency]]
+    dnf = [ "nemo" ]
+    pacman = [ "nemo" ]
+
+
+[[nemo.files]]    
     paths = [
-        ".config/dolphinrc",
-        ".local/share/dolphin",
-        ".local/share/kio/servicemenus/shadewallpaper.desktop",
-        ".local/share/kxmlgui5/dolphin",
+    ".config/nemorc",
+    ".local/share/nemo",
+    ".local/share/kio/servicemenus/shadewallpaper.desktop",
+    ".local/share/kxmlgui5/nemo",
     ]
     source_root = "Configs"
     target_root = "${HOME}"
 
-[[dolphin.files]]
-    action      = "preserve"
-    paths       = "dolphinstaterc"
+
+[[nemo.files]]
+    action = "preserve"
+    paths = "nemostaterc"
     source_root = "Configs/.local/state"
     target_root = "${HOME}/.local/state"
 
 
-[[dolphin.files]]
-    action      = "sync"
-    paths       = "applications.menu"
+
+[[nemo.files]]
+    action = "sync"
+    paths = "applications.menu"
     source_root = "Configs/.config/menus"
-    target_root = "${XDG_CONFIG_HOME}/menus"
+    target_root = "${XDG_CONFIG_HOME}/menus" 

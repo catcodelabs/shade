@@ -84,7 +84,7 @@ shade 是一个高度自定义的预设，在其他[桌面环境](https://wiki.a
 
 ```shell
 sudo pacman -S --needed git base-devel
-git clone --depth 1 https://github.com/shade-Project/shade ~/shade
+git clone --depth 1 https://github.com/catcodelabs/shade ~/shade
 cd ~/shade/Scripts
 ./install.sh
 ```
@@ -177,7 +177,7 @@ shadeVM 是一个脚本，允许您在虚拟机中运行 shade 进行测试和�
 
 ```bash
 # 下载并运行（会自动检测缺失的软件包）
-curl -L https://raw.githubusercontent.com/shade-Project/shade/main/Scripts/shadevm/shadevm.sh -o shadevm
+curl -L https://raw.githubusercontent.com/catcodelabs/shade/main/Scripts/shadevm/shadevm.sh -o shadevm
 chmod +x shadevm
 ./shadevm
 ```
@@ -186,7 +186,7 @@ chmod +x shadevm
 
 ```bash
 # 使用 shade 仓库的 flakes
-nix run github:shade-Project/shade
+nix run github:catcodelabs/shade
 
 # 或者如果您已克隆了本地仓库
 nix run .
@@ -205,23 +205,23 @@ nix run .
 ---
 
 所有的官方主题都作为单独的仓库存储，您可以用过主题补丁程序安装。
-详情请见 [shade-Project/shade-themes](https://github.com/shade-Project/shade-themes)。
+详情请见 [catcodelabs/shade-themes](https://github.com/catcodelabs/shade-themes)。
 
 <div align="center">
   <table><tr><td>
 
-[![Catppuccin-Latte](https://placehold.co/130x30/dd7878/eff1f5?text=Catppuccin-Latte&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Catppuccin-Latte)
-[![Catppuccin-Mocha](https://placehold.co/130x30/b4befe/11111b?text=Catppuccin-Mocha&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Catppuccin-Mocha)
-[![Decay-Green](https://placehold.co/130x30/90ceaa/151720?text=Decay-Green&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Decay-Green)
-[![Edge-Runner](https://placehold.co/130x30/fada16/000000?text=Edge-Runner&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Edge-Runner)
-[![Frosted-Glass](https://placehold.co/130x30/7ed6ff/1e4c84?text=Frosted-Glass&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Frosted-Glass)
-[![Graphite-Mono](https://placehold.co/130x30/a6a6a6/262626?text=Graphite-Mono&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Graphite-Mono)
-[![Gruvbox-Retro](https://placehold.co/130x30/475437/B5CC97?text=Gruvbox-Retro&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Gruvbox-Retro)
-[![Material-Sakura](https://placehold.co/130x30/f2e9e1/b4637a?text=Material-Sakura&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Material-Sakura)
-[![Nordic-Blue](https://placehold.co/130x30/D9D9D9/476A84?text=Nordic-Blue&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Nordic-Blue)
-[![Rosé-Pine](https://placehold.co/130x30/c4a7e7/191724?text=Rosé-Pine&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Rose-Pine)
-[![Synth-Wave](https://placehold.co/130x30/495495/ff7edb?text=Synth-Wave&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Synth-Wave)
-[![Tokyo-Night](https://placehold.co/130x30/7aa2f7/24283b?text=Tokyo-Night&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Tokyo-Night)
+[![Catppuccin-Latte](https://placehold.co/130x30/dd7878/eff1f5?text=Catppuccin-Latte&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Catppuccin-Latte)
+[![Catppuccin-Mocha](https://placehold.co/130x30/b4befe/11111b?text=Catppuccin-Mocha&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Catppuccin-Mocha)
+[![Decay-Green](https://placehold.co/130x30/90ceaa/151720?text=Decay-Green&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Decay-Green)
+[![Edge-Runner](https://placehold.co/130x30/fada16/000000?text=Edge-Runner&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Edge-Runner)
+[![Frosted-Glass](https://placehold.co/130x30/7ed6ff/1e4c84?text=Frosted-Glass&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Frosted-Glass)
+[![Graphite-Mono](https://placehold.co/130x30/a6a6a6/262626?text=Graphite-Mono&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Graphite-Mono)
+[![Gruvbox-Retro](https://placehold.co/130x30/475437/B5CC97?text=Gruvbox-Retro&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Gruvbox-Retro)
+[![Material-Sakura](https://placehold.co/130x30/f2e9e1/b4637a?text=Material-Sakura&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Material-Sakura)
+[![Nordic-Blue](https://placehold.co/130x30/D9D9D9/476A84?text=Nordic-Blue&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Nordic-Blue)
+[![Rosé-Pine](https://placehold.co/130x30/c4a7e7/191724?text=Rosé-Pine&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Rose-Pine)
+[![Synth-Wave](https://placehold.co/130x30/495495/ff7edb?text=Synth-Wave&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Synth-Wave)
+[![Tokyo-Night](https://placehold.co/130x30/7aa2f7/24283b?text=Tokyo-Night&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Tokyo-Night)
 
 </td></tr></table>
 </div>
@@ -285,7 +285,7 @@ nix run .
 <a id="star_history"></a>
 <img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=星标" width="450"/>
 
-[![Stargazers over time](https://starchart.cc/shade-Project/shade.svg?background=%231f2226&axis=%23ebbcba&line=%23c79bf0)](https://starchart.cc/shade-Project/shade)
+[![Stargazers over time](https://starchart.cc/catcodelabs/shade.svg?background=%231f2226&axis=%23ebbcba&line=%23c79bf0)](https://starchart.cc/catcodelabs/shade)
 
 
 
@@ -323,8 +323,8 @@ nix run .
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://rubiin.is-a.dev"><img src="https://avatars.githubusercontent.com/u/8222059?v=4?s=100" width="100px;" alt="Rubin Bhandari"/><br /><sub><b>Rubin Bhandari</b></sub></a><br /><a href="https://github.com/shade-Project/shade/commits?author=rubiin" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/kRHYME7"><img src="https://avatars.githubusercontent.com/u/53417443?v=4?s=100" width="100px;" alt="Khing"/><br /><sub><b>Khing</b></sub></a><br /><a href="https://github.com/shade-Project/shade/commits?author=kRHYME7" title="Code">💻</a> <a href="https://github.com/shade-Project/shade/commits?author=kRHYME7" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://rubiin.is-a.dev"><img src="https://avatars.githubusercontent.com/u/8222059?v=4?s=100" width="100px;" alt="Rubin Bhandari"/><br /><sub><b>Rubin Bhandari</b></sub></a><br /><a href="https://github.com/catcodelabs/shade/commits?author=rubiin" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/kRHYME7"><img src="https://avatars.githubusercontent.com/u/53417443?v=4?s=100" width="100px;" alt="Khing"/><br /><sub><b>Khing</b></sub></a><br /><a href="https://github.com/catcodelabs/shade/commits?author=kRHYME7" title="Code">💻</a> <a href="https://github.com/catcodelabs/shade/commits?author=kRHYME7" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>

@@ -2,5 +2,5 @@
     action      = "sync"
     description = "Choose a shell"
     include     = [ "../dots/zsh.toml", "../dots/fish.toml" ]
-    owner       = "The shade Project"
+    owner       = "CatCodeLabs"
     version     = "latest"

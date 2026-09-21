@@ -1,8 +1,8 @@
 # Use for instalation script until we refactor the whole installation stack
 [global]
     action      = "preserve"                                 #
-    git         = "https://github.com/shade-Project/shade.git"
-    owner       = "The shade Project"                         #
+    git         = "https://github.com/catcodelabs/shade.git"
+    owner       = "CatCodeLabs"                         #
     pre_command = "echo 'starting deployment'"
     version     = "0.1.0"
     # dots = ["kitty", "hyprland"] # List of dots to be used in the configuration file

@@ -46,11 +46,11 @@ function _slow_load_warning {
             - It is important to remove all shade related
                 configurations from your .zshrc file as shade will handle it for you.
             - Check the '.zshrc' file from the repo for a clean configuration.
-                https://github.com/shade-Project/shade/blob/master/Configs/.zshrc
+                https://github.com/catcodelabs/shade/blob/master/Configs/.zshrc
         3. Check the '~/.user.zsh' file for any slow initialization scripts.
 
     For more information, on the possible causes of slow shell startup, see:
-        🌐 https://github.com/shade-Project/shade/wiki
+        🌐 https://github.com/catcodelabs/shade/wiki
 
 EOF
         fi

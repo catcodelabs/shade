@@ -205,8 +205,8 @@ modelbutton.flat:selected,
   background-color: #<wallbash_1xa3>;
 }
 
-.nemo-window .view selection,
-.nemo-window .view:selected,
+.dolphin-window .view selection,
+.dolphin-window .view:selected,
 .nautilus-window notebook .view:not(treeview) selection,
 .nautilus-window notebook .view:not(treeview):selected,
 .nautilus-window flowboxchild:selected .icon-item-background,
@@ -216,7 +216,7 @@ flowbox flowboxchild:selected,
   background-color: rgba(242, 205, 205, 0.2);
 }
 
-.nemo-window .nemo-window-pane widget.entry:selected,
+.dolphin-window .dolphin-window-pane widget.entry:selected,
 window.background.csd evview.view.content-view:selected,
 window.background.csd evview.view.content-view:selected:backdrop,
 spinbutton.vertical selection,
@@ -1817,7 +1817,7 @@ spinbutton.vertical button,
 spinbutton:not(.vertical) button,
 modelbutton.flat,
 .menuitem.button.flat,
-.nemo-window .toolbar button,
+.dolphin-window .toolbar button,
 #buttonbox_frame button,
 .xfce4-panel.background button,
 .raven stackswitcher.linked > button,
@@ -1847,7 +1847,7 @@ popover.background.menu button,
 popover.background button.model,
 .caja-pathbar button,
 .path-bar.linked:not(.vertical) > button,
-.nemo-window .primary-toolbar button:not(.text-button),
+.dolphin-window .primary-toolbar button:not(.text-button),
 headerbar button:not(.suggested-action):not(.destructive-action),
 toolbar button,
 combobox > .linked:not(.vertical) > button:not(:only-child),
@@ -1898,7 +1898,7 @@ spinbutton.vertical button:focus,
 spinbutton:not(.vertical) button:focus,
 modelbutton.flat:focus,
 .menuitem.button.flat:focus,
-.nemo-window .toolbar button:focus,
+.dolphin-window .toolbar button:focus,
 #buttonbox_frame button:focus,
 .xfce4-panel.background button:focus,
 .raven stackswitcher.linked > button:focus,
@@ -1928,7 +1928,7 @@ popover.background.menu button:focus,
 popover.background button.model:focus,
 .caja-pathbar button:focus,
 .path-bar.linked:not(.vertical) > button:focus,
-.nemo-window .primary-toolbar button:focus:not(.text-button),
+.dolphin-window .primary-toolbar button:focus:not(.text-button),
 headerbar button:focus:not(.suggested-action):not(.destructive-action),
 toolbar button:focus,
 combobox > .linked:not(.vertical) > button:focus:not(:only-child),
@@ -1969,7 +1969,7 @@ spinbutton.vertical button:hover,
 spinbutton:not(.vertical) button:hover,
 modelbutton.flat:hover,
 .menuitem.button.flat:hover,
-.nemo-window .toolbar button:hover,
+.dolphin-window .toolbar button:hover,
 #buttonbox_frame button:hover,
 .xfce4-panel.background button:hover,
 .raven stackswitcher.linked > button:hover,
@@ -1999,7 +1999,7 @@ popover.background.menu button:hover,
 popover.background button.model:hover,
 .caja-pathbar button:hover,
 .path-bar.linked:not(.vertical) > button:hover,
-.nemo-window .primary-toolbar button:hover:not(.text-button),
+.dolphin-window .primary-toolbar button:hover:not(.text-button),
 headerbar button:hover:not(.suggested-action):not(.destructive-action),
 toolbar button:hover,
 combobox > .linked:not(.vertical) > button:hover:not(:only-child),
@@ -2040,7 +2040,7 @@ spinbutton.vertical button:active,
 spinbutton:not(.vertical) button:active,
 modelbutton.flat:active,
 .menuitem.button.flat:active,
-.nemo-window .toolbar button:active,
+.dolphin-window .toolbar button:active,
 #buttonbox_frame button:active,
 .xfce4-panel.background button:active,
 .raven stackswitcher.linked > button:active,
@@ -2070,7 +2070,7 @@ popover.background.menu button:active,
 popover.background button.model:active,
 .caja-pathbar button:active,
 .path-bar.linked:not(.vertical) > button:active,
-.nemo-window .primary-toolbar button:active:not(.text-button),
+.dolphin-window .primary-toolbar button:active:not(.text-button),
 headerbar button:active:not(.suggested-action):not(.destructive-action),
 toolbar button:active,
 combobox > .linked:not(.vertical) > button:active:not(:only-child),
@@ -2121,7 +2121,7 @@ spinbutton.vertical button:disabled,
 spinbutton:not(.vertical) button:disabled,
 modelbutton.flat:disabled,
 .menuitem.button.flat:disabled,
-.nemo-window .toolbar button:disabled,
+.dolphin-window .toolbar button:disabled,
 #buttonbox_frame button:disabled,
 .xfce4-panel.background button:disabled,
 .raven stackswitcher.linked > button:disabled,
@@ -2151,7 +2151,7 @@ popover.background.menu button:disabled,
 popover.background button.model:disabled,
 .caja-pathbar button:disabled,
 .path-bar.linked:not(.vertical) > button:disabled,
-.nemo-window .primary-toolbar button:disabled:not(.text-button),
+.dolphin-window .primary-toolbar button:disabled:not(.text-button),
 headerbar button:disabled:not(.suggested-action):not(.destructive-action),
 toolbar button:disabled,
 combobox > .linked:not(.vertical) > button:disabled:not(:only-child),
@@ -2161,7 +2161,7 @@ button.flat:disabled {
   color: <wallbash_4xa9_rgba(0.3)>;
 }
 
-.nemo-window .toolbar button:checked,
+.dolphin-window .toolbar button:checked,
 #buttonbox_frame button:checked,
 .xfce4-panel.background button:checked,
 .raven stackswitcher.linked > button:checked,
@@ -2191,7 +2191,7 @@ popover.background.menu button:checked,
 popover.background button.model:checked,
 .caja-pathbar button:checked,
 .path-bar.linked:not(.vertical) > button:checked,
-.nemo-window .primary-toolbar button:checked:not(.text-button),
+.dolphin-window .primary-toolbar button:checked:not(.text-button),
 headerbar button:checked:not(.suggested-action):not(.destructive-action),
 toolbar button:checked,
 combobox > .linked:not(.vertical) > button:checked:not(:only-child),
@@ -2201,7 +2201,7 @@ button.flat:checked:hover {
   color: #<wallbash_4xa9>;
 }
 
-.nemo-window .toolbar button:checked:disabled,
+.dolphin-window .toolbar button:checked:disabled,
 #buttonbox_frame button:checked:disabled,
 .xfce4-panel.background button:checked:disabled,
 .raven stackswitcher.linked > button:checked:disabled,
@@ -2231,7 +2231,7 @@ popover.background.menu button:checked:disabled,
 popover.background button.model:checked:disabled,
 .caja-pathbar button:checked:disabled,
 .path-bar.linked:not(.vertical) > button:checked:disabled,
-.nemo-window .primary-toolbar button:checked:disabled:not(.text-button),
+.dolphin-window .primary-toolbar button:checked:disabled:not(.text-button),
 headerbar
   button:checked:disabled:not(.suggested-action):not(.destructive-action),
 toolbar button:checked:disabled,
@@ -2834,69 +2834,69 @@ searchbar > revealer > box {
 /***************
  * Header bars *
  ***************/
-.nemo-window .primary-toolbar button:not(.text-button),
+.dolphin-window .primary-toolbar button:not(.text-button),
 headerbar button:not(.suggested-action):not(.destructive-action) {
   color: <wallbash_4xa9_rgba(0.7)>;
 }
 
-.nemo-window .primary-toolbar .linked:not(.vertical) > button:not(.text-button),
+.dolphin-window .primary-toolbar .linked:not(.vertical) > button:not(.text-button),
 headerbar
   .linked:not(.vertical)
   > button:not(.suggested-action):not(.destructive-action) {
   border-radius: 6px;
 }
 
-.nemo-window .primary-toolbar button:focus:not(.text-button),
+.dolphin-window .primary-toolbar button:focus:not(.text-button),
 headerbar button:focus:not(.suggested-action):not(.destructive-action),
-.nemo-window .primary-toolbar button:hover:not(.text-button),
+.dolphin-window .primary-toolbar button:hover:not(.text-button),
 headerbar button:hover:not(.suggested-action):not(.destructive-action),
-.nemo-window .primary-toolbar button:active:not(.text-button),
+.dolphin-window .primary-toolbar button:active:not(.text-button),
 headerbar button:active:not(.suggested-action):not(.destructive-action),
-.nemo-window .primary-toolbar button:checked:not(.text-button),
+.dolphin-window .primary-toolbar button:checked:not(.text-button),
 headerbar button:checked:not(.suggested-action):not(.destructive-action) {
   color: #<wallbash_4xa9>;
 }
 
-.nemo-window .primary-toolbar button:disabled:not(.text-button),
+.dolphin-window .primary-toolbar button:disabled:not(.text-button),
 headerbar button:disabled:not(.suggested-action):not(.destructive-action) {
   color: <wallbash_4xa9_rgba(0.3)>;
 }
 
-.nemo-window .primary-toolbar button:checked:disabled:not(.text-button),
+.dolphin-window .primary-toolbar button:checked:disabled:not(.text-button),
 headerbar
   button:checked:disabled:not(.suggested-action):not(.destructive-action) {
   background-color: transparent;
   color: <wallbash_4xa9_rgba(0.5)>;
 }
 
-.nemo-window .primary-toolbar button:backdrop:not(.text-button),
+.dolphin-window .primary-toolbar button:backdrop:not(.text-button),
 headerbar button:backdrop:not(.suggested-action):not(.destructive-action) {
   color: <wallbash_4xa9_rgba(0.5)>;
 }
 
-.nemo-window .primary-toolbar button:backdrop:focus:not(.text-button),
+.dolphin-window .primary-toolbar button:backdrop:focus:not(.text-button),
 headerbar button:backdrop:focus:not(.suggested-action):not(.destructive-action),
-.nemo-window .primary-toolbar button:backdrop:hover:not(.text-button),
+.dolphin-window .primary-toolbar button:backdrop:hover:not(.text-button),
 headerbar button:backdrop:hover:not(.suggested-action):not(.destructive-action),
-.nemo-window .primary-toolbar button:backdrop:active:not(.text-button),
+.dolphin-window .primary-toolbar button:backdrop:active:not(.text-button),
 headerbar
   button:backdrop:active:not(.suggested-action):not(.destructive-action) {
   color: <wallbash_4xa9_rgba(0.7)>;
 }
 
-.nemo-window .primary-toolbar button:backdrop:disabled:not(.text-button),
+.dolphin-window .primary-toolbar button:backdrop:disabled:not(.text-button),
 headerbar
   button:backdrop:disabled:not(.suggested-action):not(.destructive-action) {
   color: <wallbash_4xa9_rgba(0.3)>;
 }
 
-.nemo-window .primary-toolbar button:backdrop:checked:not(.text-button),
+.dolphin-window .primary-toolbar button:backdrop:checked:not(.text-button),
 headerbar
   button:backdrop:checked:not(.suggested-action):not(.destructive-action) {
   color: <wallbash_4xa9_rgba(0.7)>;
 }
 
-.nemo-window
+.dolphin-window
   .primary-toolbar
   button:backdrop:checked:disabled:not(.text-button),
 headerbar
@@ -2904,31 +2904,31 @@ headerbar
   color: <wallbash_4xa9_rgba(0.3)>;
 }
 
-.nemo-window .primary-toolbar entry,
+.dolphin-window .primary-toolbar entry,
 .titlebar entry {
   background-color: <wallbash_4xa9_rgba(0.04)>;
   color: #<wallbash_4xa9>;
 }
 
-.nemo-window .primary-toolbar entry:disabled,
+.dolphin-window .primary-toolbar entry:disabled,
 .titlebar entry:disabled {
   background-color: <wallbash_4xa9_rgba(0.04)>;
   color: <wallbash_4xa9_rgba(0.5)>;
 }
 
-.nemo-window .primary-toolbar entry image,
+.dolphin-window .primary-toolbar entry image,
 .titlebar entry image {
   color: <wallbash_4xa9_rgba(0.7)>;
 }
 
-.nemo-window .primary-toolbar entry image:hover,
+.dolphin-window .primary-toolbar entry image:hover,
 .titlebar entry image:hover,
-.nemo-window .primary-toolbar entry image:active,
+.dolphin-window .primary-toolbar entry image:active,
 .titlebar entry image:active {
   color: #<wallbash_4xa9>;
 }
 
-.nemo-window .primary-toolbar entry image:disabled,
+.dolphin-window .primary-toolbar entry image:disabled,
 .titlebar entry image:disabled {
   color: <wallbash_4xa9_rgba(0.5)>;
 }
@@ -6515,7 +6515,7 @@ popover.emoji-completion .emoji:hover {
   color: <wallbash_4xa9_rgba(0.7)>;
 }
 
-.nemo-desktop.nemo-canvas-item,
+.dolphin-desktop.dolphin-canvas-item,
 .caja-desktop.caja-canvas-item,
 .nautilus-desktop.nautilus-canvas-item {
   color: #<wallbash_4xa9>;
@@ -11406,62 +11406,62 @@ window.background.csd.thunar
 }
 
 /********
- * Nemo *
+ * Dolphin *
  ********/
-.nemo-window .primary-toolbar {
+.dolphin-window .primary-toolbar {
   background-color: #<wallbash_pry1>;
   border-bottom: 1px solid <wallbash_4xa9_rgba(0.12)>;
 }
 
-.nemo-window .primary-toolbar entry {
+.dolphin-window .primary-toolbar entry {
   min-height: 0;
   margin: 0;
 }
 
-.nemo-window .primary-toolbar button.text-button {
+.dolphin-window .primary-toolbar button.text-button {
   padding-left: 8px;
   padding-right: 8px;
   color: <wallbash_4xa9_rgba(0.7)>;
 }
 
-.nemo-window .primary-toolbar button.text-button:hover,
-.nemo-window .primary-toolbar button.text-button:active,
-.nemo-window .primary-toolbar button.text-button:checked {
+.dolphin-window .primary-toolbar button.text-button:hover,
+.dolphin-window .primary-toolbar button.text-button:active,
+.dolphin-window .primary-toolbar button.text-button:checked {
   color: #<wallbash_4xa9>;
 }
-.nemo-window .primary-toolbar button.text-button:disabled {
+.dolphin-window .primary-toolbar button.text-button:disabled {
   color: <wallbash_4xa9_rgba(0.5)>;
 }
 
-.nemo-window .primary-toolbar button:not(.text-button):not(.image-button) {
+.dolphin-window .primary-toolbar button:not(.text-button):not(.image-button) {
   padding-left: 4px;
   padding-right: 4px;
 }
 
-.nemo-window scrolledwindow.frame {
+.dolphin-window scrolledwindow.frame {
   border-style: none;
 }
 
-.nemo-window scrolledwindow.frame .view:not(:selected) {
+.dolphin-window scrolledwindow.frame .view:not(:selected) {
   background-color: transparent;
 }
 
-.nemo-window .nemo-inactive-pane .view:not(:selected) {
+.dolphin-window .dolphin-inactive-pane .view:not(:selected) {
   background-color: #<wallbash_1xa1>;
 }
 
-.nemo-window .nemo-window-pane widget.entry {
+.dolphin-window .dolphin-window-pane widget.entry {
   border-radius: 6px;
   background-color: <wallbash_4xa9_rgba(0.04)>;
 }
 
 .places-treeview {
-  -nemoplacestreeview-disk-full-bg-color: #<wallbash_1xa5>;
-  -nemoplacestreeview-disk-full-fg-color: #<wallbash_4xa8>;
-  -nemoplacestreeview-disk-full-bar-width: 2px;
-  -nemoplacestreeview-disk-full-bar-radius: 0;
-  -nemoplacestreeview-disk-full-bottom-padding: 1px;
-  -nemoplacestreeview-disk-full-max-length: 80px;
+  -dolphinplacestreeview-disk-full-bg-color: #<wallbash_1xa5>;
+  -dolphinplacestreeview-disk-full-fg-color: #<wallbash_4xa8>;
+  -dolphinplacestreeview-disk-full-bar-width: 2px;
+  -dolphinplacestreeview-disk-full-bar-radius: 0;
+  -dolphinplacestreeview-disk-full-bottom-padding: 1px;
+  -dolphinplacestreeview-disk-full-max-length: 80px;
   padding-top: 3px;
   padding-bottom: 3px;
 }

@@ -168,7 +168,7 @@ hl.window_rule(
 -- filemanagers
 hl.window_rule({
 	name = "filemanagers-fullscreen",
-	match = { class = "^(.*dolphin.*)$|^(.*pcmanfm-qt.*)$|^(.*nemo.*)$|^(.*ark.*)$|.*Nautilus.*" },
+	match = { class = "^(.*dolphin.*)$|^(.*pcmanfm-qt.*)$|^(.*dolphin.*)$|^(.*ark.*)$|.*Nautilus.*" },
 	opaque = true,
 	float = false,
 })

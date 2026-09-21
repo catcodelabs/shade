@@ -1,6 +1,6 @@
 [shade]
 description = "shade core configuration"
-pre_command = "echo 'shade Is the Best!'"
+pre_command = "echo 'shade - shade hyprarch desktop environment'"
 version = "v26.8.1"
 
 #? Core configuration

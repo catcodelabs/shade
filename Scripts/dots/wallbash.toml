@@ -1,8 +1,8 @@
 [wallbash-gtk]
-source = "https://github.com/shade-Project/wallbash-gtk/releases/download/latest/Wallbash-Gtk.tar.xz"
+source = "https://github.com/catcodelabs/wallbash-gtk/releases/download/latest/Wallbash-Gtk.tar.xz"
 version = "0.1.0"
 target_root = "${XDG_DATA_HOME}/themes/Wallbash-Gtk"
 paths = "."
-owner = "The shade Project"
+owner = "CatCodeLabs"
 description = "Wallbash theme for GTK"
 action = "sync"

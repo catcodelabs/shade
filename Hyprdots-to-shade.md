@@ -17,7 +17,7 @@
 
 ### Who are the $USER?
 
-> **NOTE**: If you're confused why every `install.sh -r` overwrites your configs, you should fork [shade](https://github.com/shade-Project/shade), edit the `*.lst` file, and run the script. That’s the intended way.
+> **NOTE**: If you're confused why every `install.sh -r` overwrites your configs, you should fork [shade](https://github.com/catcodelabs/shade), edit the `*.lst` file, and run the script. That’s the intended way.
 
 Who are the $USER?
 

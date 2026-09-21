@@ -10,7 +10,7 @@ import random
 
 logger = logger.get_logger()
 
-REPO_URL = "https://github.com/shade-Project/shade-gallery.git"
+REPO_URL = "https://github.com/catcodelabs/shade-gallery.git"
 CLONE_DIR = os.path.join(
     os.getenv("XDG_CACHE_HOME", os.path.expanduser("~/.cache")),
     "shade/gallery-database",

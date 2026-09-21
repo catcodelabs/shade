@@ -17,7 +17,7 @@
 
 ### $USER 是谁?
 
-> **注意**: 如果你奇怪为什么每次 ```install.sh -r``` 都会覆盖您的配置，您应该 fork [shade](https://github.com/shade-Project/shade)，编辑 ```*.lst``` 文件。这才是我们预期的方式。
+> **注意**: 如果你奇怪为什么每次 ```install.sh -r``` 都会覆盖您的配置，您应该 fork [shade](https://github.com/catcodelabs/shade)，编辑 ```*.lst``` 文件。这才是我们预期的方式。
 
 所以 $USER 是谁？他们：
 

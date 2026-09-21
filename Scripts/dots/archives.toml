@@ -1,7 +1,7 @@
 [icon-wallbash]
 version = "0.1.0"
 source = "Source/arcs/Icon_Wallbash.tar.gz"
-owner = "The shade Project"
+owner = "The HyDE Project"
 description = "Icon theme wallbash recolors, named by path from the notifications and the popups"
 action = "sync"
 target_root = "${XDG_DATA_HOME}/icons/Wallbash-Icon"
@@ -100,9 +100,3 @@ action = "sync"
 target_root = "/usr/local/share/fonts/NotoSansCJK"
 paths = "."
 action = "tarball"
-#*
-#! MaterialDesingIcons are now built into the Nerd Fonts  no need to download them
-# TODO: Add systemwide installation
-# * font-noto-sans-cjk-ttc
-# * cursor-bibata-modern-ice
-# * hyprcursor-bibata-modern-ice

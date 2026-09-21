@@ -3,6 +3,6 @@
         "format": "\ue709 ",
         "rotate": 0,
         "tooltip-format": "\ue709 shade repository",
-        "on-click": "xdg-open https://github.com/shade-Project/shade"
+        "on-click": "xdg-open https://github.com/catcodelabs/shade"
     }
 }

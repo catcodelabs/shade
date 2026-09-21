@@ -1,5 +1,6 @@
 [[global.dependency]]
 # Core pacman dependencies imported from Scripts/pkg_core.lst
+# packages tagged with [SHADE] have been added by CatCodeLabs to make shade be shade
 pacman = [
   # System
   "lua", # for lua runtime
@@ -15,6 +16,7 @@ pacman = [
   "wireplumber", # pipewire session manager
   "pavucontrol", # pulseaudio volume control
   "pamixer", # pulseaudio cli mixer
+  "helvum", # [SHADE] visual audiosystem manager
   "networkmanager", # network manager
   "network-manager-applet", # network manager system tray utility
   "bluez", # bluetooth protocol stack

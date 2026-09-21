@@ -3,7 +3,7 @@ shade exposes `xdg_config/shade/config.toml` file for users to modify. This lets
 
 Users are encouraged to use an editor that support schema validation to ensure the configuration file is valid.
 ```toml
-"$schema" = "https://raw.githubusercontent.com/shade-Project/shade/refs/heads/master/Configs/.local/share/shade/schema/config.toml.json"
+"$schema" = "https://raw.githubusercontent.com/catcodelabs/shade/refs/heads/master/Configs/.local/share/shade/schema/config.toml.json"
 ```
 ---
 ### [battery.notify]

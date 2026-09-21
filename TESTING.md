@@ -11,7 +11,7 @@ The `dev` branch has all the new cool stuff that needs testing before we merge i
 1. Clone it:
 
    ```bash
-   git clone https://github.com/shade-Project/shade.git
+   git clone https://github.com/catcodelabs/shade.git
    cd shade
    ```
 
@@ -76,7 +76,7 @@ The `rc` (release-candidate) branch is used for final testing and bug fixes befo
 1. Clone the repo (if you haven't already):
 
    ```bash
-   git clone https://github.com/shade-Project/shade.git
+   git clone https://github.com/catcodelabs/shade.git
    cd shade
    ```
 
@@ -147,11 +147,11 @@ Found something weird? Here's what to do:
 
 Report directly on the rc to master MR:
 
-- Go here: https://github.com/shade-Project/shade/compare/master...rc
+- Go here: https://github.com/catcodelabs/shade/compare/master...rc
 
 Report directly on the dev to rc MR:
 
-- Go here: https://github.com/shade-Project/shade/compare/dev...rc
+- Go here: https://github.com/catcodelabs/shade/compare/dev...rc
 
 
 ### Discord

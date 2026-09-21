@@ -1,9 +1,9 @@
 # Use for instalation script until we refactor the whole installation stack
 [global]
     action       = "preserve"                                 #
-    git          = "https://github.com/shade-Project/shade.git"
+    git          = "https://github.com/catcodelabs/shade.git"
     git_branch   = "lua"
-    owner        = "The shade Project"                         #
+    owner        = "CatCodeLabs"                         #
     post_command = "hyprctl reload"
     pre_command  = "echo 'shade Core Configurations'"
     version      = "0.1.0"

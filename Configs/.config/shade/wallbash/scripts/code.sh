@@ -19,7 +19,7 @@ for i in "${!codeVsix[@]}"; do
     [[ -z "${codeVsix[i]}" ]] && continue
     file=$(find -L "${codeVsix[i]}" -type f -path "*extensions/theshadeproject*" -name "wallbash.json")
     if [ -z "${file}" ]; then
-        [ -f "${cacheDir}/landing/Code_Wallbash.vsix" ] || curl -L -o "${cacheDir}/landing/Code_Wallbash.vsix" https://github.com/shade-Project/code-wallbash/raw/refs/heads/master/release/Code_Wallbash.vsix
+        [ -f "${cacheDir}/landing/Code_Wallbash.vsix" ] || curl -L -o "${cacheDir}/landing/Code_Wallbash.vsix" https://github.com/catcodelabs/code-wallbash/raw/refs/heads/master/release/Code_Wallbash.vsix
         case ${codeVsix[i]} in
         *".cursor"*)
             echo "[wallbashcode] Cursor IDE: Manual intervention required for extension installation."

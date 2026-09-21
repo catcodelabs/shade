@@ -60,7 +60,7 @@ shadeVM is a streamlined development tool that automatically sets up shade in a 
 
 ```bash
 # Download and run (will auto-detect missing packages)
-curl -L https://raw.githubusercontent.com/shade-Project/shade/main/Scripts/shadevm/shadevm.sh -o shadevm
+curl -L https://raw.githubusercontent.com/catcodelabs/shade/main/Scripts/shadevm/shadevm.sh -o shadevm
 chmod +x shadevm
 ./shadevm
 ```
@@ -69,7 +69,7 @@ chmod +x shadevm
 
 ```bash
 # Using flakes from shade repository
-nix run github:shade-Project/shade
+nix run github:catcodelabs/shade
 
 # Or if you have the repository cloned locally
 nix run
@@ -259,7 +259,7 @@ For non-NixOS hosts, use [nixGL](https://github.com/nix-community/nixGL) for bet
 
 ```bash
 # Install nixGL first, then run shadeVM
-nixGL nix run github:shade-Project/shade
+nixGL nix run github:catcodelabs/shade
 ```
 
 ### AMD GPU + Any CPU ✅

@@ -71,7 +71,7 @@ def generate_default_config(toml_file_path):
         "# This file contains default values for all configuration options",
         "# Generated from schema",
         "",
-        "\"$schema\" = \"https://raw.githubusercontent.com/shade-Project/shade/refs/heads/master/Configs/.local/share/shade/schema/config.toml.json\"",
+        "\"$schema\" = \"https://raw.githubusercontent.com/catcodelabs/shade/refs/heads/master/Configs/.local/share/shade/schema/config.toml.json\"",
         "",
     ]
     

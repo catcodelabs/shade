@@ -33,7 +33,7 @@ configure_spicetify() {
     
     spicetify_themes_dir="$HOME/.config/spicetify/Themes"
     if [ ! -d "${spicetify_themes_dir}/Sleek" ]; then
-        curl -L -o "${cache_dir}/landing/Spotify_Sleek.tar.gz" "https://github.com/shade-Project/shade/raw/master/Source/arcs/Spotify_Sleek.tar.gz"
+        curl -L -o "${cache_dir}/landing/Spotify_Sleek.tar.gz" "https://github.com/catcodelabs/shade/raw/master/Source/arcs/Spotify_Sleek.tar.gz"
         tar -xzf "${cache_dir}/landing/Spotify_Sleek.tar.gz" -C "$spicetify_themes_dir"
     fi
     spicetify backup apply

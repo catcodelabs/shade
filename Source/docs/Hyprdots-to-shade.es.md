@@ -17,7 +17,7 @@
 
 ### ¿Quiénes son los $USER?
 
-> **NOTA**: Si estás confundido sobre por qué cada vez que ejecutas `install.sh -r` se sobrescriben tus configuraciones, deberías hacer un fork de [shade](https://github.com/shade-Project/shade), editar el archivo `*.lst` y ejecutar el script. Esa es la forma prevista.
+> **NOTA**: Si estás confundido sobre por qué cada vez que ejecutas `install.sh -r` se sobrescriben tus configuraciones, deberías hacer un fork de [shade](https://github.com/catcodelabs/shade), editar el archivo `*.lst` y ejecutar el script. Esa es la forma prevista.
 
 ¿Quiénes son los $USER?
 

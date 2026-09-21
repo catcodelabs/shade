@@ -17,7 +17,7 @@
 
 ### Wer sind die $USER?
 
-> **HINWEIS**: Wenn Sie verwirrt sind, warum jedes `install.sh -r` Ihre Konfigurationen überschreibt, sollten Sie [shade](https://github.com/shade-Project/shade) forken, die Datei `*.lst` bearbeiten und das Skript ausführen. Das ist der beabsichtigte Weg.
+> **HINWEIS**: Wenn Sie verwirrt sind, warum jedes `install.sh -r` Ihre Konfigurationen überschreibt, sollten Sie [shade](https://github.com/catcodelabs/shade) forken, die Datei `*.lst` bearbeiten und das Skript ausführen. Das ist der beabsichtigte Weg.
 > Wer sind die $USER?
 > ✅ Ich möchte keinen Fork pflegen
 > ✅ Sie wollen mit diesem großartigen Dotfile auf dem Laufenden bleiben

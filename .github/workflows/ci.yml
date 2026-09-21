@@ -11,7 +11,7 @@ on:
 jobs:
   dev-to-rc-pr:
     name: Create PR from Dev to RC
-    if: github.ref == 'refs/heads/dev' && github.repository == 'shade-Project/shade'
+    if: github.ref == 'refs/heads/dev' && github.repository == 'catcodelabs/shade'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -142,7 +142,7 @@ jobs:
 
   rc-to-master-pr:
     name: Create PR from RC to Master
-    if: github.ref == 'refs/heads/rc' && github.repository == 'shade-Project/shade'
+    if: github.ref == 'refs/heads/rc' && github.repository == 'catcodelabs/shade'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -273,7 +273,7 @@ jobs:
 
   release:
     name: Quarterly Snapshot Release
-    if: github.ref == 'refs/heads/master' && github.repository == 'shade-Project/shade'
+    if: github.ref == 'refs/heads/master' && github.repository == 'catcodelabs/shade'
     runs-on: ubuntu-latest
     steps:
       - uses: googleapis/release-please-action@v3

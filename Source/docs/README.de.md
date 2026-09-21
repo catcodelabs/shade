@@ -76,7 +76,7 @@ Führen Sie zur Installation die folgenden Befehle aus:
 
 ```shell
 pacman -S --needed git base-devel
-git clone --depth 1 https://github.com/shade-Project/shade ~/shade
+git clone --depth 1 https://github.com/catcodelabs/shade ~/shade
 cd ~/shade/Scripts
 ./install.sh
 ```
@@ -139,23 +139,23 @@ Weitere Details finden Sie in [shade-cli - dots management wiki](https://github.
 ---
 
 Alle unsere offiziellen Themen sind in einem separaten Repository gespeichert, so dass Benutzer sie mit themepatcher installieren können.
-Weitere Informationen finden Sie unter [shade-Project/shade-themes](https://github.com/shade-Project/shade-themes).
+Weitere Informationen finden Sie unter [catcodelabs/shade-themes](https://github.com/catcodelabs/shade-themes).
 
 <div align="center">
   <table><tr><td>
 
-  [![Catppuccin-Latte](https://placehold.co/130x30/dd7878/eff1f5?text=Catppuccin-Latte&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Catppuccin-Latte)
-  [![Catppuccin-Mocha](https://placehold.co/130x30/b4befe/11111b?text=Catppuccin-Mocha&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Catppuccin-Mocha)
-  [![Decay-Green](https://placehold.co/130x30/90ceaa/151720?text=Decay-Green&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Decay-Green)
-  [![Edge-Runner](https://placehold.co/130x30/fada16/000000?text=Edge-Runner&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Edge-Runner)
-  [![Frosted-Glass](https://placehold.co/130x30/7ed6ff/1e4c84?text=Frosted-Glass&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Frosted-Glass)
-  [![Graphite-Mono](https://placehold.co/130x30/a6a6a6/262626?text=Graphite-Mono&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Graphite-Mono)
-  [![Gruvbox-Retro](https://placehold.co/130x30/475437/B5CC97?text=Gruvbox-Retro&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Gruvbox-Retro)
-  [![Material-Sakura](https://placehold.co/130x30/f2e9e1/b4637a?text=Material-Sakura&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Material-Sakura)
-  [![Nordic-Blue](https://placehold.co/130x30/D9D9D9/476A84?text=Nordic-Blue&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Nordic-Blue)
-  [![Rosé-Pine](https://placehold.co/130x30/c4a7e7/191724?text=Rosé-Pine&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Rose-Pine)
-  [![Synth-Wave](https://placehold.co/130x30/495495/ff7edb?text=Synth-Wave&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Synth-Wave)
-  [![Tokyo-Night](https://placehold.co/130x30/7aa2f7/24283b?text=Tokyo-Night&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Tokyo-Night)
+  [![Catppuccin-Latte](https://placehold.co/130x30/dd7878/eff1f5?text=Catppuccin-Latte&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Catppuccin-Latte)
+  [![Catppuccin-Mocha](https://placehold.co/130x30/b4befe/11111b?text=Catppuccin-Mocha&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Catppuccin-Mocha)
+  [![Decay-Green](https://placehold.co/130x30/90ceaa/151720?text=Decay-Green&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Decay-Green)
+  [![Edge-Runner](https://placehold.co/130x30/fada16/000000?text=Edge-Runner&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Edge-Runner)
+  [![Frosted-Glass](https://placehold.co/130x30/7ed6ff/1e4c84?text=Frosted-Glass&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Frosted-Glass)
+  [![Graphite-Mono](https://placehold.co/130x30/a6a6a6/262626?text=Graphite-Mono&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Graphite-Mono)
+  [![Gruvbox-Retro](https://placehold.co/130x30/475437/B5CC97?text=Gruvbox-Retro&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Gruvbox-Retro)
+  [![Material-Sakura](https://placehold.co/130x30/f2e9e1/b4637a?text=Material-Sakura&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Material-Sakura)
+  [![Nordic-Blue](https://placehold.co/130x30/D9D9D9/476A84?text=Nordic-Blue&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Nordic-Blue)
+  [![Rosé-Pine](https://placehold.co/130x30/c4a7e7/191724?text=Rosé-Pine&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Rose-Pine)
+  [![Synth-Wave](https://placehold.co/130x30/495495/ff7edb?text=Synth-Wave&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Synth-Wave)
+  [![Tokyo-Night](https://placehold.co/130x30/7aa2f7/24283b?text=Tokyo-Night&font=Oswald)](https://github.com/catcodelabs/shade-themes/tree/Tokyo-Night)
 
   </td></tr></table>
 </div>

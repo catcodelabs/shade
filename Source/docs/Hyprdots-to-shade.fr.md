@@ -18,7 +18,7 @@
 
 ### Qui est $USER?
 
-> **NOTE**: Si vous êtes confus avec le fichier `install.sh -r` sur le fait qu'il remplace vos configs, vous devriez fork [shade](https://github.com/shade-Project/shade), editer le fichier `*.lst`, et lancer le script. C'est le fonctionnement prévu.
+> **NOTE**: Si vous êtes confus avec le fichier `install.sh -r` sur le fait qu'il remplace vos configs, vous devriez fork [shade](https://github.com/catcodelabs/shade), editer le fichier `*.lst`, et lancer le script. C'est le fonctionnement prévu.
 
 Qui est $USER?
 

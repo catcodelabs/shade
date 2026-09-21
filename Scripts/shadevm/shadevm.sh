@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # shadeVM - Simplified VM tool for shade contributors
-# Works on both Arch Linux and NixOS with automatic OS detection
+# Works on Arch, hyprarch, and NixOS with automatic OS detection
 
 set -e
 
@@ -9,7 +9,7 @@ set -e
 CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/shadevm"
 BASE_IMAGE="$CACHE_DIR/archbase.qcow2"
 SNAPSHOTS_DIR="$CACHE_DIR/snapshots"
-SHADE_REPO="https://github.com/shade-Project/shade.git"
+SHADE_REPO="https://github.com/catcodelabs/shade.git"
 # Required packages for Arch Linux
 ARCH_PACKAGES=(
     "qemu-desktop"
@@ -29,6 +29,8 @@ function detect_os() {
             echo "nixos"
         elif [[ "$ID" == "arch" ]]; then
             echo "arch"
+        elif [[ "$ID" == "hyprarch" ]]; then
+            echo "hyprarch"
         else
             echo "unknown"
         fi
@@ -114,7 +116,7 @@ function check_dependencies() {
             check_arch_dependencies
             ;;
         *)
-            echo "⚠️  Unsupported OS. This script supports Arch Linux and NixOS."
+            echo "⚠️  Unsupported OS. This script supports Arch, hyprarch, and NixOS."
             echo "   Please ensure qemu, curl, python, and git are installed."
             return 0
             ;;
