@@ -8,8 +8,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## Unreleased
 
-### Changed
-- Everywhere: replaced almost every mention of "HyDE" with "shade" This includes renaming hyde-shell to shade-shell so change your command habits
 
 ### Added
 - Docs: link to Lua migration guide in `README.md` and `MIGRATION-LUA.md`
@@ -26,6 +24,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Wallbash: resolve `integer expected` syntax error in `color.set.sh` when evaluating template failure state
 - Waybar: `gpuinfo` no longer crashes with a division-by-zero error, leaks a plain-text banner into its JSON output on the first poll after a reboot or a `--reset`, or emits an invalid `"percentage":` with no value when no temperature sensor is available; all three used to break the module's parsing
 - Python environment: `uv sync` now targets the hyde-managed venv at `~/.local/state/HyDE/python_env` instead of creating a project-local `.venv`; also forces `--link-mode copy` to avoid silent reflink failures on ext4 that left packages uninstalled
+
+## v0.1-beta
+### Changed
+- Everywhere: replaced almost every mention of "HyDE" with "shade" This includes renaming hyde-shell to shade-shell so change your command habits
+
 
 ## v26.08.21
 
