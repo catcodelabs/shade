@@ -7,7 +7,11 @@
 <div align="right"><a id=-design-by-t2></a><sub>// design by t2</sub></div>
 
 ![shade_banner](Source/assets/shade_banner.png)
-### Note: This is catcodelabs/shade, not HyDE-Project/HyDE. shade is a modification of HyDE, and is currently reliant on some assets that haven't been transferred and/or replaced, so some stuff (like the above logo, as well as all wiki links) are from HyDE. We are also expecting edge-cases that will occur during install and usage.
+> [!NOTE]
+> **This is catcodelabs/shade, not HyDE-Project/HyDE.**  
+> `shade` is an independent modification of HyDE. It currently relies on certain upstream assets that haven't been fully replaced yet, including logos, wiki links, and documentation references. Expect edge cases during installation and usage due to unfixed internal and external links.
+> to keep it simple, anything that does not link to inside the shade repo has to be manually linked to outside the shade repo, for example to the original HyDE repo or the HyDE documentation.
+
 <!--
 Multi-language README support
 -->
