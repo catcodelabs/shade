@@ -1,5 +1,5 @@
 {
     "image#profile": {
-	"exec": "realpath $HOME/.cache/hyde/wall.set"
+	"exec": "realpath $HOME/.cache/shade/wall.set"
 }
 }

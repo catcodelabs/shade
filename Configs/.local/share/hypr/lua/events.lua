@@ -1,19 +1,19 @@
 local floating_window_boundary = function(win)
-	-- HyDE's helper to limit the window size when floating, based on the monitor's usable area.
+	-- shade's helper to limit the window size when floating, based on the monitor's usable area.
 	-- This prevents windows from opening larger than the screen, eg annoying  dolphin window
 	if not win or not win.floating then
 		return
 	end
 
-	if hyde.handle and hyde.handle.float_size_bounds then
-		hyde.handle.float_size_bounds(win)
+	if shade.handle and shade.handle.float_size_bounds then
+		shade.handle.float_size_bounds(win)
 	end
 end
 
 -- spawns floating windows
 local floating_window_follow_cursor = function(win)
-	if hyde.handle and hyde.handle.float_follow_cursor then
-		hyde.handle.float_follow_cursor(win)
+	if shade.handle and shade.handle.float_follow_cursor then
+		shade.handle.float_follow_cursor(win)
 	end
 end
 

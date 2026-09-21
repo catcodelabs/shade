@@ -1,6 +1,6 @@
 " Name:         wallbash
 " Description:  wallbash template
-" Author:       The HyDE Project
+" Author:       The shade Project
 " License:      Same as Vim
 " Last Change:  April 2025
 

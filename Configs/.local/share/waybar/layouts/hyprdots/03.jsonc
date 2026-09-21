@@ -80,7 +80,7 @@
         "orientation": "inherit",
         "modules": [
             "custom/cliphist",
-            "custom/hyde-menu",
+            "custom/shade-menu",
             "custom/power"
         ]
     }

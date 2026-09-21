@@ -3,6 +3,6 @@
         "format": " ",
         "tooltip-format": " Toggle game mode",
         "rotate": 0,
-        "on-click": "hyde-shell gamemode"
+        "on-click": "shade-shell gamemode"
     }
 }

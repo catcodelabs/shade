@@ -1,11 +1,11 @@
 # Use for instalation script until we refactor the whole installation stack
 [global]
     action       = "preserve"                                 #
-    git          = "https://github.com/HyDE-Project/HyDE.git"
+    git          = "https://github.com/shade-Project/shade.git"
     git_branch   = "lua"
-    owner        = "The HyDE Project"                         #
+    owner        = "The shade Project"                         #
     post_command = "hyprctl reload"
-    pre_command  = "echo 'HyDE Core Configurations'"
+    pre_command  = "echo 'shade Core Configurations'"
     version      = "0.1.0"
     # dots = ["kitty", "hyprland"] # List of dots to be used in the configuration file
     # We can call it core packages!

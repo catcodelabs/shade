@@ -17,7 +17,7 @@
 config_home="${XDG_CONFIG_HOME:-${HOME}/.config}"
 data_home="${XDG_DATA_HOME:-${HOME}/.local/share}"
 state_home="${XDG_STATE_HOME:-${HOME}/.local/state}"
-backup_dir="${state_home}/hyde/migration/v26.8.3"
+backup_dir="${state_home}/shade/migration/v26.8.3"
 
 entry_point=""
 
@@ -25,15 +25,15 @@ old_ifs="${IFS}"
 IFS=:
 for data_dir in ${data_home} ${XDG_DATA_DIRS:-/usr/local/share:/usr/share}; do
     [ -n "${data_dir}" ] || continue
-    if [ -r "${data_dir}/hypr/hyde.lua" ]; then
-        entry_point="${data_dir}/hypr/hyde.lua"
+    if [ -r "${data_dir}/hypr/shade.lua" ]; then
+        entry_point="${data_dir}/hypr/shade.lua"
         break
     fi
 done
 IFS="${old_ifs}"
 
 if [ -z "${entry_point}" ]; then
-    echo "  no readable hypr/hyde.lua under the data directories, leaving the generated theme files in place"
+    echo "  no readable hypr/shade.lua under the data directories, leaving the generated theme files in place"
     exit 0
 fi
 
@@ -107,7 +107,7 @@ for rel in ${sourced_by}; do
         ;;
     esac
 
-    if sed -i -E 's@^([[:space:]]*source[[:space:]]*=.*themes/(theme|wallbash)\.conf.*)$@# retired by HyDE, the file it sources is no longer generated\n#\1@' "${file}"; then
+    if sed -i -E 's@^([[:space:]]*source[[:space:]]*=.*themes/(theme|wallbash)\.conf.*)$@# retired by shade, the file it sources is no longer generated\n#\1@' "${file}"; then
         echo "  commented the retired include out of ${rel}"
         commented=$((commented + 1))
     else

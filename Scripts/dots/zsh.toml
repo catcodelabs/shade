@@ -19,7 +19,7 @@
 
 [[zsh.files]]
     action      = "sync"
-    paths       = [ "hyde", "00-hyde.zsh" ]
+    paths       = [ "shade", "00-shade.zsh" ]
     source_root = "Configs/.config/zsh/conf.d"
     target_root = "${XDG_CONFIG_HOME}/zsh/conf.d"
 
@@ -31,7 +31,7 @@
 
 [[zsh.files]]
     action      = "sync"
-    paths       = "hydectl.zsh"
+    paths       = "shadectl.zsh"
     source_root = "Configs/.config/zsh/completions"
     target_root = "${XDG_CONFIG_HOME}/zsh/completions"
 

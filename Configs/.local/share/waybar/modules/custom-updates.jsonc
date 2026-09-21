@@ -1,10 +1,10 @@
 {
   "custom/updates": {
-    "exec": "hyde-shell system.update",
+    "exec": "shade-shell system.update",
     "return-type": "json",
     "format": "{0}",
     "rotate": 0,
-    "on-click": "hyde-shell system.update up",
+    "on-click": "shade-shell system.update up",
     "interval": 86400,
     "tooltip": true,
     "signal": 20

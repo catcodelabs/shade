@@ -1,5 +1,5 @@
 {
-  description = "HyDE - HyprDots Environment";
+  description = "shade - HyprDots Environment";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -21,16 +21,16 @@
         system:
         let
           pkgs = nixpkgs.legacyPackages.${system};
-          hydevm = import ./Scripts/hydevm { inherit pkgs; };
+          shadevm = import ./Scripts/shadevm { inherit pkgs; };
         in
         {
           default = {
             type = "app";
-            program = "${hydevm.defaultPackage}/bin/hydevm";
+            program = "${shadevm.defaultPackage}/bin/shadevm";
           };
-          hydevm = {
+          shadevm = {
             type = "app";
-            program = "${hydevm.defaultPackage}/bin/hydevm";
+            program = "${shadevm.defaultPackage}/bin/shadevm";
           };
         }
       );
@@ -39,11 +39,11 @@
         system:
         let
           pkgs = nixpkgs.legacyPackages.${system};
-          hydevm = import ./Scripts/hydevm { inherit pkgs; };
+          shadevm = import ./Scripts/shadevm { inherit pkgs; };
         in
         {
-          default = hydevm.defaultPackage;
-          hydevm = hydevm.defaultPackage;
+          default = shadevm.defaultPackage;
+          shadevm = shadevm.defaultPackage;
         }
       );
 

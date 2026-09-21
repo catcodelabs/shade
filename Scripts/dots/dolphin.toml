@@ -1,7 +1,7 @@
 [dolphin]
     action      = "sync"
     description = "KDE File Manager"
-    owner       = "The HyDE Project"
+    owner       = "The shade Project"
     version     = "0.1.0"
 
 [[dolphin.dependency]]
@@ -12,7 +12,7 @@
     paths = [
         ".config/dolphinrc",
         ".local/share/dolphin",
-        ".local/share/kio/servicemenus/hydewallpaper.desktop",
+        ".local/share/kio/servicemenus/shadewallpaper.desktop",
         ".local/share/kxmlgui5/dolphin",
     ]
     source_root = "Configs"

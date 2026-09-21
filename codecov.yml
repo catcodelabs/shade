@@ -22,7 +22,7 @@ flags:
     paths:
       - Scripts/
       - Configs/.local/bin/
-      - Configs/.local/lib/hyde/
+      - Configs/.local/lib/shade/
     carryforward: true
 
 comment:
@@ -42,7 +42,7 @@ ignore:
   - "**/*.jsonc"
   - "**/*.toml"
   - "Configs/.config/**"
-  - "Configs/.local/share/hyde/**"
+  - "Configs/.local/share/shade/**"
   - "Configs/.local/share/wallbash/**"
   - "Configs/.local/share/waybar/**"
   - "Scripts/nvidia-db/**"

@@ -18,7 +18,7 @@ function ffe -d "Find file with fzf and open in Editor"
     set selected_file (find . -maxdepth $max_depth -type f 2>/dev/null | fzf $fzf_options)
 
     if test -n "$selected_file"; and test -f "$selected_file"
-        set editor (_hyde_editor)
+        set editor (_shade_editor)
         if test -z "$editor"
             echo "No editor found. Install one, or set EDITOR in ~/.config/fish/user.fish."
             return 1

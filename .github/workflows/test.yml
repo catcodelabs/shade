@@ -26,7 +26,7 @@ jobs:
       - name: Resolve test repository and branch
         id: resolve-tests
         env:
-          REPO_OWNER: HyDE-Project
+          REPO_OWNER: shade-Project
           BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
           EVENT_NAME: ${{ github.event_name }}
           HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name || '' }}
@@ -83,7 +83,7 @@ jobs:
       - name: Run the test suite
         run: sh tests/run.sh
 
-      - name: Check hyde-shell open app priority
+      - name: Check shade-shell open app priority
         run: sh .github/scripts/test_open_priority.sh
 
   coverage:
@@ -102,7 +102,7 @@ jobs:
       - name: Resolve test repository and branch
         id: resolve-tests
         env:
-          REPO_OWNER: HyDE-Project
+          REPO_OWNER: shade-Project
           BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
           EVENT_NAME: ${{ github.event_name }}
           HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name || '' }}
@@ -160,7 +160,7 @@ jobs:
         run: |
           mkdir -p coverage
           kcov \
-            --include-path=Scripts,Configs/.local/bin,Configs/.local/lib/hyde \
+            --include-path=Scripts,Configs/.local/bin,Configs/.local/lib/shade \
             --exclude-pattern=/tests/ \
             coverage sh tests/run.sh
 

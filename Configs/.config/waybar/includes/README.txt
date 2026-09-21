@@ -3,7 +3,7 @@ WAYBAR INCLUDES
 
 WHAT IS THIS DIRECTORY?
 -----------------------
-This directory contains additional configuration files and styles for Waybar, enhancing its customization and dynamic features. This setup is specific to HyDE.
+This directory contains additional configuration files and styles for Waybar, enhancing its customization and dynamic features. This setup is specific to shade.
 
 WHAT ARE THE FILES?
 -------------------

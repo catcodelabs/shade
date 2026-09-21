@@ -6,7 +6,7 @@
 // allowing you to match the blur color with your system theme.
 // It works well with transparency to create a consistent look across apps.
 
-//!source=$XDG_CACHE_HOME/hyde/wallbash/colors.inc
+//!source=$XDG_CACHE_HOME/shade/wallbash/colors.inc
 
 
 /* 

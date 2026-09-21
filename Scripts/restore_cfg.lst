@@ -43,11 +43,11 @@ N|Y|${HOME}/.config|spotify-flags.conf|spotify
 Y|Y|${HOME}/.config|dunst|dunst
 N|Y|${HOME}/.config|fish|fish
 N|Y|${HOME}/.config|lsd|lsd
-Y|Y|${HOME}/.config/hyde|wallbash|hyprland
-Y|Y|${HOME}/.local/share|hyde|hyprland
+Y|Y|${HOME}/.config/shade|wallbash|hyprland
+Y|Y|${HOME}/.local/share|shade|hyprland
 N|Y|${HOME}/.config/hypr|nvidia.conf|hyprland nvidia-utils
-N|Y|${HOME}/.config/hypr|hyde.conf keybindings.conf monitors.conf userprefs.conf animations.conf hyprland.conf windowrules.conf animations themes|hyprland
-Y|Y|${HOME}/.local/lib|hyde|hyprland
+N|Y|${HOME}/.config/hypr|shade.conf keybindings.conf monitors.conf userprefs.conf animations.conf hyprland.conf windowrules.conf animations themes|hyprland
+Y|Y|${HOME}/.local/lib|shade|hyprland
 Y|Y|${HOME}/.config|kitty|kitty
 Y|Y|${HOME}/.config|Kvantum|kvantum
 Y|Y|${HOME}/.config|MangoHud|mangohud
@@ -67,5 +67,5 @@ N|Y|${HOME}/.config|baloofilerc|dolphin
 Y|Y|${HOME}/.config/menus|applications.menu|dolphin
 Y|Y|${HOME}/.local/share|dolphin|dolphin
 Y|Y|${HOME}/.local/share/kxmlgui5|dolphin|dolphin
-Y|Y|${HOME}/.local/share/kio/servicemenus|hydewallpaper.desktop|dolphin
+Y|Y|${HOME}/.local/share/kio/servicemenus|shadewallpaper.desktop|dolphin
 N|Y|${HOME}/.config|libinput-gestures.conf|libinput-gestures

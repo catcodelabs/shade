@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #|---/ /+-------------------------------+---/ /|#
-#|--/ /-| Script to remove HyDE configs |--/ /-|#
+#|--/ /-| Script to remove shade configs |--/ /-|#
 #|-/ /--| Prasanth Rangan               |-/ /--|#
 #|/ /---+-------------------------------+/ /---|#
 
@@ -17,13 +17,13 @@ cat <<"EOF"
 -------------------------------------------------
 
 
-.: WARNING :: This will remove all config files related to HyDE :.
+.: WARNING :: This will remove all config files related to shade :.
 
-please type "DONT HYDE" to continue...
+please type "DONT SHADE" to continue...
 EOF
 
 read -r PROMPT_INPUT
-[ "${PROMPT_INPUT}" == "DONT HYDE" ] || exit 0
+[ "${PROMPT_INPUT}" == "DONT SHADE" ] || exit 0
 
 cat <<"EOF"
 
@@ -68,16 +68,16 @@ cat "${CfgLst}" | while read lst; do
     done
 done
 
-[ -d "$HOME/.config/hyde" ] && rm -rf "$HOME/.config/hyde"
-[ -d "$HOME/.cache/hyde" ] && rm -rf "$HOME/.cache/hyde"
-[ -d "$HOME/.local/state/hyde" ] && rm -rf "$HOME/.local/state/hyde"
+[ -d "$HOME/.config/shade" ] && rm -rf "$HOME/.config/shade"
+[ -d "$HOME/.cache/shade" ] && rm -rf "$HOME/.cache/shade"
+[ -d "$HOME/.local/state/shade" ] && rm -rf "$HOME/.local/state/shade"
 
 cat <<"NOTE"
 -------------------------------------------------------
 .: Manual action required to complete uninstallation :.
 -------------------------------------------------------
 
-Remove HyDE related backups/icons/fonts/themes manually from these paths
+Remove shade related backups/icons/fonts/themes manually from these paths
 $HOME/.config/cfg_backups               # remove all previous backups
 $HOME/.local/share/fonts                # remove fonts from here
 $HOME/.local/share/icons                # remove fonts from here
@@ -86,12 +86,12 @@ $HOME/.icons                            # remove icons from here
 $HOME/.themes                           # remove themes from here
 
 Revert back bootloader/pacman/sddm settings manually from these backups
-/boot/loader/entries/*.conf.hyde.bkp    # restore systemd-boot from this backup
-/etc/default/grub.hyde.bkp              # restore grub from this backup
-/boot/grub/grub.hyde.bkp                # restore grub from this backup
+/boot/loader/entries/*.conf.shade.bkp    # restore systemd-boot from this backup
+/etc/default/grub.shade.bkp              # restore grub from this backup
+/boot/grub/grub.shade.bkp                # restore grub from this backup
 /usr/share/grub/themes                  # remove grub themes from here
-/etc/pacman.conf.hyde.bkp               # restore pacman from this backup
-/etc/sddm.conf.d/kde_settings.hyde.bkp  # restore sddm from this backup
+/etc/pacman.conf.shade.bkp               # restore pacman from this backup
+/etc/sddm.conf.d/kde_settings.shade.bkp  # restore sddm from this backup
 /usr/share/sddm/themes                  # remove sddm themes from here
 
 Uninstall the packages manually that are no longer required based on these list

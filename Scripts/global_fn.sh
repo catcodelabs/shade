@@ -10,10 +10,10 @@ scrDir="$(dirname "$(realpath "$0")")"
 cloneDir="$(dirname "${scrDir}")" # fallback, we will use CLONE_DIR now
 cloneDir="${CLONE_DIR:-${cloneDir}}"
 confDir="${XDG_CONFIG_HOME:-$HOME/.config}"
-cacheDir="${XDG_CACHE_HOME:-$HOME/.cache}/hyde"
+cacheDir="${XDG_CACHE_HOME:-$HOME/.cache}/shade"
 aurList=("yay" "paru" "pikaur" "trizen" "aura" "pakku" "pacaur" "aurman" "pacseek" "aurutils")
 shlList=("zsh" "fish")
-pacmanCmd=${cloneDir}/Configs/.local/lib/hyde/pm.sh
+pacmanCmd=${cloneDir}/Configs/.local/lib/shade/pm.sh
 
 export cloneDir
 export confDir
@@ -160,7 +160,7 @@ prompt_timer() {
 }
 print_log() {
     local executable="${0##*/}"
-    local logFile="${cacheDir}/logs/${HYDE_LOG}/${executable}.log"
+    local logFile="${cacheDir}/logs/${SHADE_LOG}/${executable}.log"
     mkdir -p "$(dirname "${logFile}")"
     local section=${log_section:-}
     {
@@ -230,7 +230,7 @@ print_log() {
             esac
         done
         echo ""
-    } | if [ -n "${HYDE_LOG}" ]; then
+    } | if [ -n "${SHADE_LOG}" ]; then
         tee >(sed 's/\x1b\[[0-9;]*m//g' >>"${logFile}")
     else
         cat
@@ -239,15 +239,15 @@ print_log() {
 
 # Creates the Python environment and syncs it against this checkout's lock.
 #
-# The dot deployment, the dependency checks and hyde-shell all run out of that
+# The dot deployment, the dependency checks and shade-shell all run out of that
 # environment, and the revisions they run are the ones this checkout pins. A
 # run that skips this works with whatever was installed the last time it did
 # not, so a corrected pin never reaches the machine that needs it. It lives
 # here rather than in a script of its own so the pre-install path and the
 # installer cannot drift apart.
 setup_python_env() {
-    local pyutils="${cloneDir}/Configs/.local/lib/hyde/pyutils/python_env.py"
-    local python_env_dir="${HOME}/.local/state/hyde/python_env"
+    local pyutils="${cloneDir}/Configs/.local/lib/shade/pyutils/python_env.py"
+    local python_env_dir="${HOME}/.local/state/shade/python_env"
 
     if [ "${flg_DryRun:-0}" -eq 1 ]; then
         print_log -y "[PYTHON] " -b "dry-run :: " "Would setup Python environment"

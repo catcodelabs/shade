@@ -30,7 +30,7 @@
     "escape": true,
     // "on-click-right": "menu",
     "menu": "on-click-right",
-    "menu-file": "${HYDE_WAYBAR_MENU_DIR:-$XDG_DATA_HOME/waybar/menus}/swaync.xml",
+    "menu-file": "${SHADE_WAYBAR_MENU_DIR:-$XDG_DATA_HOME/waybar/menus}/swaync.xml",
     "menu-actions": {
       "toggle-dnd": "swaync-client --toggle-dnd",
       "reload-config": "swaync-client --reload-config",

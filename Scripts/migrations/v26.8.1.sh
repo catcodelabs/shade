@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 
 # Hyprland resolves "$XDG_CONFIG_HOME/hypr/hyprland.lua" before hyprland.conf
-# and ignores the latter once the former exists. HyDE deploys that path as the
-# user's override layer, loaded last by hyde.lua, and its entry point lives in
+# and ignores the latter once the former exists. shade deploys that path as the
+# user's override layer, loaded last by shade.lua, and its entry point lives in
 # the data directory where Hyprland never looks. A session started without
 # HYPRLAND_CONFIG therefore loads the override layer on its own: a valid,
 # empty configuration, so no error, and a compositor with a cursor and nothing
@@ -15,7 +15,7 @@
 
 config_home="${XDG_CONFIG_HOME:-${HOME}/.config}"
 target="${config_home}/hypr/hyprland.lua"
-backup_dir="${XDG_STATE_HOME:-${HOME}/.local/state}/hyde/migration/v26.8.1"
+backup_dir="${XDG_STATE_HOME:-${HOME}/.local/state}/shade/migration/v26.8.1"
 
 # A dangling link is checked before absence: exiting zero on one would have the
 # runner record this migration as applied, and repairing the link afterwards
@@ -35,8 +35,8 @@ fi
 
 [ -f "${target}" ] || exit 0
 
-if grep -q '^if not hyde then$' "${target}"; then
-    echo "  ${target} already loads HyDE, nothing to do"
+if grep -q '^if not shade then$' "${target}"; then
+    echo "  ${target} already loads shade, nothing to do"
     exit 0
 fi
 
@@ -52,7 +52,7 @@ if ! cp -p "${target}" "${backup_dir}/hyprland.lua"; then
     exit 1
 fi
 
-rewritten="${target}.hyde-migration"
+rewritten="${target}.shade-migration"
 
 # Seeding the new file from the old one carries its mode across; the
 # redirection below truncates the copy rather than creating a file under the
@@ -66,16 +66,16 @@ fi
 {
     cat <<'LOADER'
 -- Hyprland loads this file when it is started without a config, and it prefers
--- it over hyprland.conf. HyDE loads it too, last, as the override layer below.
--- The block keeps the two apart: hyde.lua sets `hyde` on its first line, so it
--- runs only when this file is the entry point and HyDE has not been loaded.
+-- it over hyprland.conf. shade loads it too, last, as the override layer below.
+-- The block keeps the two apart: shade.lua sets `shade` on its first line, so it
+-- runs only when this file is the entry point and shade has not been loaded.
 -- Removing it leaves a session with a cursor and nothing else.
-if not hyde then
+if not shade then
 	local share = os.getenv("XDG_DATA_HOME") or (os.getenv("HOME") .. "/.local/share")
-	local entry = share .. "/hypr/hyde.lua"
+	local entry = share .. "/hypr/shade.lua"
 	local handle = io.open(entry, "r")
 	if not handle then
-		error("HyDE is not installed at " .. entry .. ". Run install.sh -r, or point Hyprland at your own config.")
+		error("shade is not installed at " .. entry .. ". Run install.sh -r, or point Hyprland at your own config.")
 	end
 	handle:close()
 	dofile(entry)
@@ -95,6 +95,6 @@ if ! mv "${rewritten}" "${target}"; then
     exit 1
 fi
 
-echo "  ${target} now loads HyDE when Hyprland picks it"
+echo "  ${target} now loads shade when Hyprland picks it"
 echo "  the copy from before this change is at ${backup_dir}/hyprland.lua"
 exit 0

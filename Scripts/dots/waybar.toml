@@ -1,7 +1,7 @@
 # end converted restore_cfg.psv entries
 [waybar]
 pre_command = "echo 'Pre commands '"
-post_command = "echo 'HyDE backed up!'"
+post_command = "echo 'shade backed up!'"
 
 [[waybar.dependency]]
 pacman = ["waybar"]

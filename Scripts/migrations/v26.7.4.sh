@@ -2,14 +2,14 @@
 
 # The Lua release replaced a set of shell helpers with Lua and Python
 # equivalents. Deployment overwrites files but does not delete the ones that
-# disappeared upstream, and hyde-shell used to resolve ".sh" before ".lua", so
+# disappeared upstream, and shade-shell used to resolve ".sh" before ".lua", so
 # the leftovers kept answering in place of the scripts that replaced them.
 #
 # Nothing is deleted here. Anything found is moved aside so it can be restored
 # if a local change is still needed.
 
-lib_dir="${HOME}/.local/lib/hyde"
-backup_dir="${XDG_STATE_HOME:-${HOME}/.local/state}/hyde/migration/v26.7.4"
+lib_dir="${HOME}/.local/lib/shade"
+backup_dir="${XDG_STATE_HOME:-${HOME}/.local/state}/shade/migration/v26.7.4"
 
 superseded="
 animations.sh

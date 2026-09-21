@@ -14,6 +14,6 @@
 
 [[fastfetch.files]]
     action      = "sync"
-    paths       = "hyde"
+    paths       = "shade"
     source_root = "Configs/.local/share/fastfetch/presets"
     target_root = "${HOME}/.local/share/fastfetch/presets"

@@ -1,12 +1,12 @@
 <div align = center>
   <a href="https://discord.gg/AYbJ9MJez7">
-    <img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FmT5YqjaJFh%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&suffix=%20members&style=for-the-badge&logo=discord&logoSize=auto&label=The%20HyDe%20Project&labelColor=ebbcba&color=c79bf0">
+    <img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FmT5YqjaJFh%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&suffix=%20members&style=for-the-badge&logo=discord&logoSize=auto&label=The%20shade%20Project&labelColor=ebbcba&color=c79bf0">
   </a>
 </div>
 
 ###### _<div align="right"><a id=-design-by-t2></a><sub>// design by t2</sub></div>_
 
-![hyde_banner](../assets/hyde_banner.png)
+![shade_banner](../assets/shade_banner.png)
 
 <!--
 Mehrsprachige KEYBINDINGS-Unterstützung
@@ -43,10 +43,10 @@ Mehrsprachige KEYBINDINGS-Unterstützung
   </div>
 </div>
 
-<!-- # <a id=hyde-tastenkombinationen>HyDE Tastenkombinationen</a> -->
-<!-- # <a id=hyde-tastenkombinationen></a><img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&width=450&lines=HyDE Tastenkombinationen" width="450"/> -->
+<!-- # <a id=shade-tastenkombinationen>shade Tastenkombinationen</a> -->
+<!-- # <a id=shade-tastenkombinationen></a><img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&width=450&lines=shade Tastenkombinationen" width="450"/> -->
 
-Hier sind alle HyDE-spezifischen Tastenkombinationen aufgelistet.
+Hier sind alle shade-spezifischen Tastenkombinationen aufgelistet.
 
 >[!TIP] 
 > <kbd>Super</kbd> + <kbd>/</kbd> zeigt die Tastenkombinationen.
@@ -287,10 +287,10 @@ Du kannst deine eigenen Tastenkombinationen definieren, indem du die Datei bearb
 ~/.config/hypr/userprefs.conf
 ```
 
-Zum Beispiel, um eine Tastenkombination für den **HyDE Game Launcher** zu erstellen, füge diese Zeile hinzu:
+Zum Beispiel, um eine Tastenkombination für den **shade Game Launcher** zu erstellen, füge diese Zeile hinzu:
 
 ```ini
-bind = $mainMod, SPACE, exec, $HOME/.local/lib/hyde/gamelauncher.sh
+bind = $mainMod, SPACE, exec, $HOME/.local/lib/shade/gamelauncher.sh
 ```
 
 Dies weist den **Game Launcher** der Kombination <kbd>SUPER</kbd> + <kbd>Leertaste</kbd> zu.  
@@ -299,7 +299,7 @@ Du kannst `SPACE` durch jede andere Taste ersetzen.
 Das Skript `gamelauncher.sh` ist standardmäßig enthalten und befindet sich unter:
 
 ```bash
-~/.local/lib/hyde/gamelauncher.sh
+~/.local/lib/shade/gamelauncher.sh
 ```
 
 <!--

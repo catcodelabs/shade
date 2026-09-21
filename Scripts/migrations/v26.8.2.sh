@@ -18,9 +18,9 @@
 
 config_home="${XDG_CONFIG_HOME:-${HOME}/.config}"
 data_home="${XDG_DATA_HOME:-${HOME}/.local/share}"
-backup_dir="${XDG_STATE_HOME:-${HOME}/.local/state}/hyde/migration/v26.8.2"
+backup_dir="${XDG_STATE_HOME:-${HOME}/.local/state}/shade/migration/v26.8.2"
 
-entry_point="${data_home}/hypr/hyde.lua"
+entry_point="${data_home}/hypr/shade.lua"
 user_config="${config_home}/hypr/hyprland.lua"
 
 # Readable, not merely present: the loader opens this file, and an unreadable
@@ -30,8 +30,8 @@ if [ ! -r "${entry_point}" ]; then
     exit 0
 fi
 
-if [ ! -f "${user_config}" ] || ! grep -q '^if not hyde then$' "${user_config}"; then
-    echo "  ${user_config} does not load HyDE yet, leaving the hyprlang configuration in place"
+if [ ! -f "${user_config}" ] || ! grep -q '^if not shade then$' "${user_config}"; then
+    echo "  ${user_config} does not load shade yet, leaving the hyprlang configuration in place"
     exit 0
 fi
 
@@ -61,9 +61,9 @@ hypr/migration.conf
 hypr/startup.conf
 hypr/variables.conf
 hypr/windowrules.conf
-hyde/hyprland.conf
-hyde/keybindings.conf
-hyde/templates/hypr
+shade/hyprland.conf
+shade/keybindings.conf
+shade/templates/hypr
 "
 
 moved=0

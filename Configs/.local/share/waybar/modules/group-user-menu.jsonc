@@ -9,7 +9,7 @@
         },
         "modules": [
             "user",
-            "custom/hyde-menu"
+            "custom/shade-menu"
         ]
     }
 }

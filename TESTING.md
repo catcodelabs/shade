@@ -11,8 +11,8 @@ The `dev` branch has all the new cool stuff that needs testing before we merge i
 1. Clone it:
 
    ```bash
-   git clone https://github.com/HyDE-Project/HyDE.git
-   cd HyDE
+   git clone https://github.com/shade-Project/shade.git
+   cd shade
    ```
 
 2. Switch to dev:
@@ -76,8 +76,8 @@ The `rc` (release-candidate) branch is used for final testing and bug fixes befo
 1. Clone the repo (if you haven't already):
 
    ```bash
-   git clone https://github.com/HyDE-Project/HyDE.git
-   cd HyDE
+   git clone https://github.com/shade-Project/shade.git
+   cd shade
    ```
 
 2. Switch to the rc branch:
@@ -147,16 +147,16 @@ Found something weird? Here's what to do:
 
 Report directly on the rc to master MR:
 
-- Go here: https://github.com/HyDE-Project/HyDE/compare/master...rc
+- Go here: https://github.com/shade-Project/shade/compare/master...rc
 
 Report directly on the dev to rc MR:
 
-- Go here: https://github.com/HyDE-Project/HyDE/compare/dev...rc
+- Go here: https://github.com/shade-Project/shade/compare/dev...rc
 
 
 ### Discord
 
-In the HyDE Discord:
+In the shade Discord:
 
 - Drop a message in #testers channel
 - Real issues should go on GitHub, but we can chat about them in Discord
@@ -175,4 +175,4 @@ Nobody gets paid for this - we're all just nerds who like making cool stuff toge
 
 Let's build something awesome together! Thanks for being part of our weird little community!
 
-### Do not forget stay HyDErated!
+### Do not forget stay shaderated!

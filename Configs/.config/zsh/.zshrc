@@ -1,7 +1,7 @@
 # Add user configurations here
-# For HyDE to not touch your beloved configurations,
-# we added a config file for you to customize HyDE before loading zshrc
-# Edit $ZDOTDIR/.user.zsh to customize HyDE before loading zshrc
+# For shade to not touch your beloved configurations,
+# we added a config file for you to customize shade before loading zshrc
+# Edit $ZDOTDIR/.user.zsh to customize shade before loading zshrc
 
 #  Plugins 
 # oh-my-zsh plugins are loaded  in $ZDOTDIR/.user.zsh file, see the file for more information

@@ -41,7 +41,7 @@ hl.window_rule(
 )
 hl.layer_rule(
     {
-        name = "hyde_workflow_powersaver",
+        name = "shade_workflow_powersaver",
         no_anim = true,
         blur = false,
         match = {

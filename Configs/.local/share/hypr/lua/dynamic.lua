@@ -25,8 +25,8 @@ if next(color) then
 					text_color = "rgba(" .. color._txt3 .. "ee)",
 					text_color_inactive = "rgba(" .. color._txt1 .. "ee)",
 					blur = true,
-					font_size = hyde.config.ui.font_size,
-					font_family = hyde.config.ui.groupbar_font or hyde.config.ui.font -- fallback to main font if groupbar_font is not set
+					font_size = shade.config.ui.font_size,
+					font_family = shade.config.ui.groupbar_font or shade.config.ui.font -- fallback to main font if groupbar_font is not set
 				},
 				col = {
 					border_active = {colors = {color._pry4_rgba, color._pry2_rgba}, angle = 45},
@@ -36,13 +36,13 @@ if next(color) then
 				}
 			},
 			misc = {
-				font_family = hyde.config.ui.font,
+				font_family = shade.config.ui.font,
 				background_color = color._pry1_rgba
 			}
 		}
 	)
 else
-	local message = "[HyDE] Hyprland does not detect colors! Run: hyde-shell reload"
+	local message = "[shade] Hyprland does not detect colors! Run: shade-shell reload"
 	hl.exec_cmd("hyprctl seterror 'rgba(c79bf0ff)' " .. message)
 end
 --
@@ -54,21 +54,21 @@ if type(theme_config) == "table" then
     hl.config(theme_config)
 end
 
--- Load the HyDE's ui config
+-- Load the shade's ui config
 local state_ui = check_require("lua_state.ui") or {}
-hyde.config({ui = state_ui.ui or state_ui, wallbash = state_ui.wallbash or {}}, {skip_empty = true}) -- Merge the config safely and ignore blank strings from state UI
+shade.config({ui = state_ui.ui or state_ui, wallbash = state_ui.wallbash or {}}, {skip_empty = true}) -- Merge the config safely and ignore blank strings from state UI
 
--- Loads the user config if there is one. The directory comes from hyde.path,
+-- Loads the user config if there is one. The directory comes from shade.path,
 -- which leaves it nil rather than building a path out of an unset variable, so
 -- a session without XDG_CONFIG_HOME skips the optional file instead of dying
 -- on a nil concatenation. The probe closes the handle it opens: this runs on
 -- every reload, and a leaked one accumulates for the life of the session.
-local user_config_path = hyde.path.config and (hyde.path.config .. "/hyde/config.toml")
+local user_config_path = shade.path.config and (shade.path.config .. "/shade/config.toml")
 if user_config_path then
 	local user_config = io.open(user_config_path)
 	if user_config then
 		user_config:close()
-		hyde.config.load_toml(user_config_path)
+		shade.config.load_toml(user_config_path)
 	end
 end
 
@@ -80,17 +80,17 @@ hl.config(
 	{
 		group = {
 			groupbar = {
-				font_size = hyde.config.ui.font_size,
-				font_family = hyde.config.ui.groupbar_font or hyde.config.ui.font -- fallback to main font if groupbar_font is not set
+				font_size = shade.config.ui.font_size,
+				font_family = shade.config.ui.groupbar_font or shade.config.ui.font -- fallback to main font if groupbar_font is not set
 			}
 		},
 		misc = {
-			font_family = hyde.config.ui.font
+			font_family = shade.config.ui.font
 		}
 	}
 )
 
-local wallbash_mode = (hyde.config.wallbash and hyde.config.wallbash.mode) or "auto"
+local wallbash_mode = (shade.config.wallbash and shade.config.wallbash.mode) or "auto"
 if wallbash_mode ~= "theme" and next(color) then
 	hl.config(
 		{
@@ -122,12 +122,12 @@ if wallbash_mode ~= "theme" and next(color) then
 	)
 end
 -- Handle kb soon
--- # HyDE Preparation
--- $exec.mkdir = mkdir -p $XDG_RUNTIME_DIR/hyde $XDG_CACHE_HOME/hyde/wallbash $XDG_CONFIG_HOME/hyde $XDG_DATA_HOME/hyde $(dirname $XDG_DATA_HOME)/state/hyde # Create HyDE directories
--- # $set.env = printf "\n_SHELL='$SHELL'\n_GDK_BACKEND='$GDK_BACKEND'\n_QT_QPA_PLATFORM='$QT_QPA_PLATFORM'\n_SDL_VIDEODRIVER='$SDL_VIDEODRIVER'\n_CLUTTER_BACKEND='$CLUTTER_BACKEND'\n_XDG_CURRENT_DESKTOP='$XDG_CURRENT_DESKTOP'\n_XDG_SESSION_TYPE='$XDG_SESSION_TYPE'\n_XDG_SESSION_DESKTOP='$XDG_SESSION_DESKTOP'\n_QT_AUTO_SCREEN_SCALE_FACTOR='$QT_AUTO_SCREEN_SCALE_FACTOR'\n_QT_WAYLAND_DISABLE_WINDOWDECORATION='$QT_WAYLAND_DISABLE_WINDOWDECORATION'\n_QT_QPA_PLATFORMTHEME='$QT_QPA_PLATFORMTHEME'\n_HYDE_PATH='$hyde.PATH'\n_MOZ_ENABLE_WAYLAND='$MOZ_ENABLE_WAYLAND'\n_GDK_SCALE='$GDK_SCALE'\n_ELECTRON_OZONE_PLATFORM_HINT='$ELECTRON_OZONE_PLATFORM_HINT'\n_XDG_RUNTIME_DIR='$XDG_RUNTIME_DIR'\n_XDG_CONFIG_HOME='$XDG_CONFIG_HOME'\n_XDG_CACHE_HOME='$XDG_CACHE_HOME'\n_XDG_DATA_HOME='$XDG_DATA_HOME'\n_GTK_THEME='$GTK_THEME'\n_ICON_THEME='$ICON_THEME'\n_COLOR_SCHEME='$COLOR_SCHEME'\n_CURSOR_SIZE='$CURSOR_SIZE'\n_CURSOR_THEME='$CURSOR_THEME'\n_FONT='$FONT'\n_FONT_SIZE='$FONT_SIZE'\n_DOCUMENT_FONT='$DOCUMENT_FONT'\n_DOCUMENT_FONT_SIZE='$DOCUMENT_FONT_SIZE'\n_MONOSPACE_FONT='$MONOSPACE_FONT'\n_MONOSPACE_FONT_SIZE='$MONOSPACE_FONT_SIZE'\n_FONT_ANTIALIASING='$FONT_ANTIALIASING'\n_FONT_HINTING='$FONT_HINTING'\n_HYDE_RUNTIME_DIR='$XDG_RUNTIME_DIR/hyde'\n_HYDE_CONFIG_HOME='$XDG_CONFIG_HOME/hyde'\n_HYDE_CACHE_HOME='$XDG_CACHE_HOME/hyde'\n_HYDE_DATA_HOME='$XDG_DATA_HOME/hyde'\n_HYDE_STATE_HOME='$(dirname $XDG_DATA_HOME)/state/hyde'\nexport _TERMINAL='$(which $TERMINAL)'\nexport _LOCKSCREEN='$LOCKSCREEN'" > "$XDG_RUNTIME_DIR/hyde/environment"
+-- # shade Preparation
+-- $exec.mkdir = mkdir -p $XDG_RUNTIME_DIR/shade $XDG_CACHE_HOME/shade/wallbash $XDG_CONFIG_HOME/shade $XDG_DATA_HOME/shade $(dirname $XDG_DATA_HOME)/state/shade # Create shade directories
+-- # $set.env = printf "\n_SHELL='$SHELL'\n_GDK_BACKEND='$GDK_BACKEND'\n_QT_QPA_PLATFORM='$QT_QPA_PLATFORM'\n_SDL_VIDEODRIVER='$SDL_VIDEODRIVER'\n_CLUTTER_BACKEND='$CLUTTER_BACKEND'\n_XDG_CURRENT_DESKTOP='$XDG_CURRENT_DESKTOP'\n_XDG_SESSION_TYPE='$XDG_SESSION_TYPE'\n_XDG_SESSION_DESKTOP='$XDG_SESSION_DESKTOP'\n_QT_AUTO_SCREEN_SCALE_FACTOR='$QT_AUTO_SCREEN_SCALE_FACTOR'\n_QT_WAYLAND_DISABLE_WINDOWDECORATION='$QT_WAYLAND_DISABLE_WINDOWDECORATION'\n_QT_QPA_PLATFORMTHEME='$QT_QPA_PLATFORMTHEME'\n_SHADE_PATH='$shade.PATH'\n_MOZ_ENABLE_WAYLAND='$MOZ_ENABLE_WAYLAND'\n_GDK_SCALE='$GDK_SCALE'\n_ELECTRON_OZONE_PLATFORM_HINT='$ELECTRON_OZONE_PLATFORM_HINT'\n_XDG_RUNTIME_DIR='$XDG_RUNTIME_DIR'\n_XDG_CONFIG_HOME='$XDG_CONFIG_HOME'\n_XDG_CACHE_HOME='$XDG_CACHE_HOME'\n_XDG_DATA_HOME='$XDG_DATA_HOME'\n_GTK_THEME='$GTK_THEME'\n_ICON_THEME='$ICON_THEME'\n_COLOR_SCHEME='$COLOR_SCHEME'\n_CURSOR_SIZE='$CURSOR_SIZE'\n_CURSOR_THEME='$CURSOR_THEME'\n_FONT='$FONT'\n_FONT_SIZE='$FONT_SIZE'\n_DOCUMENT_FONT='$DOCUMENT_FONT'\n_DOCUMENT_FONT_SIZE='$DOCUMENT_FONT_SIZE'\n_MONOSPACE_FONT='$MONOSPACE_FONT'\n_MONOSPACE_FONT_SIZE='$MONOSPACE_FONT_SIZE'\n_FONT_ANTIALIASING='$FONT_ANTIALIASING'\n_FONT_HINTING='$FONT_HINTING'\n_SHADE_RUNTIME_DIR='$XDG_RUNTIME_DIR/shade'\n_SHADE_CONFIG_HOME='$XDG_CONFIG_HOME/shade'\n_SHADE_CACHE_HOME='$XDG_CACHE_HOME/shade'\n_SHADE_DATA_HOME='$XDG_DATA_HOME/shade'\n_SHADE_STATE_HOME='$(dirname $XDG_DATA_HOME)/state/shade'\nexport _TERMINAL='$(which $TERMINAL)'\nexport _LOCKSCREEN='$LOCKSCREEN'" > "$XDG_RUNTIME_DIR/shade/environment"
 
 -- # Execute on reload
 -- exec = $exec.mkdir & $exec.keybinds_hint
-hl.exec_cmd(hyde.sh.keybinds_hint("--reload")) -- Regenerate keybinds hint on reload
+hl.exec_cmd(shade.sh.keybinds_hint("--reload")) -- Regenerate keybinds hint on reload
 
-hl.exec_cmd("hyprctl setcursor " .. hyde.config.ui.cursor_theme .. " " .. hyde.config.ui.cursor_size) -- Reset cursor
+hl.exec_cmd("hyprctl setcursor " .. shade.config.ui.cursor_theme .. " " .. shade.config.ui.cursor_size) -- Reset cursor

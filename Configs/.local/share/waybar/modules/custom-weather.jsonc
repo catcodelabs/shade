@@ -1,6 +1,6 @@
 {
   "custom/weather": {
-    "exec": "hyde-shell weather",
+    "exec": "shade-shell weather",
     "on-click": "pkill -RTMIN+10 waybar",
     "tooltip": true,
     "format": "{0}",

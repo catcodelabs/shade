@@ -1,12 +1,12 @@
 <div align = center>
   <a href="https://discord.gg/AYbJ9MJez7">
-    <img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FmT5YqjaJFh%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&suffix=%20members&style=for-the-badge&logo=discord&logoSize=auto&label=The%20HyDe%20Project&labelColor=ebbcba&color=c79bf0">
+    <img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FmT5YqjaJFh%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&suffix=%20members&style=for-the-badge&logo=discord&logoSize=auto&label=The%20shade%20Project&labelColor=ebbcba&color=c79bf0">
   </a>
 </div>
 
 ###### _<div align="right"><a id=-design-by-t2></a><sub>// design by t2</sub></div>_
 
-![hyde_banner](../assets/hyde_banner.png)
+![shade_banner](../assets/shade_banner.png)
 
 <!--
 Multi-language README support
@@ -28,7 +28,7 @@ Multi-language README support
   <a href="#stijlen"><kbd> <br> Stijlen <br> </kbd></a>&ensp;&ensp;
   <a href="../assets/keybinds/KEYBINDINGS.nl.md"><kbd> <br> Toetscombinaties <br> </kbd></a>&ensp;&ensp;
   <a href="https://www.youtube.com/watch?v=2rWqdKU1vu8&list=PLt8rU_ebLsc5yEHUVsAQTqokIBMtx3RFY&index=1"><kbd> <br> Youtube <br> </kbd></a>&ensp;&ensp;
-  <a href="https://hydeproject.pages.dev/"><kbd> <br> Wiki <br> </kbd></a>&ensp;&ensp;
+  <a href="https://shadeproject.pages.dev/"><kbd> <br> Wiki <br> </kbd></a>&ensp;&ensp;
   <a href="https://discord.gg/qWehcFJxPa"><kbd> <br> Discord <br> </kbd></a>
 </div><br><br>
 
@@ -43,7 +43,7 @@ Multi-language README support
 </div>
 
 Bekijk de volledige notitie hier:
-[Reis naar HyDe en verder](../../Hyprdots-to-HyDE.md)
+[Reis naar shade en verder](../../Hyprdots-to-shade.md)
 
 <https://github.com/prasanthrangan/hyprdots/assets/106020512/7f8fadc8-e293-4482-a851-e9c6464f5265>
 
@@ -55,9 +55,9 @@ Bekijk de volledige notitie hier:
 ---
 
 Het installatiescript is ontworpen voor een minimale [Arch Linux](https://wiki.archlinux.org/title/Arch_Linux) installatie, maar het **kan** ook werken op sommige [Arch-gebaseerde distributies](https://wiki.archlinux.org/title/Arch-based_distributions).
-Hoewel het installeren van HyDE naast een andere [DE](https://wiki.archlinux.org/title/Desktop_environment)/[WM](https://wiki.archlinux.org/title/Window_manager) zou moeten werken. Gaat het, vanwege de sterk aangepaste setup, **conflicteren** met je [GTK](https://wiki.archlinux.org/title/GTK)/[Qt](https://wiki.archlinux.org/title/Qt) thema's, [Shell](https://wiki.archlinux.org/title/Command-line_shell), [SDDM](https://wiki.archlinux.org/title/SDDM), [GRUB](https://wiki.archlinux.org/title/GRUB), enz. Dit is volledig het op eigen risico.
+Hoewel het installeren van shade naast een andere [DE](https://wiki.archlinux.org/title/Desktop_environment)/[WM](https://wiki.archlinux.org/title/Window_manager) zou moeten werken. Gaat het, vanwege de sterk aangepaste setup, **conflicteren** met je [GTK](https://wiki.archlinux.org/title/GTK)/[Qt](https://wiki.archlinux.org/title/Qt) thema's, [Shell](https://wiki.archlinux.org/title/Command-line_shell), [SDDM](https://wiki.archlinux.org/title/SDDM), [GRUB](https://wiki.archlinux.org/title/GRUB), enz. Dit is volledig het op eigen risico.
 
-Voor NixOS-ondersteuning is er een apart project dat wordt onderhouden op [Hydenix](https://github.com/richen604/hydenix/tree/main)
+Voor NixOS-ondersteuning is er een apart project dat wordt onderhouden op [shadenix](https://github.com/richen604/shadenix/tree/main)
 
 > [!IMPORTANT]
 > Het installatiescript detecteert automatisch een NVIDIA-kaart en installeert nvidia-open-dkms drivers voor je kernel.
@@ -70,13 +70,13 @@ Om te installeren, voer de volgende commando's uit:
 
 ```shell
 pacman -S --needed git base-devel
-git clone --depth 1 https://github.com/HyDE-Project/HyDE ~/HyDE
-cd ~/HyDE/Scripts
+git clone --depth 1 https://github.com/shade-Project/shade ~/shade
+cd ~/shade/Scripts
 ./install.sh
 ```
 
 > [!TIP]
-> Je kan ook andere apps die je tegelijk met HyDe wenst te installeren toevoegen aan `Scripts/pkg_user.lst`. Deze file kan je dan als parameter aan de install meegeven:
+> Je kan ook andere apps die je tegelijk met shade wenst te installeren toevoegen aan `Scripts/pkg_user.lst`. Deze file kan je dan als parameter aan de install meegeven:
 >
 > ```shell
 > ./install.sh pkg_user.lst
@@ -86,7 +86,7 @@ cd ~/HyDE/Scripts
 > Baseer je lijst op basis van `Scripts/pkg_extra.lst`
 > of je kunt `cp  Scripts/pkg_extra.lst Scripts/pkg_user.lst` Als je alle extra pakketten wilt installeren.
 
-Start je systeem opnieuw op na het installatiescript klaar is en je voor de eerste keer naar het SDDM inlogscherm (of zwart scherm) brengt. Voor meer details, raadpleeg de [installatie wiki](https://hydeproject.pages.dev/en/getting-started/installation).
+Start je systeem opnieuw op na het installatiescript klaar is en je voor de eerste keer naar het SDDM inlogscherm (of zwart scherm) brengt. Voor meer details, raadpleeg de [installatie wiki](https://shadeproject.pages.dev/en/getting-started/installation).
 
 <div align="right">
   <br>
@@ -98,10 +98,10 @@ Start je systeem opnieuw op na het installatiescript klaar is en je voor de eers
 
 ---
 
-Om de HyDE te updaten, moet je de laatste aanpassingen van Github ophalen en de configuraties herstellen door de volgende commando's uit te voeren:
+Om de shade te updaten, moet je de laatste aanpassingen van Github ophalen en de configuraties herstellen door de volgende commando's uit te voeren:
 
 ```shell
-cd ~/HyDE/Scripts
+cd ~/shade/Scripts
 git pull origin master
 ./install.sh -r
 ```
@@ -121,23 +121,23 @@ git pull origin master
 ---
 
 Al onze officiële thema's worden opgeslagen in een apart repository, waardoor gebruikers ze kunnen installeren met themepatcher.
-Voor meer informatie, bezoek [HyDE-Project/hyde-themes](https://github.com/HyDE-Project/hyde-themes).
+Voor meer informatie, bezoek [shade-Project/shade-themes](https://github.com/shade-Project/shade-themes).
 
 <div align="center">
   <table><tr><td>
 
-[![Catppuccin-Latte](https://placehold.co/130x30/dd7878/eff1f5?text=Catppuccin-Latte&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Catppuccin-Latte)
-[![Catppuccin-Mocha](https://placehold.co/130x30/b4befe/11111b?text=Catppuccin-Mocha&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Catppuccin-Mocha)
-[![Decay-Green](https://placehold.co/130x30/90ceaa/151720?text=Decay-Green&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Decay-Green)
-[![Edge-Runner](https://placehold.co/130x30/fada16/000000?text=Edge-Runner&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Edge-Runner)
-[![Frosted-Glass](https://placehold.co/130x30/7ed6ff/1e4c84?text=Frosted-Glass&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Frosted-Glass)
-[![Graphite-Mono](https://placehold.co/130x30/a6a6a6/262626?text=Graphite-Mono&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Graphite-Mono)
-[![Gruvbox-Retro](https://placehold.co/130x30/475437/B5CC97?text=Gruvbox-Retro&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Gruvbox-Retro)
-[![Material-Sakura](https://placehold.co/130x30/f2e9e1/b4637a?text=Material-Sakura&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Material-Sakura)
-[![Nordic-Blue](https://placehold.co/130x30/D9D9D9/476A84?text=Nordic-Blue&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Nordic-Blue)
-[![Rosé-Pine](https://placehold.co/130x30/c4a7e7/191724?text=Rosé-Pine&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Rose-Pine)
-[![Synth-Wave](https://placehold.co/130x30/495495/ff7edb?text=Synth-Wave&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Synth-Wave)
-[![Tokyo-Night](https://placehold.co/130x30/7aa2f7/24283b?text=Tokyo-Night&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Tokyo-Night)
+[![Catppuccin-Latte](https://placehold.co/130x30/dd7878/eff1f5?text=Catppuccin-Latte&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Catppuccin-Latte)
+[![Catppuccin-Mocha](https://placehold.co/130x30/b4befe/11111b?text=Catppuccin-Mocha&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Catppuccin-Mocha)
+[![Decay-Green](https://placehold.co/130x30/90ceaa/151720?text=Decay-Green&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Decay-Green)
+[![Edge-Runner](https://placehold.co/130x30/fada16/000000?text=Edge-Runner&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Edge-Runner)
+[![Frosted-Glass](https://placehold.co/130x30/7ed6ff/1e4c84?text=Frosted-Glass&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Frosted-Glass)
+[![Graphite-Mono](https://placehold.co/130x30/a6a6a6/262626?text=Graphite-Mono&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Graphite-Mono)
+[![Gruvbox-Retro](https://placehold.co/130x30/475437/B5CC97?text=Gruvbox-Retro&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Gruvbox-Retro)
+[![Material-Sakura](https://placehold.co/130x30/f2e9e1/b4637a?text=Material-Sakura&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Material-Sakura)
+[![Nordic-Blue](https://placehold.co/130x30/D9D9D9/476A84?text=Nordic-Blue&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Nordic-Blue)
+[![Rosé-Pine](https://placehold.co/130x30/c4a7e7/191724?text=Rosé-Pine&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Rose-Pine)
+[![Synth-Wave](https://placehold.co/130x30/495495/ff7edb?text=Synth-Wave&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Synth-Wave)
+[![Tokyo-Night](https://placehold.co/130x30/7aa2f7/24283b?text=Tokyo-Night&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Tokyo-Night)
 
   </td></tr></table>
 </div>
@@ -145,7 +145,7 @@ Voor meer informatie, bezoek [HyDE-Project/hyde-themes](https://github.com/HyDE-
 > [!TIP]
 > Iedereen, inclusief jij, kan extra thema's maken, onderhouden en delen, die allemaal kunnen worden geïnstalleerd met themepatcher!
 > Om je eigen aangepaste thema te maken, raadpleeg de [thema wiki](https://github.com/prasanthrangan/hyprdots/wiki/Theming).
-> Als je wilt dat jouw HyDE-thema wordt getoond, of als je enkele niet-officiële thema's wilt vinden, bezoek [kRHYME7/hyde-gallery](https://github.com/kRHYME7/hyde-gallery)!
+> Als je wilt dat jouw shade-thema wordt getoond, of als je enkele niet-officiële thema's wilt vinden, bezoek [kRHYME7/shade-gallery](https://github.com/kRHYME7/shade-gallery)!
 
 <div align="right">
   <br>
@@ -210,10 +210,10 @@ Voor meer informatie, bezoek [HyDE-Project/hyde-themes](https://github.com/HyDE-
 
 ---
 
-<a href="https://star-history.com/#hyde-project/hyde&hyde-project/hyde-gallery&hyde-project/hyde-themes&Timeline">
+<a href="https://star-history.com/#shade-project/shade&shade-project/shade-gallery&shade-project/shade-themes&Timeline">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=hyde-project/hyde&type=Timeline&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=hyde-project/hyde&type=Timeline" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=hyde-project/hyde&type=Timeline" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=shade-project/shade&type=Timeline&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=shade-project/shade&type=Timeline" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=shade-project/shade&type=Timeline" />
  </picture>
 </a>

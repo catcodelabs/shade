@@ -40,7 +40,7 @@ hl.window_rule(
 )
 hl.layer_rule(
     {
-        name = "hyde_workflow_gaming",
+        name = "shade_workflow_gaming",
         blur = false,
         no_anim = true,
         match = {

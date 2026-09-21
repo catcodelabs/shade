@@ -30,7 +30,7 @@ hl.window_rule(
 )
 hl.layer_rule(
     {
-        name = "hyde_workflow_editing",
+        name = "shade_workflow_editing",
         blur = true,
         match = {
             namespace = "^(rofi|notifications|swaync-(notification-window|control-center)|logout_dialog|waybar)$"

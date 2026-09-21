@@ -1,22 +1,22 @@
-hyde = hyde or {}
-hyde.env.finalize()
+shade = shade or {}
+shade.env.finalize()
 
 -- hl.env sets PATH on the live compositor process, so it is still there for
 -- os.getenv on the next `hyprctl reload` -- appending unconditionally grows it
--- by one more copy of hyde.path.lib every reload (#1521).
-local current_path = hyde.env("PATH") or ""
+-- by one more copy of shade.path.lib every reload (#1521).
+local current_path = shade.env("PATH") or ""
 local already_on_path = false
 for segment in (current_path .. ":"):gmatch("([^:]*):") do
-	if segment == hyde.path.lib then
+	if segment == shade.path.lib then
 		already_on_path = true
 		break
 	end
 end
 if not already_on_path then
-	hl.env("PATH", current_path == "" and hyde.path.lib or current_path .. ":" .. hyde.path.lib)
+	hl.env("PATH", current_path == "" and shade.path.lib or current_path .. ":" .. shade.path.lib)
 end
 -- ? Isolate dconf (Prevents already-opened GTK apps (brave, nwg-displays, etc.) from updating their theme)
--- hl.env("DCONF_PROFILE",  ((os.getenv("XDG_CONFIG_HOME") ~= "" and os.getenv("XDG_CONFIG_HOME")) or (os.getenv("HOME") or "" ) .. "/.config") .. "/dconf/profile/hyde_hyprland")
+-- hl.env("DCONF_PROFILE",  ((os.getenv("XDG_CONFIG_HOME") ~= "" and os.getenv("XDG_CONFIG_HOME")) or (os.getenv("HOME") or "" ) .. "/.config") .. "/dconf/profile/shade_hyprland")
 
 -- NVIDIA hook
 -- https://wiki.hypr.land/Nvidia/

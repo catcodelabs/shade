@@ -1,0 +1,625 @@
+#!/usr/bin/env bash
+# This script resolves $PATHS and LIB_DIR specific to shade.
+# @name: shade-shell
+# @short: shade Command-Line Interface and Script Runner
+# @ver: 1.1.0
+# @usage: shade-shell [command] [args]
+# @global.flag: -h,--help | Show this help message
+# @global.flag: -v,--version | Show version information
+# @cmd: help
+# @cmd.alias: -h
+# @cmd.desc: Show help for shade-shell commands and scripts
+# @cmd.opt: <topic> | Show detailed help for a command or script
+# @cmd: man
+# @cmd.desc: Render metadata in man-style format
+# @cmd.opt: <topic> | Render a man-style page for a command or script
+# @cmd: reload
+# @cmd.alias: -r
+# @cmd.desc: Reload shade assets or environment
+# @cmd.opt: all | Reload all components
+# @cmd.opt: cache | Clear and rebuild asset cache
+# @cmd.opt: theme | Apply new color scheme
+# @cmd.opt: python | Reload Python environment
+# @cmd.opt: lua | Reload Lua environment
+# @cmd: scripts
+# @cmd.alias: -s
+# @cmd.desc: List available scripts
+# @cmd: wallbash
+# @cmd.desc: Execute a wallbash script by name
+# @cmd: version
+# @cmd.alias: -v
+# @cmd.desc: Show version information
+# @cmd: release-notes
+# @cmd.desc: Show latest release notes
+# @cmd: completion
+# @cmd.alias: completions
+# @cmd.desc: Shell completion helper utilities
+# @cmd.opt: --list-builtins | List built-in completions
+# @cmd.opt: --list-script | List script completions
+# @cmd.opt: --list-script-path | List script paths
+# @cmd.opt: --list-all | List all autocomplete options
+# @cmd.opt: bash | Generate bash completion
+# @cmd.opt: zsh | Generate zsh completion
+# @cmd.opt: fish | Generate fish completion
+# @cmd.opt: --help | Show completion help
+# @cmd: validate
+# @cmd.desc: Validate shade configuration files
+# @cmd: pyinit
+# @cmd.desc: Initialize Python virtual environment
+# @cmd: uv
+# @cmd.desc: Manage Python packages via uv
+# @cmd.opt: install | Install a package
+# @cmd.opt: uninstall | Uninstall a package
+# @cmd.opt: remove | Remove a package
+# @cmd.opt: list | List installed packages
+# @cmd: init
+# @cmd.desc: Source shell initialization environment
+# @cmd: logout
+# @cmd.desc: Log out of the current desktop session
+# @cmd: lock-session
+# @cmd.desc: Lock the current session
+# @cmd: pypr
+# @cmd.desc: PyPR / Pyprland helper utilities
+# @cmd.opt: help | Show pypr help
+# @cmd.opt: reload | Reload pypr config
+# @cmd.opt: toggle | Toggle pypr window
+# @cmd.opt: hide | Hide pypr window
+# @cmd.opt: show | Show pypr window
+# @cmd.opt: expose | Expose pypr windows
+# @cmd: luainit
+# @cmd.desc: Initialize Lua virtual environment
+# @cmd: luarocks
+# @cmd.desc: Manage Lua packages via luarocks
+# @cmd.opt: install | Install a rock
+# @cmd.opt: remove | Remove a rock
+# @cmd.opt: list | List installed rocks
+# @cmd.opt: search | Search for rocks
+# @cmd.opt: show | Show rock info
+# @cmd.opt: help | Show luarocks help
+
+# shellcheck disable=SC1091
+# shellcheck disable=SC2086
+# shellcheck disable=SC1090
+
+python_initialized() {
+    local python_script="${LIB_DIR}/shade/pyutils/python_env.py"
+    local venv="${XDG_STATE_HOME:-$HOME/.local/state}/shade/python_env"
+
+    if [[ -x "${venv}/bin/python" ]]; then
+        source "${venv}/bin/activate"
+        "${venv}/bin/python" "${python_script}" sync >/dev/null 2>&1 && return 0
+        echo "Sync failed; rebuilding Python environment..."
+        "${venv}/bin/python" "${python_script}" rebuild
+        return $?
+    fi
+
+    echo "Python environment not found; creating..."
+    python3 "${python_script}" create >/dev/null 2>&1 && return 0
+    echo "Create failed; attempting rebuild..."
+    python3 "${python_script}" rebuild
+}
+
+python_activate() {
+    local python_env="${XDG_STATE_HOME:-$HOME/.local/state}/shade/python_env/bin/activate"
+    if [[ -r "${python_env}" ]]; then
+        source "${python_env}"
+    else
+        printf "Warning: Python virtual environment not found at %s\n" "${python_env}"
+        printf "You may need to run 'shade-shell pyinit' to set it up.\n"
+        python_initialized
+    fi
+}
+
+lua_initialized() {
+    python_activate
+    python3 "${LIB_DIR}/shade/pyutils/lua_env.py" sync ||
+        python3 "${LIB_DIR}/shade/pyutils/lua_env.py" rebuild
+}
+
+initialized() {
+    cat <<EOF
+SHADE_SHELL_INIT=1
+BIN_DIR="${BIN_DIR}"
+LIB_DIR="${LIB_DIR}"
+SHARE_DIR="${SHARE_DIR}"
+PATH=${PATH}
+SHADE_SCRIPTS_PATH=${SHADE_SCRIPTS_PATH}
+export BIN_DIR LIB_DIR SHARE_DIR PATH SHADE_SCRIPTS_PATH SHADE_SHELL_INIT
+EOF
+    command cat "${LIB_DIR}/shade/globalcontrol.sh"
+}
+
+USAGE() {
+    local cols
+    cols=$(tput cols 2>/dev/null || echo 80)
+    local sep
+    sep=$(printf '─%.0s' $(seq 1 "$((cols - 2))"))
+
+    local _R=$'\e[0m' _BOLD=$'\e[1m' _DIM=$'\e[2m' _CYAN=$'\e[36m'
+
+    printf '\n%s  shade Shell%s\n' "$_BOLD" "$_R"
+    printf '  %s%s%s\n\n' "$_DIM" "$sep" "$_R"
+
+    printf '  %sUSAGE%s\n' "$_BOLD" "$_R"
+    printf '    shade-shell %s[command]%s %s[args]%s\n\n' "$_CYAN" "$_R" "$_DIM" "$_R"
+
+    printf '  %sCOMMANDS%s\n' "$_BOLD" "$_R"
+    local cmds=(
+        'help, -h [topic]' 'Show help (or topic-specific help)'
+        '-r, reload' 'Reload shade'
+        '-s, scripts' 'List available scripts (formatted)'
+        'wallbash <script>' 'Execute a wallbash script'
+        'version, -v' 'Show version information'
+        'release-notes' 'Show release notes'
+        'completion <subcmd>' 'Completion utilities (--list-builtins|--list-script|--list-script-path|bash|zsh|fish)'
+        'validate [args]' 'Validate shade configuration'
+        'pyinit' 'Initialize Python virtual environment'
+        'uv <cmd> [pkg]' 'Manage packages (install|uninstall|list)'
+        'init' 'Source initialization script'
+        'logout' 'Log out of the current session'
+        'lock-session' 'Lock the current session'
+    )
+    for ((i = 0; i < ${#cmds[@]}; i += 2)); do
+        printf '    %s%-26s%s %s\n' "$_CYAN" "${cmds[i]}" "$_R" "${cmds[i + 1]}"
+    done
+    printf '\n'
+
+    printf '  %sSCRIPTS%s\n' "$_BOLD" "$_R"
+    printf '    Run any script by name (without extension):\n'
+    printf '      %sshade-shell theme.switch%s\n' "$_DIM" "$_R"
+    printf '      %sshade-shell wallpaper%s\n\n' "$_DIM" "$_R"
+    printf '    Use %sshade-shell -s%s to list all available scripts.\n\n' "$_CYAN" "$_R"
+
+    printf '  %s%s%s\n\n' "$_DIM" "$sep" "$_R"
+}
+
+call_wallbashScript() {
+    local scriptName=$1
+    shift
+    local args=("${@}")
+    local dirs=("${WALLBASH_DIRS[@]}")
+    sanitized_dirs=()
+    for dir in "${dirs[@]}"; do
+        if [[ -d "$dir" ]]; then
+            sanitized_dirs+=("$dir")
+        fi
+    done
+    dirs=("${sanitized_dirs[@]}")
+    script_path=$(find -L "${dirs[@]}" -type f -path "*/scripts/*" -name "${scriptName}.sh" -exec echo {} \; -quit)
+
+    for func in $(compgen -A function); do
+        export -f "${func?}"
+    done
+
+    if [[ -n "$script_path" ]]; then
+        "$script_path" "${args[@]}"
+    else
+        echo "Usage: wallbash [script-name] [args]"
+        echo "Executes the specified wallbash script with the provided arguments."
+        echo "Available scripts:"
+        for dir in "${dirs[@]}"; do
+            if [[ -d "$dir" ]]; then
+                echo -e "\n[ $dir ]"
+                find -L "$dir" -type f -path "*/scripts/*" -name "*.sh" -exec basename {} \;
+            fi
+        done
+    fi
+}
+
+shade_reload() {
+    python_activate
+    python3 "${LIB_DIR}/shade/reload.py" "${@}"
+}
+
+list_script_path() {
+    IFS=':' read -ra RAW_DIRS <<<"$SHADE_SCRIPTS_PATH"
+    declare -A _seen_dirs
+    for dir in "${RAW_DIRS[@]}"; do
+        [[ -z "$dir" ]] && continue
+        [[ -n "${_seen_dirs[$dir]}" ]] && continue
+        _seen_dirs["$dir"]=1
+        # Added -name "*.lua" to discoverable scripts
+        [[ -d "$dir" ]] && find -L "$dir" -maxdepth 1 -type f \( -name "*.sh" -o -name "*.py" -o -name "*.lua" \) -exec echo {} \;
+    done
+}
+
+list_script() {
+    list_script_path | while IFS= read -r script_path; do
+        [[ -z "$script_path" ]] && continue
+        # Only include scripts that have @name: metadata (public scripts)
+        if head -n 50 "$script_path" | grep -qE '^#\s*@name:\s'; then
+            basename "$script_path"
+        fi
+    done | sort -u
+}
+
+get_version() {
+    if [[ ! -f "${XDG_STATE_HOME:-$HOME/.local/state}/shade/version" ]]; then
+        echo "shade version file not found. Please update shade."
+        exit 1
+    fi
+    source "${XDG_STATE_HOME:-$HOME/.local/state}/shade/version"
+    cat <<VERSION
+shade, your Development Environment
+
+Version: $SHADE_VERSION
+Branch: $SHADE_BRANCH
+Commit Hash: $SHADE_COMMIT_HASH
+Remote: $SHADE_REMOTE
+Restore Date: $SHADE_VERSION_LAST_CHECKED
+Last Commit Message: $SHADE_VERSION_COMMIT_MSG
+
+Tools:
+shadectl: $(shadectl version 2>/dev/null || echo "shadectl not found")
+$(hyprland -v 2>/dev/null | head -n1 || echo "hyprland not found")
+$(if hyprctl_output=$(hyprctl version 2>/dev/null | head -n1); then echo "$hyprctl_output (Running Instance)"; else echo "hyprctl not found or not running"; fi)
+$(shade-ipc --version 2>/dev/null || echo "shade-ipc not found")
+
+shade updates every Friday, so please check for updates regularly.
+Run 'shade-shell release-notes' to see the latest changes.
+shade is a community-driven project, and contributions are welcome.
+VERSION
+}
+
+get_release_notes() {
+    if [[ ! -f "${XDG_STATE_HOME:-$HOME/.local/state}/shade/version" ]]; then
+        echo "shade version file not found. Please update shade."
+        exit 1
+    fi
+    source "${XDG_STATE_HOME:-$HOME/.local/state}/shade/version"
+    echo "shade Release Notes:"
+    echo "$SHADE_RELEASE_NOTES"
+}
+
+shade-logout() {
+    if uwsm check is-active; then
+        uwsm stop
+    elif [[ -n "${HYPRLAND_INSTANCE_SIGNATURE}" ]]; then
+        if command -v hyprshutdown >/dev/null 2>&1; then
+            hyprshutdown --top-label "Stay shaderated!🫧"
+        else
+            hyprctl dispatch 'hl.dsp.exit()'
+        fi
+    fi
+}
+
+run_command() {
+    IFS=':' read -ra RAW_DIRS <<<"$SHADE_SCRIPTS_PATH"
+    declare -A seen_dirs
+    SCRIPT_DIRS=()
+    for dir in "${RAW_DIRS[@]}"; do
+        [[ -z "$dir" ]] && continue
+        [[ -n "${seen_dirs[$dir]}" ]] && continue
+        seen_dirs["$dir"]=1
+        [[ -d "$dir" ]] && SCRIPT_DIRS+=("$dir")
+    done
+
+    # Lua is resolved before shell, so a script left behind by an older release
+    # cannot shadow the implementation that replaced it.
+    for dir in "${SCRIPT_DIRS[@]}"; do
+        if [[ -f "$dir/${1}.lua" ]]; then
+            l_env="${XDG_STATE_HOME:-$HOME/.local/state}/shade/lua_env"
+            if [[ ! -d "$l_env" ]]; then
+                print_log -warn "Lua environment not found!" " Please run 'shade-shell luainit' to set up the environment."
+                send_notifs "Lua environment not found!" "Please run 'shade-shell luainit' to set up the environment."
+                exit 1
+            fi
+            __shade_lua_ver_file="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/shade/lua_ver"
+            if [[ -f "$__shade_lua_ver_file" ]]; then
+                read -r lua_ver _ <"$__shade_lua_ver_file"
+            elif command -v lua &>/dev/null; then
+                read -r lua_ver _ < <(lua -e 'io.write(_VERSION:match("%d+%.%d+"))')
+                echo "$lua_ver" >"$__shade_lua_ver_file"
+            fi
+            unset __shade_lua_ver_file
+            export LUA_PATH="$l_env/share/lua/$lua_ver/?.lua;$l_env/share/lua/$lua_ver/?/init.lua;$LUA_PATH"
+            export LUA_CPATH="$l_env/lib/lua/$lua_ver/?.so;$LUA_CPATH"
+            exec lua "$dir/${1}.lua" "${@:2}"
+        elif [[ -f "$dir/${1}.sh" ]]; then
+            exec bash "$dir/${1}.sh" "${@:2}"
+        elif [[ -f "$dir/${1}.py" ]]; then
+            exec "${XDG_STATE_HOME:-$HOME/.local/state}/shade/python_env/bin/python" "$dir/${1}.py" "${@:2}"
+        elif [[ -f "$dir/${1}" && -x "$dir/${1}" ]]; then
+            exec "$dir/${1}" "${@:2}"
+        fi
+    done
+
+    if [[ -f "$1" && -x "$1" ]]; then
+        exec "$1" "${@:2}"
+    else
+        echo "Command not found: $1"
+        echo "Available commands:"
+        list_scripts_pretty
+    fi
+}
+
+run_uv() {
+    local project_dir="${LIB_DIR}/shade"
+    local venv_path="${XDG_STATE_HOME:-$HOME/.local/state}/shade/python_env"
+    shift
+    local subcmd="${1:-help}"
+    shift 2>/dev/null || true
+    case "$subcmd" in
+    install)
+        UV_PROJECT_ENVIRONMENT="$venv_path" uv add "$@" --project "$project_dir"
+        ;;
+    uninstall | remove)
+        UV_PROJECT_ENVIRONMENT="$venv_path" uv remove "$@" --project "$project_dir"
+        ;;
+    list)
+        UV_PROJECT_ENVIRONMENT="$venv_path" uv pip list --python "${venv_path}/bin/python"
+        ;;
+    *)
+        echo "Usage: shade-shell uv [install|uninstall|list] [packages...]"
+        ;;
+    esac
+}
+
+run_luarocks() {
+    shift
+    local lua_env_dir="${XDG_STATE_HOME:-$HOME/.local/state}/shade/lua_env"
+    if command -v luarocks >/dev/null 2>&1; then
+        luarocks --tree "${lua_env_dir}" "$@"
+    else
+        echo "luarocks not found in your system."
+    fi
+}
+
+run_pypr() {
+    python_activate
+    shift
+
+    if command -v pypr >/dev/null 2>&1; then
+        socket_path="${XDG_RUNTIME_DIR}/hypr/${HYPRLAND_INSTANCE_SIGNATURE}/.pyprland.sock"
+        if [[ ! -f "${XDG_CONFIG_HOME:-$HOME/.config}/pypr/config.toml" ]]; then
+            send_notifs "Missing config.toml" "Please create a config.toml in config dir."
+            exit 1
+        fi
+
+        if [[ -S "$socket_path" ]] && pgrep -u "$USER" pypr >/dev/null 2>&1; then
+            local -a msg=("$@")
+            ((${#msg[@]} == 0)) && msg=("help")
+            if ! printf '%s\n' "${msg[*]}" | nc -N -U "$socket_path" 2>/dev/null; then
+                if ! printf '%s\n' "${msg[*]}" | socat - UNIX-CONNECT:"$socket_path" 2>/dev/null; then
+                    if ! printf '%s\n' "${msg[*]}" | ncat -U "$socket_path" 2>/dev/null; then
+                        if ! pypr "${msg[@]}"; then
+                            print_log -sec "pypr" "Error communicating with socket: $socket_path"
+                            exit 1
+                        fi
+                    fi
+                fi
+            fi
+        else
+            print_log -sec "pypr" "PyPR is not running properly, starting fresh"
+            rm -f "$socket_path"
+            exec app.sh -t service pypr
+        fi
+    else
+        UV_PROJECT_ENVIRONMENT="${XDG_STATE_HOME:-$HOME/.local/state}/shade/python_env" uv add "pyprland==3.3.1" --project "${LIB_DIR}/shade"
+    fi
+}
+
+list_scripts_pretty() {
+    local cols
+    cols=$(tput cols 2>/dev/null || echo 80)
+    local sep
+    sep=$(printf '─%.0s' $(seq 1 "$((cols - 2))"))
+
+    local _R=$'\e[0m' _BOLD=$'\e[1m' _DIM=$'\e[2m'
+    local _VIOLET=$'\e[35m' _GREEN=$'\e[92m'
+
+    IFS=':' read -ra RAW_DIRS <<<"$SHADE_SCRIPTS_PATH"
+    declare -A seen_dirs
+    local SCRIPT_DIRS=()
+
+    for dir in "${RAW_DIRS[@]}"; do
+        [[ -z "$dir" ]] && continue
+        [[ -n "${seen_dirs[$dir]}" ]] && continue
+        seen_dirs["$dir"]=1
+        [[ -d "$dir" ]] && SCRIPT_DIRS+=("$dir")
+    done
+
+    local total=0
+    printf '\n%s  Available Scripts%s\n' "$_BOLD" "$_R"
+    printf '  %s%s%s\n' "$_DIM" "$sep" "$_R"
+
+    for dir in "${SCRIPT_DIRS[@]}"; do
+        local scripts=()
+        while IFS= read -r f; do
+            [[ -n "$f" ]] && scripts+=("$f")
+        done < <(find -L "$dir" -maxdepth 1 -type f \( -name "*.sh" -o -name "*.py" \) -exec basename {} \; 2>/dev/null | sort)
+
+        [[ ${#scripts[@]} -eq 0 ]] && continue
+        printf '\n  %s%s%s\n' "$_VIOLET" "$dir" "$_R"
+
+        unset groups roots
+        declare -A groups roots
+
+        for s in "${scripts[@]}"; do
+            local name="${s%.*}"
+            if [[ "$name" == *.* ]]; then
+                local root="${name%%.*}"
+                roots["$root"]=1
+            fi
+        done
+
+        for s in "${scripts[@]}"; do
+            local name="${s%.*}"
+            if [[ "$name" == *.* ]]; then
+                local root="${name%%.*}"
+                groups["$root"]+="$name "
+            else
+                if [[ -n "${roots[$name]}" ]]; then
+                    groups["$name"]="$name ${groups[$name]}"
+                else
+                    groups["$name"]="$name"
+                fi
+            fi
+        done
+
+        for key in $(printf "%s\n" "${!groups[@]}" | sort); do
+            read -ra items <<<"${groups[$key]}"
+            if [[ ${#items[@]} -gt 1 ]]; then
+                printf "    %s%s%s\n" "$_GREEN" "$key" "$_R"
+                for item in "${items[@]}"; do
+                    if [[ "$item" != "$key" ]]; then
+                        printf "      %s%s%s\n" "$_DIM" "$item" "$_R"
+                    fi
+                    ((total++))
+                done
+            else
+                printf "    %s%s%s\n" "$_GREEN" "$key" "$_R"
+                ((total++))
+            fi
+        done
+    done
+
+    local dir_word="directories"
+    ((${#SCRIPT_DIRS[@]} == 1)) && dir_word="directory"
+
+    printf '\n  %s%s%s\n' "$_DIM" "$sep" "$_R"
+    printf '  %s%d scripts across %d %s%s\n\n' "$_DIM" "$total" "${#SCRIPT_DIRS[@]}" "$dir_word" "$_R"
+}
+
+lock_session() {
+    if busctl --user list | grep -q "org.freedesktop.ScreenSaver"; then
+        echo "Using org.freedesktop.ScreenSaver for locking"
+        loginctl lock-session
+    else
+        lockscreen.sh
+    fi
+}
+
+# -----------------------------------------------------------------
+
+if [[ -z "${BASH_SOURCE[0]}" ]]; then
+    EXECUTABLE="${0}"
+else
+    EXECUTABLE="${BASH_SOURCE[0]}"
+fi
+
+BIN_DIR=$(dirname "$(which "${EXECUTABLE:-shade-shell}")")
+LIB_DIR=$(realpath "${BIN_DIR}/../lib")
+SHARE_DIR=$(realpath "${BIN_DIR}/../share")
+# Prepend shade paths to PATH only if not already present
+for _p in "$LIB_DIR/shade" "$BIN_DIR" "${XDG_CONFIG_HOME:-$HOME/.config}/shade/scripts"; do
+    [[ ":$PATH:" != *":$_p:"* ]] && PATH="$_p:$PATH"
+done
+unset _p
+# Define shade scripts search paths (colon-separated, user configurable)
+SHADE_SCRIPTS_PATH="${SHADE_SCRIPTS_PATH:-${XDG_CONFIG_HOME:-$HOME/.config}/shade/scripts:${LIB_DIR}/shade}:${XDG_DATA_HOME:-$HOME/.local/share}/waybar/scripts:${XDG_CONFIG_HOME:-$HOME/.config}/waybar/scripts"
+export BIN_DIR LIB_DIR SHARE_DIR PATH SHADE_SCRIPTS_PATH
+
+# -----------------------------------------------------------------
+
+[[ -d "${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/shade" ]] || mkdir -p "${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/shade"
+
+case "$1" in
+app)
+    export PATH="${SHADE_SCRIPTS_PATH}:${PATH}"
+    [[ "${SHADEPY}" -eq 1 ]] && python_activate
+    shift
+    exec app.sh "$@"
+    ;;
+init | --init)
+    initialized
+    exit 0
+    ;;
+lock-session)
+    lock_session
+    exit 0
+    ;;
+*)
+    export SHADE_SHELL_INIT=1
+    ;;
+esac
+
+if ! source "${LIB_DIR}/shade/globalcontrol.sh"; then
+    echo "Error: Could not load shade, broken installation?"
+    exit 1
+fi
+
+# -----------------------------------------------------------------
+
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    case $1 in
+    logout)
+        shade-logout
+        ;;
+    pypr)
+        run_pypr "${@}"
+        exit 0
+        ;;
+    uv)
+        run_uv "${@}"
+        exit 0
+        ;;
+    luarocks)
+        run_luarocks "${@}"
+        exit 0
+        ;;
+    -r | reload)
+        shift
+        shade_reload "${@}"
+        ;;
+    wallbash)
+        shift
+        call_wallbashScript "$@"
+        ;;
+
+    completion | completions)
+        # Delegate all completion operations to the Python backend
+        python_activate
+        python3 "${LIB_DIR}/shade/completions.py" "${@:2}"
+        exit $?
+        ;;
+    --release-notes | release-notes)
+        get_release_notes
+        ;;
+    --version | version | -v)
+        get_version
+        ;;
+    help)
+        shift
+        if [[ $# -gt 0 ]]; then
+            python3 "${LIB_DIR}/shade/help.py" "$@"
+            exit $?
+        fi
+        USAGE
+        ;;
+    man)
+        shift
+        python3 "${LIB_DIR}/shade/man.py" "$@"
+        exit $?
+        ;;
+    --help | -h)
+        USAGE
+        ;;
+    -s | scripts)
+        list_scripts_pretty
+        ;;
+    validate)
+        shift
+        if command -v shade-config >/dev/null 2>&1; then
+            shade-config -no-daemon "${@}"
+        else
+            echo "shade-config not found."
+        fi
+        exit 0
+        ;;
+    pyinit)
+        python_initialized
+        ;;
+    luainit)
+        lua_initialized
+        ;;
+    "")
+        for func in $(compgen -A function); do
+            export -f "${func?}"
+        done
+        ;;
+    *)
+        run_command "$@"
+        ;;
+    esac
+fi

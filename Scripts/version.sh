@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-HYDE_CLONE_PATH=$(git rev-parse --show-toplevel)
-HYDE_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-HYDE_REMOTE=$(git config --get remote.origin.url)
-HYDE_VERSION=$(git describe --tags --always)
-HYDE_COMMIT_HASH=$(git rev-parse HEAD)
-HYDE_VERSION_COMMIT_MSG=$(git log -1 --pretty=%B)
-HYDE_VERSION_LAST_CHECKED=$(date +%Y-%m-%d\ %H:%M%S\ %z)
+SHADE_CLONE_PATH=$(git rev-parse --show-toplevel)
+SHADE_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+SHADE_REMOTE=$(git config --get remote.origin.url)
+SHADE_VERSION=$(git describe --tags --always)
+SHADE_COMMIT_HASH=$(git rev-parse HEAD)
+SHADE_VERSION_COMMIT_MSG=$(git log -1 --pretty=%B)
+SHADE_VERSION_LAST_CHECKED=$(date +%Y-%m-%d\ %H:%M%S\ %z)
 
 generate_release_notes() {
   local latest_tag
@@ -31,33 +31,33 @@ generate_release_notes() {
   echo "$commits"
 }
 
-# HYDE_RELEASE_NOTES=$(generate_release_notes)
+# SHADE_RELEASE_NOTES=$(generate_release_notes)
 
-echo "HyDE $HYDE_VERSION built from branch $HYDE_BRANCH at commit ${HYDE_COMMIT_HASH:0:12} ($HYDE_VERSION_COMMIT_MSG)"
-echo "Date: $HYDE_VERSION_LAST_CHECKED"
-echo "Repository: $HYDE_CLONE_PATH"
-echo "Remote: $HYDE_REMOTE"
+echo "shade $SHADE_VERSION built from branch $SHADE_BRANCH at commit ${SHADE_COMMIT_HASH:0:12} ($SHADE_VERSION_COMMIT_MSG)"
+echo "Date: $SHADE_VERSION_LAST_CHECKED"
+echo "Repository: $SHADE_CLONE_PATH"
+echo "Remote: $SHADE_REMOTE"
 echo ""
 
 if [[ "$1" == "--cache" ]]; then
-  state_dir="${XDG_STATE_HOME:-$HOME/.local/state}/hyde"
+  state_dir="${XDG_STATE_HOME:-$HOME/.local/state}/shade"
   mkdir -p "$state_dir"
   version_file="$state_dir/version"
 
   cat >"$version_file" <<EOL
-HYDE_CLONE_PATH='$HYDE_CLONE_PATH'
-HYDE_BRANCH='$HYDE_BRANCH'
-HYDE_REMOTE='$HYDE_REMOTE'
-HYDE_VERSION='$HYDE_VERSION'
-HYDE_VERSION_LAST_CHECKED='$HYDE_VERSION_LAST_CHECKED'
-HYDE_VERSION_COMMIT_MSG='$HYDE_VERSION_COMMIT_MSG'
-HYDE_COMMIT_HASH='$HYDE_COMMIT_HASH'
+SHADE_CLONE_PATH='$SHADE_CLONE_PATH'
+SHADE_BRANCH='$SHADE_BRANCH'
+SHADE_REMOTE='$SHADE_REMOTE'
+SHADE_VERSION='$SHADE_VERSION'
+SHADE_VERSION_LAST_CHECKED='$SHADE_VERSION_LAST_CHECKED'
+SHADE_VERSION_COMMIT_MSG='$SHADE_VERSION_COMMIT_MSG'
+SHADE_COMMIT_HASH='$SHADE_COMMIT_HASH'
 EOL
-# HYDE_RELEASE_NOTES='$HYDE_RELEASE_NOTES'
+# SHADE_RELEASE_NOTES='$SHADE_RELEASE_NOTES'
 
   echo -e "Version cache output to $version_file\n"
 
 elif [[ "$1" == "--release-notes" ]]; then
-  echo "$HYDE_RELEASE_NOTES"
+  echo "$SHADE_RELEASE_NOTES"
 
 fi

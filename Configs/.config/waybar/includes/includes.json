@@ -11,7 +11,7 @@
         "/home/khing/.config/waybar/modules/cpuinfo.jsonc",
         "/home/khing/.config/waybar/modules/display.jsonc",
         "/home/khing/.config/waybar/modules/footer.jsonc",
-        "/home/khing/.config/waybar/modules/github_hyde.jsonc",
+        "/home/khing/.config/waybar/modules/github_shade.jsonc",
         "/home/khing/.config/waybar/modules/github_hyprdots.jsonc",
         "/home/khing/.config/waybar/modules/gpuinfo.jsonc",
         "/home/khing/.config/waybar/modules/header.jsonc",
@@ -53,7 +53,7 @@
         "/home/khing/.local/share/waybar/modules/custom-display.jsonc",
         "/home/khing/.local/share/waybar/modules/custom-dunst.jsonc",
         "/home/khing/.local/share/waybar/modules/custom-gamemode.jsonc",
-        "/home/khing/.local/share/waybar/modules/custom-github_hyde.jsonc",
+        "/home/khing/.local/share/waybar/modules/custom-github_shade.jsonc",
         "/home/khing/.local/share/waybar/modules/custom-gpuinfo#amd.jsonc",
         "/home/khing/.local/share/waybar/modules/custom-gpuinfo#intel.jsonc",
         "/home/khing/.local/share/waybar/modules/custom-gpuinfo#nvidia.jsonc",
@@ -86,8 +86,8 @@
         "/home/khing/.local/share/waybar/modules/pulseaudio#microphone.jsonc",
         "/home/khing/.local/share/waybar/modules/tray.jsonc",
         "/home/khing/.local/share/waybar/modules/power-profiles-daemon.jsonc",
-        "/home/khing/.local/share/waybar/modules/image#hyde-menu.jsonc",
-        "/home/khing/.local/share/waybar/modules/custom-hyde-menu.jsonc",
+        "/home/khing/.local/share/waybar/modules/image#shade-menu.jsonc",
+        "/home/khing/.local/share/waybar/modules/custom-shade-menu.jsonc",
         "/home/khing/.local/share/waybar/modules/network#bandwidth.jsonc"
     ],
     "wlr/taskbar#windows": {

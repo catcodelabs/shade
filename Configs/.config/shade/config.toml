@@ -1,0 +1,4 @@
+# Configuration file for shade
+# Environment variables should be on top
+# Updated config.toml file can be found at $HOME/.local/share/shade/config.toml
+"$schema" = "https://raw.githubusercontent.com/shade-Project/shade/refs/heads/master/Configs/.local/share/shade/schema/config.toml.json"

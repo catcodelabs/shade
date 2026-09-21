@@ -1,7 +1,7 @@
 -- # // █░░ ▄▀█ █▄█ █▀▀ █▀█   █▀█ █░█ █░░ █▀▀ █▀
 -- # // █▄▄ █▀█ ░█░ ██▄ █▀▄   █▀▄ █▄█ █▄▄ ██▄ ▄█
 
-local util = _G.hyde.utils
+local util = _G.shade.utils
 
 local blur_layers =
   util.regex_compile(
@@ -32,19 +32,19 @@ local ignore_alpha_layers =
 )
 
 hl.layer_rule({
-  name  = "hyde_layer_blur",
+  name  = "shade_layer_blur",
   match = { namespace = blur_layers.namespace },
   blur  = true,
 })
 
 hl.layer_rule({
-  name         = "hyde_layer_ignore_alpha",
+  name         = "shade_layer_ignore_alpha",
   match        = { namespace = ignore_alpha_layers.namespace },
   ignore_alpha = 0,
 })
 
 hl.layer_rule({
-  name    = "hyde_layer_no_anim",
+  name    = "shade_layer_no_anim",
   no_anim = true,
   match   = { namespace = "selection" },
 })

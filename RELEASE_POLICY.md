@@ -55,7 +55,7 @@ We use **year.month.week** format (`YY.M.W`) instead of traditional semantic ver
 remote: Counting objects: 100% (1/1), done.
 remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
 Unpacking objects: 100% (1/1), 869 bytes | 869.00 KiB/s, done.
-From https://github.com/HyDE-Project/HyDE
+From https://github.com/shade-Project/shade
 
 ---
 

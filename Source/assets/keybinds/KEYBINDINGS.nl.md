@@ -1,12 +1,12 @@
 <div align = center>
   <a href="https://discord.gg/AYbJ9MJez7">
-    <img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FmT5YqjaJFh%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&suffix=%20members&style=for-the-badge&logo=discord&logoSize=auto&label=The%20HyDe%20Project&labelColor=ebbcba&color=c79bf0">
+    <img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FmT5YqjaJFh%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&suffix=%20members&style=for-the-badge&logo=discord&logoSize=auto&label=The%20shade%20Project&labelColor=ebbcba&color=c79bf0">
   </a>
 </div>
 
 ###### _<div align="right"><a id=-design-by-t2></a><sub>// design by t2</sub></div>_
 
-![hyde_banner](../assets/hyde_banner.png)
+![shade_banner](../assets/shade_banner.png)
 
 <!--
 Multi-language KEYBINDINGS support
@@ -43,7 +43,7 @@ Multi-language KEYBINDINGS support
   </div>
 </div>
 
-Hier zijn alle HyDE-specifieke toetscombinaties opgesomd.
+Hier zijn alle shade-specifieke toetscombinaties opgesomd.
 
 >[!TIP] 
 > <kbd>Super</kbd> + <kbd>/</kbd> toont de toetscombinaties.
@@ -272,10 +272,10 @@ Je kunt je eigen sneltoetsen instellen door dit bestand te bewerken:
 ~/.config/hypr/userprefs.conf
 ```
 
-Bijvoorbeeld, om een sneltoets toe te voegen voor het starten van de **HyDE Game Launcher**, voeg deze regel toe:
+Bijvoorbeeld, om een sneltoets toe te voegen voor het starten van de **shade Game Launcher**, voeg deze regel toe:
 
 ```ini
-bind = $mainMod, SPACE, exec, $HOME/.local/lib/hyde/gamelauncher.sh
+bind = $mainMod, SPACE, exec, $HOME/.local/lib/shade/gamelauncher.sh
 ```
 
 Hiermee koppel je de Game Launcher aan <kbd>SUPER</kbd> + <kbd>Spatie</kbd>.  
@@ -284,7 +284,7 @@ Je kunt `SPACE` vervangen door een andere gewenste toets.
 Het script `gamelauncher.sh` is standaard inbegrepen en staat op:
 
 ```bash
-~/.local/lib/hyde/gamelauncher.sh
+~/.local/lib/shade/gamelauncher.sh
 ```
 
 <div align="right">

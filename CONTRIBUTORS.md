@@ -1,6 +1,6 @@
 # Contributors
 
-This file lists the contributors to the HyDE project and their roles.
+This file lists the contributors to the shade project and their roles.
 
 ## Project Maintainers
 
@@ -43,4 +43,4 @@ _These contributors help with quality assurance and testing._
 5. Include in the PR description your relevant experience and what you hope to contribute
 6. Wait for a maintainer to review and merge your PR
 
-Note: New contributors should only add themselves to the Collaborators or Testers sections. Promotion to write access is determined by project maintainers based on the criteria in [TEAM_ROLES.md](https://github.com/HyDE-Project/HyDE/blob/master/TEAM_ROLES.md).
+Note: New contributors should only add themselves to the Collaborators or Testers sections. Promotion to write access is determined by project maintainers based on the criteria in [TEAM_ROLES.md](https://github.com/shade-Project/shade/blob/master/TEAM_ROLES.md).

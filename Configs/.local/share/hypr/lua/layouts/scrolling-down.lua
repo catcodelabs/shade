@@ -62,7 +62,7 @@ hl.bind("ALT + SLASH", hl.dsp.layout("consume"), _F)
 _F = {description = "[Scrolling] consume or expel window"}
 hl.bind("ALT + M", hl.dsp.layout("consume_or_expel prev"), _F)
 
-local MOD = hyde.config.modifiers.main
+local MOD = shade.config.modifiers.main
 _F = {description = "[Scrolling] focus next workspace"}
 hl.bind(MOD .. " + SHIFT + mouse_down", hl.dsp.focus({workspace = "e+1"}), _F)
 _F = {description = "[Scrolling] focus previous workspace"}

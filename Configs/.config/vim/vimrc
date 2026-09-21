@@ -1,6 +1,6 @@
-" Load the hyde config
+" Load the shade config
 let s:VIM_DIR = fnamemodify($MYVIMRC, ':h')
-execute 'source ' . s:VIM_DIR . '/hyde.vim'
+execute 'source ' . s:VIM_DIR . '/shade.vim'
 
 " Adding your custom colorschem
 "colorscheme zaibatsu "the only nice built-in colorscheme 

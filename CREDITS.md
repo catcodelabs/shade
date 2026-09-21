@@ -1,6 +1,6 @@
 # Credits
 
-HyDE would not be possible without the work of the following people/projects. I humbly thank them for their contributions. Licenses are in there respective repositories being referenced.
+shade would not be possible without the work of the following people/projects. I humbly thank them for their contributions. Licenses are in there respective repositories being referenced.
 
 ## Contributors
 
@@ -8,19 +8,19 @@ See [Contributors](./CONTRIBUTORS.md)
 
 ## Libraries and Tools
 
-All libraries and tools that are bundled with HyDE are listed here.
+All libraries and tools that are bundled with shade are listed here.
 
 - [app2unit](https://github.com/Vladimir-csp/app2unit) - Launches Desktop Entries as Systemd user units
 - [xdg-terminal-exec](http://github.com/Vladimir-csp/xdg-terminal-exec) - Proposal for XDG Default Terminal Execution Specification and shell-based reference implementation.
 
 All packages installed via the package manager were referenced in the following files:
 
-- [Core HyDE Packages](./Scripts/pkg_core.lst)
-- [Extra HyDE Packages](./Scripts/pkg_extra.lst)
+- [Core shade Packages](./Scripts/pkg_core.lst)
+- [Extra shade Packages](./Scripts/pkg_extra.lst)
 
 ## Inspirations
 
-- The HyDE Project is a superset of hyprdots. This is a continued effort to make hyprdots customizable and extensible. Thanks @prasanthrangan / @Tittu - [hyprdots](https://github.com/prasanthrangan/hyprdots)
+- The shade Project is a superset of hyprdots. This is a continued effort to make hyprdots customizable and extensible. Thanks @prasanthrangan / @Tittu - [hyprdots](https://github.com/prasanthrangan/hyprdots)
 - Derived hyprlock Ideas - [MrVivekRajan/Hypr-Dots](https://github.com/MrVivekRajan/Hypr-Dots)
 
 ## Ko-fi

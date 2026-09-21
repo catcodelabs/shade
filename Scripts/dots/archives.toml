@@ -1,7 +1,7 @@
 [icon-wallbash]
 version = "0.1.0"
 source = "Source/arcs/Icon_Wallbash.tar.gz"
-owner = "The HyDE Project"
+owner = "The shade Project"
 description = "Icon theme wallbash recolors, named by path from the notifications and the popups"
 action = "sync"
 target_root = "${XDG_DATA_HOME}/icons/Wallbash-Icon"

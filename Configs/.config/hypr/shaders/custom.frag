@@ -1,4 +1,4 @@
-// Hyde Shader for Hyprland - Combined shader with all effects
+// shade Shader for Hyprland - Combined shader with all effects
 // Mix and match effects by changing the define values below
 //  by: khing
 

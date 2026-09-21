@@ -1,4 +1,4 @@
-local hs = hyde.config.start or {}
+local hs = shade.config.start or {}
 
 local function check_exec(cmd)
 	if type(cmd) == "string" and cmd ~= "" then
@@ -17,7 +17,7 @@ hl.on(
 		check_exec(hs.blue_light_filter_daemon)
 		check_exec(hs.notifications)
 		check_exec(hs.auth_dialogue)
-		check_exec("hyprctl setcursor " .. hyde.config.ui.cursor_theme .. " " .. hyde.config.ui.cursor_size)
+		check_exec("hyprctl setcursor " .. shade.config.ui.cursor_theme .. " " .. shade.config.ui.cursor_size)
 		check_exec(hs.text_clipboard)
 		check_exec(hs.image_clipboard)
 		check_exec(hs.clipboard_persist)
@@ -26,6 +26,6 @@ hl.on(
 		check_exec(hs.applet_network_manager)
 		check_exec(hs.applet_removable_media)
 		check_exec(hs.applet_bluetooth)
-		check_exec(hs.hyde_config)
+		check_exec(hs.shade_config)
 	end
 )

@@ -1,12 +1,12 @@
 <div align = center>
   <a href="https://discord.gg/AYbJ9MJez7">
-    <img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FmT5YqjaJFh%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&suffix=%20members&style=for-the-badge&logo=discord&logoSize=auto&label=The%20HyDe%20Project&labelColor=ebbcba&color=c79bf0">
+    <img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FmT5YqjaJFh%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&suffix=%20members&style=for-the-badge&logo=discord&logoSize=auto&label=The%20shade%20Project&labelColor=ebbcba&color=c79bf0">
   </a>
 </div>
 
 ###### _<div align="right"><a id=-design-by-t2></a><sub>// 由 t2 设计</sub></div>_
 
-![hyde_banner](../assets/hyde_banner.png)
+![shade_banner](../assets/shade_banner.png)
 
 <!--
 Multi-language README support
@@ -34,7 +34,7 @@ Multi-language README support
 <a href="../assets/keybinds/KEYBINDINGS.zh.md"><kbd> <br>  按键映射  <br> </kbd></a>&ensp;&ensp;
 <a href="#贡献"><kbd> <br>  贡献指南  <br> </kbd></a>&ensp;&ensp;
 <a href="https://www.youtube.com/watch?v=2rWqdKU1vu8&list=PLt8rU_ebLsc5yEHUVsAQTqokIBMtx3RFY&index=1"><kbd> <br> Youtube <br> </kbd></a>&ensp;&ensp;
-<a href="https://hydeproject.pages.dev/"><kbd> <br> Wiki <br> </kbd></a>&ensp;&ensp;
+<a href="https://shadeproject.pages.dev/"><kbd> <br> Wiki <br> </kbd></a>&ensp;&ensp;
 <a href="https://discord.gg/qWehcFJxPa"><kbd> <br> Discord <br> </kbd></a>
 
 </div><br><br>
@@ -50,12 +50,12 @@ Multi-language README support
 </div>
 
 看这里了解完整说明：
-[Hyde 之旅：起源与未来蓝图](./Hyprdots-to-HyDE.zh.md)
+[shade 之旅：起源与未来蓝图](./Hyprdots-to-shade.zh.md)
 
 <!--
-<img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FmT5YqjaJFh%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&suffix=%20members&style=for-the-badge&logo=discord&logoSize=auto&label=The%20HyDe%20Project&labelColor=ebbcba&color=c79bf0">
+<img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FmT5YqjaJFh%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&suffix=%20members&style=for-the-badge&logo=discord&logoSize=auto&label=The%20shade%20Project&labelColor=ebbcba&color=c79bf0">
 
-<img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FmT5YqjaJFh%3Fwith_counts%3Dtrue&query=%24.approximate_presence_count&suffix=%20online&style=for-the-badge&logo=discord&logoSize=auto&label=The%20HyDe%20Project&labelColor=ebbcba&color=c79bf0">
+<img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FmT5YqjaJFh%3Fwith_counts%3Dtrue&query=%24.approximate_presence_count&suffix=%20online&style=for-the-badge&logo=discord&logoSize=auto&label=The%20shade%20Project&labelColor=ebbcba&color=c79bf0">
 -->
 
 <https://github.com/prasanthrangan/hyprdots/assets/106020512/7f8fadc8-e293-4482-a851-e9c6464f5265>
@@ -68,9 +68,9 @@ Multi-language README support
 ---
 
 安装脚本适用于最小安装的 [Arch Linux](https://wiki.archlinux.org/title/Arch_Linux) 系统，但在某些[基于 Arch 的发行版](https://wiki.archlinux.org/title/Arch-based_distributions)上**可能**也能正常运行.
-HyDE 是一个高度自定义的预设，在其他[桌面环境](https://wiki.archlinux.org/title/Desktop_environment)/[窗口管理器](https://wiki.archlinux.org/title/Window_manager)的上安装 HyDE 也许可行，但它可能会与您的[GTK](https://wiki.archlinux.org/title/GTK)/[Qt](https://wiki.archlinux.org/title/Qt) 主题, [Shell](https://wiki.archlinux.org/title/Command-line_shell), [SDDM](https://wiki.archlinux.org/title/SDDM), [GRUB](https://wiki.archlinux.org/title/GRUB)等等配置相冲突。您需自行承担风险。
+shade 是一个高度自定义的预设，在其他[桌面环境](https://wiki.archlinux.org/title/Desktop_environment)/[窗口管理器](https://wiki.archlinux.org/title/Window_manager)的上安装 shade 也许可行，但它可能会与您的[GTK](https://wiki.archlinux.org/title/GTK)/[Qt](https://wiki.archlinux.org/title/Qt) 主题, [Shell](https://wiki.archlinux.org/title/Command-line_shell), [SDDM](https://wiki.archlinux.org/title/SDDM), [GRUB](https://wiki.archlinux.org/title/GRUB)等等配置相冲突。您需自行承担风险。
 
-我们支持 NixOS，但作为一个单独的仓库在 [Hydenix](https://github.com/richen604/hydenix/tree/main) 提供。
+我们支持 NixOS，但作为一个单独的仓库在 [shadenix](https://github.com/richen604/shadenix/tree/main) 提供。
 
 > [!IMPORTANT]
 > 安装脚本会自动检测英伟达显卡并安装 nvidia-open-dkms 内核驱动。
@@ -84,13 +84,13 @@ HyDE 是一个高度自定义的预设，在其他[桌面环境](https://wiki.ar
 
 ```shell
 sudo pacman -S --needed git base-devel
-git clone --depth 1 https://github.com/HyDE-Project/HyDE ~/HyDE
-cd ~/HyDE/Scripts
+git clone --depth 1 https://github.com/shade-Project/shade ~/shade
+cd ~/shade/Scripts
 ./install.sh
 ```
 
 > [!TIP]
-> 您可以在 `Scripts/pkg_user.lst` 中添加您想随 HyDE 一同安装的应用，并将此文件作为参数传入安装脚本，像这样：
+> 您可以在 `Scripts/pkg_user.lst` 中添加您想随 shade 一同安装的应用，并将此文件作为参数传入安装脚本，像这样：
 >
 > ```shell
 > ./install.sh pkg_user.lst
@@ -102,12 +102,12 @@ cd ~/HyDE/Scripts
 
 <!--
 
-As a second install option, you can also use `Hyde-install`, which might be easier for some.
-View installation instructions for HyDE in [Hyde-cli - Usage](https://github.com/kRHYME7/Hyde-cli?tab=readme-ov-file#usage).
+As a second install option, you can also use `shade-install`, which might be easier for some.
+View installation instructions for shade in [shade-cli - Usage](https://github.com/kRHYME7/shade-cli?tab=readme-ov-file#usage).
 -->
 
 
-在安装脚本运行完成后请重启，首次启动时您将看到 SDDM 登录界面（或者黑屏）。更多细节请看[安装 wiki](https://hydeproject.pages.dev/zh/getting-started/installation)
+在安装脚本运行完成后请重启，首次启动时您将看到 SDDM 登录界面（或者黑屏）。更多细节请看[安装 wiki](https://shadeproject.pages.dev/zh/getting-started/installation)
 
 <div align="right">
   <br>
@@ -126,7 +126,7 @@ View installation instructions for HyDE in [Hyde-cli - Usage](https://github.com
 - 了解我们的发布流程请见 [RELEASE_POLICY.md](../../RELEASE_POLICY.md)
 - 在提交第一个 PR 时，请将您自己加入 [CONTRIBUTORS.md](../../CONTRIBUTORS.md)
 
-无论您是参与代码、测试还是文档，我们都感谢您为让 HyDE 变得更好所做的贡献。谢谢！
+无论您是参与代码、测试还是文档，我们都感谢您为让 shade 变得更好所做的贡献。谢谢！
 
 <div align="right">
   <br>
@@ -138,13 +138,13 @@ View installation instructions for HyDE in [Hyde-cli - Usage](https://github.com
 
 ---
 
-要更新 HyDE, 您需要从 GitHub 中拉取最新更改并通过运行以下命令恢复配置：
+要更新 shade, 您需要从 GitHub 中拉取最新更改并通过运行以下命令恢复配置：
 
 > [!WARNING]
 > 以下命令将会丢弃仓库中所有未提交的本地更改。
 
 ```shell
-cd ~/HyDE/Scripts
+cd ~/shade/Scripts
 git fetch --update-shallow --depth 1 origin master
 git reset --hard origin/master
 ./install.sh -r
@@ -155,8 +155,8 @@ git reset --hard origin/master
 > 但是，所有被覆盖的配置会先被备份到 `~/.config/cfg_backups/` 中，以便找回。
 
 <!--
-As a second update option, you can use `Hyde restore ...`, which does have a better way of managing restore and backup options.
-For more details, you can refer to [Hyde-cli - dots management wiki](https://github.com/kRHYME7/Hyde-cli/wiki/Dots-Management).
+As a second update option, you can use `shade restore ...`, which does have a better way of managing restore and backup options.
+For more details, you can refer to [shade-cli - dots management wiki](https://github.com/kRHYME7/shade-cli/wiki/Dots-Management).
 -->
 
 <div align="right">
@@ -164,12 +164,12 @@ For more details, you can refer to [Hyde-cli - dots management wiki](https://git
   <a href="#-design-by-t2"><kbd> <br> 🡅 <br> </kbd></a>
 </div>
 
-<a id="hydevm"></a>
-<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=HYDEVM" width="450"/>
+<a id="shadevm"></a>
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=SHADEVM" width="450"/>
 
 ---
 
-HyDEVM 是一个脚本，允许您在虚拟机中运行 HyDE 进行测试和开发。
+shadeVM 是一个脚本，允许您在虚拟机中运行 shade 进行测试和开发。
 
 ## 快速开始
 
@@ -177,22 +177,22 @@ HyDEVM 是一个脚本，允许您在虚拟机中运行 HyDE 进行测试和开�
 
 ```bash
 # 下载并运行（会自动检测缺失的软件包）
-curl -L https://raw.githubusercontent.com/HyDE-Project/HyDE/main/Scripts/hydevm/hydevm.sh -o hydevm
-chmod +x hydevm
-./hydevm
+curl -L https://raw.githubusercontent.com/shade-Project/shade/main/Scripts/shadevm/shadevm.sh -o shadevm
+chmod +x shadevm
+./shadevm
 ```
 
 ### NixOS (或 Nix)
 
 ```bash
-# 使用 HyDE 仓库的 flakes
-nix run github:HyDE-Project/HyDE
+# 使用 shade 仓库的 flakes
+nix run github:shade-Project/shade
 
 # 或者如果您已克隆了本地仓库
 nix run .
 ```
 
-更多详情请参考 [HyDEVM 说明文档](../../Scripts/hydevm/README.md)。
+更多详情请参考 [shadeVM 说明文档](../../Scripts/shadevm/README.md)。
 
 <div align="right">
   <br>
@@ -205,23 +205,23 @@ nix run .
 ---
 
 所有的官方主题都作为单独的仓库存储，您可以用过主题补丁程序安装。
-详情请见 [HyDE-Project/hyde-themes](https://github.com/HyDE-Project/hyde-themes)。
+详情请见 [shade-Project/shade-themes](https://github.com/shade-Project/shade-themes)。
 
 <div align="center">
   <table><tr><td>
 
-[![Catppuccin-Latte](https://placehold.co/130x30/dd7878/eff1f5?text=Catppuccin-Latte&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Catppuccin-Latte)
-[![Catppuccin-Mocha](https://placehold.co/130x30/b4befe/11111b?text=Catppuccin-Mocha&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Catppuccin-Mocha)
-[![Decay-Green](https://placehold.co/130x30/90ceaa/151720?text=Decay-Green&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Decay-Green)
-[![Edge-Runner](https://placehold.co/130x30/fada16/000000?text=Edge-Runner&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Edge-Runner)
-[![Frosted-Glass](https://placehold.co/130x30/7ed6ff/1e4c84?text=Frosted-Glass&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Frosted-Glass)
-[![Graphite-Mono](https://placehold.co/130x30/a6a6a6/262626?text=Graphite-Mono&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Graphite-Mono)
-[![Gruvbox-Retro](https://placehold.co/130x30/475437/B5CC97?text=Gruvbox-Retro&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Gruvbox-Retro)
-[![Material-Sakura](https://placehold.co/130x30/f2e9e1/b4637a?text=Material-Sakura&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Material-Sakura)
-[![Nordic-Blue](https://placehold.co/130x30/D9D9D9/476A84?text=Nordic-Blue&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Nordic-Blue)
-[![Rosé-Pine](https://placehold.co/130x30/c4a7e7/191724?text=Rosé-Pine&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Rose-Pine)
-[![Synth-Wave](https://placehold.co/130x30/495495/ff7edb?text=Synth-Wave&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Synth-Wave)
-[![Tokyo-Night](https://placehold.co/130x30/7aa2f7/24283b?text=Tokyo-Night&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Tokyo-Night)
+[![Catppuccin-Latte](https://placehold.co/130x30/dd7878/eff1f5?text=Catppuccin-Latte&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Catppuccin-Latte)
+[![Catppuccin-Mocha](https://placehold.co/130x30/b4befe/11111b?text=Catppuccin-Mocha&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Catppuccin-Mocha)
+[![Decay-Green](https://placehold.co/130x30/90ceaa/151720?text=Decay-Green&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Decay-Green)
+[![Edge-Runner](https://placehold.co/130x30/fada16/000000?text=Edge-Runner&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Edge-Runner)
+[![Frosted-Glass](https://placehold.co/130x30/7ed6ff/1e4c84?text=Frosted-Glass&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Frosted-Glass)
+[![Graphite-Mono](https://placehold.co/130x30/a6a6a6/262626?text=Graphite-Mono&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Graphite-Mono)
+[![Gruvbox-Retro](https://placehold.co/130x30/475437/B5CC97?text=Gruvbox-Retro&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Gruvbox-Retro)
+[![Material-Sakura](https://placehold.co/130x30/f2e9e1/b4637a?text=Material-Sakura&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Material-Sakura)
+[![Nordic-Blue](https://placehold.co/130x30/D9D9D9/476A84?text=Nordic-Blue&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Nordic-Blue)
+[![Rosé-Pine](https://placehold.co/130x30/c4a7e7/191724?text=Rosé-Pine&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Rose-Pine)
+[![Synth-Wave](https://placehold.co/130x30/495495/ff7edb?text=Synth-Wave&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Synth-Wave)
+[![Tokyo-Night](https://placehold.co/130x30/7aa2f7/24283b?text=Tokyo-Night&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Tokyo-Night)
 
 </td></tr></table>
 </div>
@@ -229,7 +229,7 @@ nix run .
 > [!TIP]
 > 包括您在内的所有人都可以创建、维护、分享主题！它们都可以通过主题补丁程序安装。
 > 请参阅[主题 wiki](https://github.com/prasanthrangan/hyprdots/wiki/Theming) 来创建您的个性化主题。
-> 如果您想展示您的 hyde 主题，或者您想寻找非官方主题，请看 [kRHYME7/hyde-gallery](https://github.com/kRHYME7/hyde-gallery)。
+> 如果您想展示您的 shade 主题，或者您想寻找非官方主题，请看 [kRHYME7/shade-gallery](https://github.com/kRHYME7/shade-gallery)。
 
 <div align="right">
   <br>
@@ -285,7 +285,7 @@ nix run .
 <a id="star_history"></a>
 <img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=星标" width="450"/>
 
-[![Stargazers over time](https://starchart.cc/HyDE-Project/HyDE.svg?background=%231f2226&axis=%23ebbcba&line=%23c79bf0)](https://starchart.cc/HyDE-Project/HyDE)
+[![Stargazers over time](https://starchart.cc/shade-Project/shade.svg?background=%231f2226&axis=%23ebbcba&line=%23c79bf0)](https://starchart.cc/shade-Project/shade)
 
 
 
@@ -323,8 +323,8 @@ nix run .
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://rubiin.is-a.dev"><img src="https://avatars.githubusercontent.com/u/8222059?v=4?s=100" width="100px;" alt="Rubin Bhandari"/><br /><sub><b>Rubin Bhandari</b></sub></a><br /><a href="https://github.com/HyDE-Project/HyDE/commits?author=rubiin" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/kRHYME7"><img src="https://avatars.githubusercontent.com/u/53417443?v=4?s=100" width="100px;" alt="Khing"/><br /><sub><b>Khing</b></sub></a><br /><a href="https://github.com/HyDE-Project/HyDE/commits?author=kRHYME7" title="Code">💻</a> <a href="https://github.com/HyDE-Project/HyDE/commits?author=kRHYME7" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://rubiin.is-a.dev"><img src="https://avatars.githubusercontent.com/u/8222059?v=4?s=100" width="100px;" alt="Rubin Bhandari"/><br /><sub><b>Rubin Bhandari</b></sub></a><br /><a href="https://github.com/shade-Project/shade/commits?author=rubiin" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/kRHYME7"><img src="https://avatars.githubusercontent.com/u/53417443?v=4?s=100" width="100px;" alt="Khing"/><br /><sub><b>Khing</b></sub></a><br /><a href="https://github.com/shade-Project/shade/commits?author=kRHYME7" title="Code">💻</a> <a href="https://github.com/shade-Project/shade/commits?author=kRHYME7" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>

@@ -1,4 +1,4 @@
-$XDG_CACHE_HOME/hyde/wallbash/colors.inc
+$XDG_CACHE_HOME/shade/wallbash/colors.inc
 // This is a template file for wallbash shaders this can be use for
 
 #define wallbash_pry1 <wallbash_pry1_rgb> 

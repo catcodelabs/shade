@@ -2,9 +2,9 @@
 
 # The editor a selection opens in, discovered rather than chosen. The user's own
 # answer comes first; the rest is an order of discovery over what this machine
-# already has. HyDE installs none of them, so a machine with no editor gets a
+# already has. shade installs none of them, so a machine with no editor gets a
 # message naming the fix instead of a guess.
-_hyde_editor() {
+_shade_editor() {
     local candidate
     for candidate in "$EDITOR" "$VISUAL" nvim vim helix hx nano micro emacs; do
         [[ -n "$candidate" ]] || continue
@@ -52,7 +52,7 @@ _fuzzy_edit_search_file_content() {
 
     if [[ -n "$selected_file" ]]; then
         local editor
-        if editor=$(_hyde_editor); then
+        if editor=$(_shade_editor); then
             "$editor" "$selected_file"
         else
             echo "No editor found. Install one, or export EDITOR from \$ZDOTDIR/user.zsh or \$HOME/.user.zsh."
@@ -80,7 +80,7 @@ _fuzzy_edit_search_file() {
 
     if [[ -n "$selected_file" && -f "$selected_file" ]]; then
         local editor
-        if editor=$(_hyde_editor); then
+        if editor=$(_shade_editor); then
             "$editor" "$selected_file"
         else
             echo "No editor found. Install one, or export EDITOR from \$ZDOTDIR/user.zsh or \$HOME/.user.zsh."

@@ -1,12 +1,12 @@
 <div align = center>
   <a href="https://discord.gg/AYbJ9MJez7">
-    <img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FmT5YqjaJFh%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&suffix=%20members&style=for-the-badge&logo=discord&logoSize=auto&label=The%20HyDe%20Project&labelColor=ebbcba&color=c79bf0">
+    <img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FmT5YqjaJFh%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&suffix=%20members&style=for-the-badge&logo=discord&logoSize=auto&label=The%20shade%20Project&labelColor=ebbcba&color=c79bf0">
   </a>
 </div>
 
 ###### _<div align="right"><a id=-design-by-t2></a><sub>// design by t2</sub></div>_
 
-![hyde_banner](../assets/hyde_banner.png)
+![shade_banner](../assets/shade_banner.png)
 
 <!--
 Multi-language README support
@@ -31,7 +31,7 @@ Multi-language README support
 <a href="#styles"><kbd> <br> Stiller <br> </kbd></a>&ensp;&ensp;
 <a href="../../KEYBINDINGS.md"><kbd> <br> Tuş atamaları <br> </kbd></a>&ensp;&ensp;
 <a href="https://www.youtube.com/watch?v=2rWqdKU1vu8&list=PLt8rU_ebLsc5yEHUVsAQTqokIBMtx3RFY&index=1"><kbd> <br> Youtube <br> </kbd></a>&ensp;&ensp;
-<a href="https://hydeproject.pages.dev/"><kbd> <br> Wiki <br> </kbd></a>&ensp;&ensp;
+<a href="https://shadeproject.pages.dev/"><kbd> <br> Wiki <br> </kbd></a>&ensp;&ensp;
 <a href="https://discord.gg/qWehcFJxPa"><kbd> <br> Discord <br> </kbd></a>
 
 </div><br><br>
@@ -47,12 +47,12 @@ Multi-language README support
 </div>
 
 Tam not için bu bağlantıya göz atın:
-[HyDE ve ötesine yolculuk](../../Hyprdots-to-HyDE.md)
+[shade ve ötesine yolculuk](../../Hyprdots-to-shade.md)
 
 <!--
-<img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FmT5YqjaJFh%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&suffix=%20members&style=for-the-badge&logo=discord&logoSize=auto&label=The%20HyDe%20Project&labelColor=ebbcba&color=c79bf0">
+<img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FmT5YqjaJFh%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&suffix=%20members&style=for-the-badge&logo=discord&logoSize=auto&label=The%20shade%20Project&labelColor=ebbcba&color=c79bf0">
 
-<img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FmT5YqjaJFh%3Fwith_counts%3Dtrue&query=%24.approximate_presence_count&suffix=%20online&style=for-the-badge&logo=discord&logoSize=auto&label=The%20HyDe%20Project&labelColor=ebbcba&color=c79bf0">
+<img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FmT5YqjaJFh%3Fwith_counts%3Dtrue&query=%24.approximate_presence_count&suffix=%20online&style=for-the-badge&logo=discord&logoSize=auto&label=The%20shade%20Project&labelColor=ebbcba&color=c79bf0">
 -->
 
 <https://github.com/prasanthrangan/hyprdots/assets/106020512/7f8fadc8-e293-4482-a851-e9c6464f5265>
@@ -64,9 +64,9 @@ Tam not için bu bağlantıya göz atın:
 
 ---
 
-Kurulum betiği (script), minimal [Arch Linux](https://wiki.archlinux.org/title/Arch_Linux) kurulumu için tasarlanmıştır, ancak **bazı** [Arch tabanlı dağıtımlarda](https://wiki.archlinux.org/title/Arch-based_distributions) da çalışabilir. HyDE'yi başka bir [DE](https://wiki.archlinux.org/title/Desktop_environment)/[WM](https://wiki.archlinux.org/title/Window_manager) ile birlikte kurmak mümkün olsa da, bu kurulumun büyük ölçüde özelleştirilmiş olması nedeniyle [GTK](https://wiki.archlinux.org/title/GTK)/[Qt](https://wiki.archlinux.org/title/Qt) temalarınız, [Shell](https://wiki.archlinux.org/title/Command-line_shell), [SDDM](https://wiki.archlinux.org/title/SDDM), [GRUB](https://wiki.archlinux.org/title/GRUB) vb. ile **çakışabilir** ve riski size aittir.
+Kurulum betiği (script), minimal [Arch Linux](https://wiki.archlinux.org/title/Arch_Linux) kurulumu için tasarlanmıştır, ancak **bazı** [Arch tabanlı dağıtımlarda](https://wiki.archlinux.org/title/Arch-based_distributions) da çalışabilir. shade'yi başka bir [DE](https://wiki.archlinux.org/title/Desktop_environment)/[WM](https://wiki.archlinux.org/title/Window_manager) ile birlikte kurmak mümkün olsa da, bu kurulumun büyük ölçüde özelleştirilmiş olması nedeniyle [GTK](https://wiki.archlinux.org/title/GTK)/[Qt](https://wiki.archlinux.org/title/Qt) temalarınız, [Shell](https://wiki.archlinux.org/title/Command-line_shell), [SDDM](https://wiki.archlinux.org/title/SDDM), [GRUB](https://wiki.archlinux.org/title/GRUB) vb. ile **çakışabilir** ve riski size aittir.
 
-NixOS desteği için ayrı bir proje yürütülmektedir @ [Hydenix](https://github.com/richen604/hydenix/tree/main)
+NixOS desteği için ayrı bir proje yürütülmektedir @ [shadenix](https://github.com/richen604/shadenix/tree/main)
 
 > [!IMPORTANT]
 > Kurulum komut dosyası NVIDIA kartını otomatik olarak algılar ve çekirdeğiniz için nvidia-open-dkms sürücülerini yükler.
@@ -79,13 +79,13 @@ Kurulum için aşağıdaki komutları çalıştırın:
 
 ```shell
 pacman -S --needed git base-devel
-git clone --depth 1 https://github.com/HyDE-Project/HyDE ~/HyDE
-cd ~/HyDE/Scripts
+git clone --depth 1 https://github.com/shade-Project/shade ~/shade
+cd ~/shade/Scripts
 ./install.sh
 ```
 
 > [!TIP]
-> HyDE ile birlikte yüklemek istediğiniz diğer uygulamaları `Scripts/pkg_user.lst` dosyasına ekleyebilir ve dosyayı bir parametre olarak geçirerek şu şekilde yükleyebilirsiniz:
+> shade ile birlikte yüklemek istediğiniz diğer uygulamaları `Scripts/pkg_user.lst` dosyasına ekleyebilir ve dosyayı bir parametre olarak geçirerek şu şekilde yükleyebilirsiniz:
 >
 > ```shell
 > ./install.sh pkg_user.lst
@@ -97,12 +97,12 @@ cd ~/HyDE/Scripts
 
 <!--
 
-As a second install option, you can also use `Hyde-install`, which might be easier for some.
-View installation instructions for HyDE in [Hyde-cli - Usage](https://github.com/kRHYME7/Hyde-cli?tab=readme-ov-file#usage).
+As a second install option, you can also use `shade-install`, which might be easier for some.
+View installation instructions for shade in [shade-cli - Usage](https://github.com/kRHYME7/shade-cli?tab=readme-ov-file#usage).
 -->
 
 Kurulum betiği (script) tamamlandıktan ve sizi ilk kez SDDM oturum açma ekranına (veya siyah ekrana) yönlendirdikten sonra lütfen yeniden başlatın.
-Daha fazla ayrıntı için lütfen [kurulum wiki](https://hydeproject.pages.dev/en/getting-started/installation) sayfasına bakın.
+Daha fazla ayrıntı için lütfen [kurulum wiki](https://shadeproject.pages.dev/en/getting-started/installation) sayfasına bakın.
 
 <div align="right">
   <br>
@@ -114,10 +114,10 @@ Daha fazla ayrıntı için lütfen [kurulum wiki](https://hydeproject.pages.dev/
 
 ---
 
-HyDE'yi güncellemek için GitHub'dan en son değişiklikleri almanız ve aşağıdaki komutları çalıştırarak yapılandırmaları geri yüklemeniz gerekir:
+shade'yi güncellemek için GitHub'dan en son değişiklikleri almanız ve aşağıdaki komutları çalıştırarak yapılandırmaları geri yüklemeniz gerekir:
 
 ```shell
-cd ~/HyDE/Scripts
+cd ~/shade/Scripts
 git pull origin master
 ./install.sh -r
 ```
@@ -127,8 +127,8 @@ git pull origin master
 > Ancak, değiştirilen tüm yapılandırmalar yedeklenir ve `~/.config/cfg_backups` dizininden geri yüklenebilir.
 
 <!--
-As a second update option, you can use `Hyde restore ...`, which does have a better way of managing restore and backup options.
-For more details, you can refer to [Hyde-cli - dots management wiki](https://github.com/kRHYME7/Hyde-cli/wiki/Dots-Management).
+As a second update option, you can use `shade restore ...`, which does have a better way of managing restore and backup options.
+For more details, you can refer to [shade-cli - dots management wiki](https://github.com/kRHYME7/shade-cli/wiki/Dots-Management).
 -->
 
 <div align="right">
@@ -136,12 +136,12 @@ For more details, you can refer to [Hyde-cli - dots management wiki](https://git
   <a href="#-design-by-t2"><kbd> <br> 🡅 <br> </kbd></a>
 </div>
 
-<a id="hydevm"></a>
-<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=HYDEVM" width="450"/>
+<a id="shadevm"></a>
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=SHADEVM" width="450"/>
 
 ---
 
-HyDEVM, test ve geliştirme amacıyla HyDE'yi sanal makinede çalıştırmanıza olanak tanıyan bir komut dosyasıdır.
+shadeVM, test ve geliştirme amacıyla shade'yi sanal makinede çalıştırmanıza olanak tanıyan bir komut dosyasıdır.
 
 ## Hızlı Başlangıç
 
@@ -149,22 +149,22 @@ HyDEVM, test ve geliştirme amacıyla HyDE'yi sanal makinede çalıştırmanıza
 
 ```bash
 # İndirin ve çalıştırın (eksik paketleri otomatik olarak algılar)
-curl -L https://raw.githubusercontent.com/HyDE-Project/HyDE/main/Scripts/hydevm/hydevm.sh -o hydevm
-chmod +x hydevm
-./hydevm
+curl -L https://raw.githubusercontent.com/shade-Project/shade/main/Scripts/shadevm/shadevm.sh -o shadevm
+chmod +x shadevm
+./shadevm
 ```
 
 ### NixOS (veya Nix)
 
 ```bash
-# HyDE deposundan flake kullanımı
-nix run github:HyDE-Project/HyDE
+# shade deposundan flake kullanımı
+nix run github:shade-Project/shade
 
 # Veya depoyu yerel olarak klonladıysanız
 nix run .
 ```
 
-Daha fazla ayrıntı için lütfen [HyDEVM README](Scripts/hydevm/README.md) dosyasına bakın.
+Daha fazla ayrıntı için lütfen [shadeVM README](Scripts/shadevm/README.md) dosyasına bakın.
 
 <div align="right">
   <br>
@@ -177,23 +177,23 @@ Daha fazla ayrıntı için lütfen [HyDEVM README](Scripts/hydevm/README.md) dos
 ---
 
 Tüm resmi temalarımız ayrı bir depoda saklanır ve kullanıcılar bunları themepatcher ile yükleyebilir.
-Daha fazla bilgi için [HyDE-Project/hyde-themes](https://github.com/HyDE-Project/hyde-themes) adresini ziyaret edin.
+Daha fazla bilgi için [shade-Project/shade-themes](https://github.com/shade-Project/shade-themes) adresini ziyaret edin.
 
 <div align="center">
   <table><tr><td>
 
-[![Catppuccin-Latte](https://placehold.co/130x30/dd7878/eff1f5?text=Catppuccin-Latte&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Catppuccin-Latte)
-[![Catppuccin-Mocha](https://placehold.co/130x30/b4befe/11111b?text=Catppuccin-Mocha&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Catppuccin-Mocha)
-[![Decay-Green](https://placehold.co/130x30/90ceaa/151720?text=Decay-Green&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Decay-Green)
-[![Edge-Runner](https://placehold.co/130x30/fada16/000000?text=Edge-Runner&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Edge-Runner)
-[![Frosted-Glass](https://placehold.co/130x30/7ed6ff/1e4c84?text=Frosted-Glass&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Frosted-Glass)
-[![Graphite-Mono](https://placehold.co/130x30/a6a6a6/262626?text=Graphite-Mono&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Graphite-Mono)
-[![Gruvbox-Retro](https://placehold.co/130x30/475437/B5CC97?text=Gruvbox-Retro&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Gruvbox-Retro)
-[![Material-Sakura](https://placehold.co/130x30/f2e9e1/b4637a?text=Material-Sakura&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Material-Sakura)
-[![Nordic-Blue](https://placehold.co/130x30/D9D9D9/476A84?text=Nordic-Blue&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Nordic-Blue)
-[![Rosé-Pine](https://placehold.co/130x30/c4a7e7/191724?text=Rosé-Pine&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Rose-Pine)
-[![Synth-Wave](https://placehold.co/130x30/495495/ff7edb?text=Synth-Wave&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Synth-Wave)
-[![Tokyo-Night](https://placehold.co/130x30/7aa2f7/24283b?text=Tokyo-Night&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Tokyo-Night)
+[![Catppuccin-Latte](https://placehold.co/130x30/dd7878/eff1f5?text=Catppuccin-Latte&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Catppuccin-Latte)
+[![Catppuccin-Mocha](https://placehold.co/130x30/b4befe/11111b?text=Catppuccin-Mocha&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Catppuccin-Mocha)
+[![Decay-Green](https://placehold.co/130x30/90ceaa/151720?text=Decay-Green&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Decay-Green)
+[![Edge-Runner](https://placehold.co/130x30/fada16/000000?text=Edge-Runner&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Edge-Runner)
+[![Frosted-Glass](https://placehold.co/130x30/7ed6ff/1e4c84?text=Frosted-Glass&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Frosted-Glass)
+[![Graphite-Mono](https://placehold.co/130x30/a6a6a6/262626?text=Graphite-Mono&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Graphite-Mono)
+[![Gruvbox-Retro](https://placehold.co/130x30/475437/B5CC97?text=Gruvbox-Retro&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Gruvbox-Retro)
+[![Material-Sakura](https://placehold.co/130x30/f2e9e1/b4637a?text=Material-Sakura&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Material-Sakura)
+[![Nordic-Blue](https://placehold.co/130x30/D9D9D9/476A84?text=Nordic-Blue&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Nordic-Blue)
+[![Rosé-Pine](https://placehold.co/130x30/c4a7e7/191724?text=Rosé-Pine&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Rose-Pine)
+[![Synth-Wave](https://placehold.co/130x30/495495/ff7edb?text=Synth-Wave&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Synth-Wave)
+[![Tokyo-Night](https://placehold.co/130x30/7aa2f7/24283b?text=Tokyo-Night&font=Oswald)](https://github.com/shade-Project/shade-themes/tree/Tokyo-Night)
 
   </td></tr></table>
 </div>
@@ -201,7 +201,7 @@ Daha fazla bilgi için [HyDE-Project/hyde-themes](https://github.com/HyDE-Projec
 > [!TIP]
 > Herkes, siz dahil, ek temalar oluşturabilir, sürdürebilir ve paylaşabilir; bunların hepsi themepatcher ile kurulabilir!
 > Kendi özel temanızı oluşturmak için lütfen [theming wiki](https://github.com/prasanthrangan/hyprdots/wiki/Theming) sayfasına bakın.
-> Hyde temanızın sergilenmesini istiyorsanız veya resmi olmayan temaları bulmak istiyorsanız [kRHYME7/hyde-gallery](https://github.com/kRHYME7/hyde-gallery) adresini ziyaret edin!
+> shade temanızın sergilenmesini istiyorsanız veya resmi olmayan temaları bulmak istiyorsanız [kRHYME7/shade-gallery](https://github.com/kRHYME7/shade-gallery) adresini ziyaret edin!
 
 <div align="right">
   <br>
@@ -259,10 +259,10 @@ Daha fazla bilgi için [HyDE-Project/hyde-themes](https://github.com/HyDE-Projec
 
 ---
 
-<a href="https://star-history.com/#hyde-project/hyde&hyde-project/hyde-gallery&hyde-project/hyde-themes&Timeline">
+<a href="https://star-history.com/#shade-project/shade&shade-project/shade-gallery&shade-project/shade-themes&Timeline">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=hyde-project/hyde&type=Timeline&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=hyde-project/hyde&type=Timeline" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=hyde-project/hyde&type=Timeline" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=shade-project/shade&type=Timeline&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=shade-project/shade&type=Timeline" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=shade-project/shade&type=Timeline" />
  </picture>
 </a>

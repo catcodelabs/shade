@@ -1,0 +1,127 @@
+[shade]
+description = "shade core configuration"
+pre_command = "echo 'shade Is the Best!'"
+version = "v26.8.1"
+
+#? Core configuration
+[[shade.files]]
+action = "preserve"
+source_root = "Configs/.config"
+target_root = "${XDG_CONFIG_HOME}"
+paths = ["shade/wallbash"]
+
+#? dconf profile for isolated shade settings
+[[shade.files]]
+action = "preserve"
+source_root = "Configs/.config"
+target_root = "${XDG_CONFIG_HOME}"
+paths = ["dconf"]
+
+[[shade.files]]
+clean_target = true
+action = "sync"
+source_root = "Configs/.local/lib"
+target_root = "${HOME}/.local/lib"
+paths = "shade"
+ignored_paths = [".*", "__pycache__"]
+
+# [[shade.files]]
+# action = "sync"
+# source_root = "Configs/.local/share"
+# target_root = "${XDG_DATA_HOME}"
+# paths = ["icons/Wallbash-Icon", "themes/Wallbash-Gtk"]
+[[shade.files]]
+clean_target = true
+action = "sync"
+source_root = "Configs/.local/share"
+target_root = "${XDG_DATA_HOME}"
+paths = ["shade", "wallbash", "xdg-desktop-portal/hyprland-portals.conf"]
+ignored_paths = [".*", "__pycache__", "schema"]
+
+[[shade.files]]
+action = "sync"
+source_root = "Configs/.config"
+target_root = "${XDG_CONFIG_HOME}"
+paths = ["gtk-3.0", "Kvantum", "nwg-look", "qt5ct", "qt6ct", "xsettingsd"]
+ignored_paths = [
+    "qt5ct/qt5ct.conf",
+    "qt6ct/qt6ct.conf",
+    "qt5ct/colors/wallbash.conf",
+    "qt6ct/colors/wallbash.conf",
+    "gtk-3.0/settings.ini"
+]
+
+[[shade.files]]
+action = "sync"
+source_root = "Configs/"
+target_root = "${HOME}"
+paths = ".gtkrc-2.0"
+
+# Converted from Scripts/restore_cfg.psv
+[[shade.files]]
+action = "preserve"
+source_root = "Configs/.config/shade"
+target_root = "${XDG_CONFIG_HOME}/shade"
+paths = "config.toml"
+
+[[shade.files]]
+action = "preserve"
+source_root = "Configs/.config/pypr"
+target_root = "${XDG_CONFIG_HOME}/pypr"
+paths = "config.toml"
+
+# [[shade.files]]
+# action = "sync"
+# source_root = "Configs/.config/systemd"
+# target_root = "${XDG_CONFIG_HOME}/systemd"
+# paths = "user"
+[[shade.files]]
+action = "sync"
+source_root = "Configs/.config/uwsm"
+target_root = "${XDG_CONFIG_HOME}/uwsm"
+paths = ["env", "env-hyprland", "env.d", "env-hyprland.d"]
+
+[[shade.files]]
+action = "preserve"
+source_root = "Configs/.config"
+target_root = "${XDG_CONFIG_HOME}"
+paths = [
+    "xdg-terminals.list",
+    "kdeglobals",
+    "qt5ct/qt5ct.conf",
+    "qt6ct/qt6ct.conf",
+    "qt5ct/colors/wallbash.conf",
+    "qt6ct/colors/wallbash.conf",
+    "gtk-3.0/settings.ini",
+]
+
+[[shade.files]]
+action = "sync"
+source_root = "Configs/.local/bin"
+target_root = "${HOME}/.local/bin"
+paths = ["shade-shell", "shadectl"]
+
+[grimblast]
+version = "26.08.17"
+source = "blob+https://raw.githubusercontent.com/hyprwm/contrib/refs/heads/main/grimblast/grimblast"
+action = "sync"
+target_root = "${HOME}/.local/lib/shade/screenshot"
+paths = "grimblast"
+owner = "hyprwm-contrib"
+post_command = "chmod +x ${HOME}/.local/lib/shade/screenshot/grimblast"
+
+[xdg-terminal-exec]
+version = "0.14.0"
+owner = "Vladimir-csp"
+source = "blob+https://raw.githubusercontent.com/Vladimir-csp/xdg-terminal-exec/refs/heads/master/xdg-terminal-exec"
+action = "sync"
+target_root = "${HOME}/.local/bin"
+paths = "xdg-terminal-exec"
+post_command = "chmod +x ${HOME}/.local/bin/xdg-terminal-exec"
+
+[app2unit]
+source = "blob+https://raw.githubusercontent.com/Vladimir-csp/app2unit/refs/heads/master/app2unit"
+action = "sync"
+target_root = "${HOME}/.local/lib/shade/"
+paths = "app2unit"
+post_command = "chmod +x ${HOME}/.local/lib/shade/app2unit"

@@ -20,16 +20,16 @@
 local animation = {
     name = "Classic",
     icon = "",
-    description = "Classic animation configuration from Hyde"
+    description = "Classic animation configuration from shade"
 }
 
 if not hl then
     return animation
 end
 
--- prod utilizes the stored hyde.config.anim.duration_scale to dynamically change anim speed!
+-- prod utilizes the stored shade.config.anim.duration_scale to dynamically change anim speed!
 local prod = function(ds)
-    return ds * hyde.config.anim.duration_scale
+    return ds * shade.config.anim.duration_scale
 end
 
 hl.curve("myBezier", {type = "bezier", points = {{0.05, 0.9}, {0.1, 1.05}}})

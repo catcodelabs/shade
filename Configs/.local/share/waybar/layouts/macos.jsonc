@@ -60,13 +60,13 @@
   },
   "custom/launcher": {
     "format": "",
-    "on-click": "hyde-shell rofilaunch"
+    "on-click": "shade-shell rofilaunch"
   },
   "custom/text#two": {
     "format": "File",
     "interval": 60,
     "return-type": "plain",
-    "on-click": "hyde-shell open --fall dolphin file-manager" //or you favorite Filer Explorer
+    "on-click": "shade-shell open --fall dolphin file-manager" //or you favorite Filer Explorer
   },
   "custom/text#three": {
     "format": "Edit",
@@ -83,30 +83,30 @@
     "format": "Help",
     "interval": 60,
     "tooltip": true,
-    "tooltip-format": "Right-click for more HyDE options",
+    "tooltip-format": "Right-click for more shade options",
     "return-type": "plain",
-    "on-click": "hyde-shell keybinds_hint",
+    "on-click": "shade-shell keybinds_hint",
     "menu": "on-click-right",
-    "menu-file": "${HYDE_WAYBAR_MENU_DIR:-$XDG_DATA_HOME/waybar/menus}/hyde-menu.xml",
+    "menu-file": "${SHADE_WAYBAR_MENU_DIR:-$XDG_DATA_HOME/waybar/menus}/shade-menu.xml",
     "menu-actions": {
-      "animations-select": "hyde-shell animations --select",
-      "wallpaper-select": "hyde-shell app -t scope -- wallpaper.sh --select --global",
-      "wallpaper-next": "hyde-shell app -t scope -- wallpaper.sh --next --global",
-      "wallpaper-previous": "hyde-shell app -t scope -- wallpaper.sh --previous --global",
-      "wallpaper-random": "hyde-shell app -t scope -- wallpaper.sh --random --global",
-      "theme-next": "hyde-shell app -t scope -- theme.switch.sh -n",
-      "theme-previous": "hyde-shell app -t scope -- theme.switch.sh -p",
-      "theme-select": "hyde-shell app -t scope -- theme.select.sh",
-      "theme-import": "hyde-shell app -T -- hydectl theme import",
-      "waybar-restart": "hyde-shell waybar -ubg",
+      "animations-select": "shade-shell animations --select",
+      "wallpaper-select": "shade-shell app -t scope -- wallpaper.sh --select --global",
+      "wallpaper-next": "shade-shell app -t scope -- wallpaper.sh --next --global",
+      "wallpaper-previous": "shade-shell app -t scope -- wallpaper.sh --previous --global",
+      "wallpaper-random": "shade-shell app -t scope -- wallpaper.sh --random --global",
+      "theme-next": "shade-shell app -t scope -- theme.switch.sh -n",
+      "theme-previous": "shade-shell app -t scope -- theme.switch.sh -p",
+      "theme-select": "shade-shell app -t scope -- theme.select.sh",
+      "theme-import": "shade-shell app -T -- shadectl theme import",
+      "waybar-restart": "shade-shell waybar -ubg",
       "waybar-reload-css": "sed -i '${/^$/d;}'  $XDG_CONFIG_HOME/waybar/style.css",
-      "waybar-layout-select": "hyde-shell waybar --select",
-      "waybar-layout-next": "hyde-shell waybar --update --next",
-      "waybar-layout-previous": "hyde-shell waybar --update --prev",
-      "workflows-select": "hyde-shell workflows --select;pkill -RTMIN+19 waybar",
-      "shaders-select": "hyde-shell shaders --select;pkill -RTMIN+19 waybar",
-      "keybinds-hint": "hyde-shell keybinds_hint",
-      "about-hyde": "xdg-open https://hydeproject.pages.dev"
+      "waybar-layout-select": "shade-shell waybar --select",
+      "waybar-layout-next": "shade-shell waybar --update --next",
+      "waybar-layout-previous": "shade-shell waybar --update --prev",
+      "workflows-select": "shade-shell workflows --select;pkill -RTMIN+19 waybar",
+      "shaders-select": "shade-shell shaders --select;pkill -RTMIN+19 waybar",
+      "keybinds-hint": "shade-shell keybinds_hint",
+      "about-shade": "xdg-open https://shadeproject.pages.dev"
     }
   }
 }

@@ -28,19 +28,19 @@ B = Backup - Backup the target
 
 
 
- Hyde core files 
-P|${HOME}/.config/hyde|config.toml|hyprland
+ shade core files 
+P|${HOME}/.config/shade|config.toml|hyprland
 #! P|${HOME}/.config/hypr|shaders.conf workflows.conf animations.conf windowrules.conf keybindings.conf userprefs.conf monitors.conf|hyprland
 #! P|${HOME}/.config/hypr|nvidia.conf|hyprland nvidia-utils
 P|${HOME}/.config/hypr/themes|theme.conf wallbash.conf colors.conf|hyprland
 P|${HOME}/.config/pypr|config.toml|hyprland
 S|${HOME}/.config/systemd|user|systemd
-#! P|${HOME}/.local/state/hyde|hyprland.conf|hyprland
+#! P|${HOME}/.local/state/shade|hyprland.conf|hyprland
 
- Hyde core files -- uwsm 
+ shade core files -- uwsm 
 S|${HOME}/.config/uwsm|env env-hyprland env.d env-hyprland.d|systemd hyprland uwsm
 
- Hyde core files -- xdg-terminal-exec 
+ shade core files -- xdg-terminal-exec 
 P|${HOME}/.config|xdg-terminals.list|xdg-utils
 
 #! P|${HOME}/.config/hypr|hyprland.conf|hyprland
@@ -55,15 +55,15 @@ S|${HOME}/.config|qt6ct|qt6ct
 T|${HOME}/.config/qt5ct|colors.conf|qt5ct
 T|${HOME}/.config/qt6ct|colors.conf|qt6ct
 
-S|${HOME}/.config/hyde|wallbash|hyprland bash imagemagick
+S|${HOME}/.config/shade|wallbash|hyprland bash imagemagick
 #! S|${HOME}/.config/hypr|animations|hyprland
 #! S|${HOME}/.config/hypr|workflows|hyprland
 #! S|${HOME}/.config/hypr|shaders|hyprland
 
 O|${HOME}/.local/share|hypr|hyprland
-O|${HOME}/.local/bin|hyde-shell hydectl|hyprland
-O|${HOME}/.local/share|hyde|hyprland
-O|${HOME}/.local/lib|hyde|hyprland
+O|${HOME}/.local/bin|shade-shell shadectl|hyprland
+O|${HOME}/.local/share|shade|hyprland
+O|${HOME}/.local/lib|shade|hyprland
 O|${HOME}/.local/share|wallbash|bash imagemagick
 
 
@@ -80,9 +80,9 @@ S|${HOME}/.local/share|waybar|waybar
  Terminal 
 P|${HOME}/.config|lsd|lsd
 P|${HOME}/.config|fastfetch|fastfetch
-O|${HOME}/.local/share/fastfetch/presets|hyde|fastfetch
+O|${HOME}/.local/share/fastfetch/presets|shade|fastfetch
 
-S|${HOME}/.config/kitty|hyde.conf theme.conf|kitty
+S|${HOME}/.config/kitty|shade.conf theme.conf|kitty
 P|${HOME}/.config/kitty|kitty.conf|kitty
 
  Shell 
@@ -93,14 +93,14 @@ P|${HOME}/.config/starship|starship.toml|starship
 
 S|${HOME}|.zshenv|zsh
 S|${HOME}/.config/zsh|.zshenv|zsh
-S|${HOME}/.config/zsh/conf.d|hyde 00-hyde.zsh|zsh
+S|${HOME}/.config/zsh/conf.d|shade 00-shade.zsh|zsh
 S|${HOME}/.config/zsh/functions|error-handlers.zsh|zsh
 S|${HOME}/.config/zsh/functions|fzf.zsh|zsh fzf
 S|${HOME}/.config/zsh/functions|duf.zsh|zsh duf
 S|${HOME}/.config/zsh/functions|eza.zsh|zsh eza
 S|${HOME}/.config/zsh/functions|bat.zsh|zsh bat
 S|${HOME}/.config/zsh/completions|fzf.zsh|zsh fzf
-S|${HOME}/.config/zsh/completions|hydectl.zsh|zsh
+S|${HOME}/.config/zsh/completions|shadectl.zsh|zsh
 
 P|${HOME}/.config/zsh|.zshrc user.zsh prompt.zsh plugin.zsh|zsh
 P|${HOME}/.config/zsh|.p10k.zsh|zsh zsh-theme-powerlevel10k
@@ -109,7 +109,7 @@ P|${HOME}/.config/zsh|.p10k.zsh|zsh zsh-theme-powerlevel10k
  Vim 
 P|${HOME}/.config/vim|vimrc|vim
 S|${HOME}/.config/vim/colors|wallbash.vim|vim
-S|${HOME}/.config/vim|hyde.vim|vim
+S|${HOME}/.config/vim|shade.vim|vim
 
  File Explorer 
 P|${HOME}/.local/state|dolphinstaterc|dolphin
@@ -117,7 +117,7 @@ P|${HOME}/.config|baloofilerc|dolphin
 S|${HOME}/.config/menus|applications.menu|dolphin
 S|${HOME}/.config|dolphinrc|dolphin
 S|${HOME}/.config|kdeglobals|dolphin
-S|${HOME}/.local/share/kio/servicemenus|hydewallpaper.desktop|dolphin
+S|${HOME}/.local/share/kio/servicemenus|shadewallpaper.desktop|dolphin
 S|${HOME}/.local/share/kxmlgui5|dolphin|dolphin
 S|${HOME}/.local/share|dolphin|dolphin
 

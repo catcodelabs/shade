@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 
-# "$XDG_CONFIG_HOME/hyde/wallbash" ships as an editable example tree, and
+# "$XDG_CONFIG_HOME/shade/wallbash" ships as an editable example tree, and
 # wallbash searches it before "$XDG_DATA_HOME/wallbash" (see `WALLBASH_DIRS`
 # in globalcontrol.sh). "theme/swaync.dcol" and "scripts/swaync.sh" exist in
 # both trees, so the example copy in the config dir permanently shadows the
-# one HyDE actually maintains: every fix or feature shipped to the data-dir
+# one shade actually maintains: every fix or feature shipped to the data-dir
 # copy is silently ignored, and swaync always themes from whatever the config
 # copy last happened to contain.
 #
@@ -13,7 +13,7 @@
 
 config_home="${XDG_CONFIG_HOME:-${HOME}/.config}"
 state_home="${XDG_STATE_HOME:-${HOME}/.local/state}"
-backup_dir="${state_home}/hyde/migration/v26.8.4"
+backup_dir="${state_home}/shade/migration/v26.8.4"
 
 retired="theme/swaync.dcol scripts/swaync.sh"
 
@@ -21,7 +21,7 @@ moved=0
 failed=0
 
 for rel in ${retired}; do
-    src="${config_home}/hyde/wallbash/${rel}"
+    src="${config_home}/shade/wallbash/${rel}"
     dst="${backup_dir}/${rel}"
 
     [ -e "${src}" ] || [ -L "${src}" ] || continue
@@ -42,10 +42,10 @@ for rel in ${retired}; do
     fi
 
     if mv "${src}" "${dst}"; then
-        echo "  moved hyde/wallbash/${rel}"
+        echo "  moved shade/wallbash/${rel}"
         moved=$((moved + 1))
     else
-        echo "  failed to move hyde/wallbash/${rel}" >&2
+        echo "  failed to move shade/wallbash/${rel}" >&2
         failed=$((failed + 1))
     fi
 done

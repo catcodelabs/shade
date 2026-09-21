@@ -3,7 +3,7 @@
     # dots = ["kitty", "hyprland"] # List of dots to be used in the configuration file
     action = "preserve" #
     description = "Optional configurations you can install later"
-    git = "https://github.com/HyDE-Project/HyDE.git"
+    git = "https://github.com/shade-Project/shade.git"
     git_branch = "lua"
     include = [
         "../dots/lsd.toml",
@@ -14,7 +14,7 @@
         "../dots/spotify.toml",
 
     ]
-    owner = "The HyDE Project" #
+    owner = "The shade Project" #
     pre_command = "echo 'Optional Configurations you can uninstall later'"
     version = "0.1.0"
 # Loads an array of package manager commands

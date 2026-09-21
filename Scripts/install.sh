@@ -127,8 +127,8 @@ fi
 export flg_DryRun=$dry_run
 export flg_Nvidia=$nvidia
 export flg_ThemeInstall=$theme_install
-HYDE_LOG="$(date +'%y%m%d_%Hh%Mm%Ss')"
-export HYDE_LOG
+SHADE_LOG="$(date +'%y%m%d_%Hh%Mm%Ss')"
+export SHADE_LOG
 
 if [ $dry_run -eq 1 ]; then
 	print_log -n "[test-run] " -b "enabled :: " "Testing without executing"
@@ -265,7 +265,7 @@ EOF
 	#------------------------------------#
 	"${scrDir}/install_aur.sh" "${getAur:-${aurhlpr:-yay-bin}}" 2>&1
 
-	deez_exe="${HOME}/.local/state/hyde/python_env/bin/deez"
+	deez_exe="${HOME}/.local/state/shade/python_env/bin/deez"
 
 	#------------------------------------------#
 	# build transient TOML: core deps + nvidia  #
@@ -332,7 +332,7 @@ if has_operation "restore"; then
 
 EOF
 
-	deez_exe="${HOME}/.local/state/hyde/python_env/bin/deez"
+	deez_exe="${HOME}/.local/state/shade/python_env/bin/deez"
 	deploy_failed=0
 
 	#------------------------------------------#
@@ -426,7 +426,7 @@ EOF
 	if [ "${flg_DryRun}" -eq 1 ]; then
 		print_log -y "[LUA] " -b "dry-run :: " "Would setup Lua environment"
 	else
-		if ! python3 "${cloneDir}/Configs/.local/lib/hyde/pyutils/lua_env.py" create; then
+		if ! python3 "${cloneDir}/Configs/.local/lib/shade/pyutils/lua_env.py" create; then
 			print_log -err "[LUA] " -crit "ERROR" "Failed to create Lua environment"
 			exit 1
 		fi
@@ -441,7 +441,7 @@ EOF
 	if [ "${flg_DryRun}" -eq 1 ]; then
 		print_log -y "[DEEZ-DOTS] " -b "dry-run :: " "Would deploy dotfiles"
 	else
-		python_env_dir="${HOME}/.local/state/hyde/python_env"
+		python_env_dir="${HOME}/.local/state/shade/python_env"
 		deez_exe="${python_env_dir}/bin/deez"
 
 		[ ! -f "${deez_exe}" ] && {
@@ -483,16 +483,16 @@ EOF
 	"${scrDir}/restore_thm.sh"
 	print_log -g "[generate] " "cache ::" "Wallpapers..."
 	if [ "${flg_DryRun}" -ne 1 ]; then
-		export PATH="$HOME/.local/lib/hyde:$HOME/.local/bin:${PATH}"
-		if ! "$HOME/.local/lib/hyde/wallpaper/cache.sh" commence -t ""; then
+		export PATH="$HOME/.local/lib/shade:$HOME/.local/bin:${PATH}"
+		if ! "$HOME/.local/lib/shade/wallpaper/cache.sh" commence -t ""; then
 			print_log -err "[theme] " -crit "ERROR" "Wallpaper cache was not generated"
 			theme_failed=1
 		fi
-		if ! "$HOME/.local/lib/hyde/theme.switch.sh" -q; then
+		if ! "$HOME/.local/lib/shade/theme.switch.sh" -q; then
 			print_log -err "[theme] " -crit "ERROR" "Theme colour state was not generated"
 			theme_failed=1
 		fi
-		if ! "$HOME/.local/lib/hyde/waybar.py" --update; then
+		if ! "$HOME/.local/lib/shade/waybar.py" --update; then
 			print_log -err "[theme] " -crit "ERROR" "Waybar configuration was not updated"
 			theme_failed=1
 		fi
@@ -532,7 +532,7 @@ if has_operation "restore"; then
 
 	echo "Running migrations from: ${migrationDir}"
 
-	migrationStateFile="${XDG_STATE_HOME:-${HOME}/.local/state}/hyde/migration/applied"
+	migrationStateFile="${XDG_STATE_HOME:-${HOME}/.local/state}/shade/migration/applied"
 
 	run_pending_migrations "${migrationDir}" "${migrationStateFile}"
 
@@ -558,13 +558,13 @@ fi
 # the services above still run against the dots that did land.
 if [ "${deploy_failed:-0}" -ne 0 ]; then
 	print_log -err "[DEEZ-DOTS] " -crit "ERROR" "Some dots were not deployed. Deal with the failures reported above and run the restore again."
-	print_log -b "Log" " :: " -y "View logs at ${cacheDir}/logs/${HYDE_LOG}"
+	print_log -b "Log" " :: " -y "View logs at ${cacheDir}/logs/${SHADE_LOG}"
 	exit 1
 fi
 
 if [ "${theme_failed:-0}" -ne 0 ]; then
 	print_log -err "[theme] " -crit "ERROR" "The theme state is incomplete, so the session would start without colours. Deal with the failures reported above and run the restore again."
-	print_log -b "Log" " :: " -y "View logs at ${cacheDir}/logs/${HYDE_LOG}"
+	print_log -b "Log" " :: " -y "View logs at ${cacheDir}/logs/${SHADE_LOG}"
 	exit 1
 fi
 
@@ -572,7 +572,7 @@ if has_operation "install"; then
 	echo ""
 	print_log -g "Installation" " :: " "COMPLETED!"
 fi
-print_log -b "Log" " :: " -y "View logs at ${cacheDir}/logs/${HYDE_LOG}"
+print_log -b "Log" " :: " -y "View logs at ${cacheDir}/logs/${SHADE_LOG}"
 if has_operation "install" ||
 	has_operation "restore" ||
 	has_operation "services" &&
@@ -583,7 +583,7 @@ if has_operation "install" ||
 		print_log -warn "Please reboot the system to apply new changes."
 	fi
 
-	print_log -stat "HyDE" "It is not recommended to use newly installed or upgraded HyDE without rebooting the system. Do you want to reboot the system? (y/N)"
+	print_log -stat "shade" "It is not recommended to use newly installed or upgraded shade without rebooting the system. Do you want to reboot the system? (y/N)"
 	read -r answer
 
 	if [[ "$answer" == [Yy] ]]; then

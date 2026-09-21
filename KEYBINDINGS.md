@@ -1,12 +1,12 @@
 <div align = center>
     <a href="https://discord.gg/AYbJ9MJez7">
-<img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FmT5YqjaJFh%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&suffix=%20members&style=for-the-badge&logo=discord&logoSize=auto&label=The%20HyDe%20Project&labelColor=ebbcba&color=c79bf0">
+<img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FmT5YqjaJFh%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&suffix=%20members&style=for-the-badge&logo=discord&logoSize=auto&label=The%20shade%20Project&labelColor=ebbcba&color=c79bf0">
     </a>
 </div>
 
 ###### _<div align="right"><a id=-design-by-t2></a><sub>// design by t2</sub></div>_
 
-![hyde_banner](Source/assets/hyde_banner.png)
+![shade_banner](Source/assets/shade_banner.png)
 
 <!--
 Multi-language KEYBINDINGS support
@@ -26,7 +26,7 @@ Multi-language KEYBINDINGS support
 
 <br>
 
-<!-- <a href=#hyde-keybindings><kbd> <br> HyDE keybindings <br> </kbd></a>&ensp;&ensp; -->
+<!-- <a href=#shade-keybindings><kbd> <br> shade keybindings <br> </kbd></a>&ensp;&ensp; -->
 
 <a href=#window-management><kbd> <br> Window Management <br> </kbd></a>&ensp;&ensp;
 <a href=#misc><kbd> <br> Misc <br> </kbd></a>&ensp;&ensp;
@@ -48,10 +48,10 @@ Multi-language KEYBINDINGS support
   </div>
 </div>
 
-<!-- # <a id=hyde-keybindings>HyDE Keybindings</a> -->
-<!-- # <a id=hyde-keybindings></a><img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&width=435&lines=HyDE%20Keybindings" width="450"/> -->
+<!-- # <a id=shade-keybindings>shade Keybindings</a> -->
+<!-- # <a id=shade-keybindings></a><img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&width=435&lines=shade%20Keybindings" width="450"/> -->
 
-Here are all HyDE specific keybindings listed.
+Here are all shade specific keybindings listed.
 
 > [!TIP]
 > <kbd>Super</kbd> + <kbd>/</kbd> shows the keybindings.
@@ -316,16 +316,16 @@ Your own keybindings go in:
 ~/.config/hypr/hyprland.lua
 ```
 
-That file is yours — updates never overwrite it. HyDE's own binds live in
+That file is yours — updates never overwrite it. shade's own binds live in
 `~/.local/share/hypr/lua/key_binds.lua`, which **is** overwritten on every
-update, so edits there are lost. Your file loads after HyDE's binds, which is
+update, so edits there are lost. Your file loads after shade's binds, which is
 why anything you write there wins. The one thing loaded after it is your
 selected workflow, which can override compositor settings.
 
-For example, to bind the **HyDE Game Launcher** to <kbd>SUPER</kbd> + <kbd>Space</kbd>:
+For example, to bind the **shade Game Launcher** to <kbd>SUPER</kbd> + <kbd>Space</kbd>:
 
 ```lua
-hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(hyde.sh.gamelauncher()), {
+hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(shade.sh.gamelauncher()), {
     description = "[Utilities] game launcher",
 })
 ```
@@ -334,17 +334,17 @@ Add a `description` in the `[Group|Subgroup] text` shape and your bind shows up
 in the keybinding hint under that group. Without one it appears as a raw
 dispatcher call under "Misc".
 
-`hyde.sh.<name>()` builds a `hyde-shell` command — here `hyde-shell
+`shade.sh.<name>()` builds a `shade-shell` command — here `shade-shell
 gamelauncher`, the same thing you can run from a terminal. Some names are
-shortcuts for something longer: `hyde.sh.screenshot.snip()` is `hyde-shell
-screenshot s`, `hyde.sh.menu.binds()` is `hyde-shell keybinds_hint`. The full
-list is `hyde.command_map` in `~/.local/share/hypr/lua/hyde/dispatcher.lua`.
+shortcuts for something longer: `shade.sh.screenshot.snip()` is `shade-shell
+screenshot s`, `shade.sh.menu.binds()` is `shade-shell keybinds_hint`. The full
+list is `shade.command_map` in `~/.local/share/hypr/lua/shade/dispatcher.lua`.
 
-### Rebinding something HyDE already uses
+### Rebinding something shade already uses
 
 Bind the same combination again and yours replaces it — but **copy the flags
 too**. A bind counts as the same one only when its flags match, and
-`description` is not a flag. Thirty-three of HyDE's binds carry one:
+`description` is not a flag. Thirty-three of shade's binds carry one:
 
 | Flags                                          | Binds                                                                                    |
 | :--------------------------------------------- | :--------------------------------------------------------------------------------------- |
@@ -360,7 +360,7 @@ across:
 
 ```lua
 hl.unbind("F10")
-hl.bind("F9", hl.dsp.exec_cmd(hyde.sh.volumecontrol("-o", "m")), {
+hl.bind("F9", hl.dsp.exec_cmd(shade.sh.volumecontrol("-o", "m")), {
     locked = true,
     description = "[Hardware Controls|Audio] un/mute output",
 })
@@ -369,18 +369,18 @@ hl.bind("F9", hl.dsp.exec_cmd(hyde.sh.volumecontrol("-o", "m")), {
 `hl.unbind` takes the combination exactly as the bind was registered, with
 single spaces around each `+`. Copy the spelling from `key_binds.lua` rather
 than guessing: several binds are written there with `CONTROL` where you might
-expect `CTRL`. Rebinding is the safer route — HyDE replaces the old bind for
+expect `CTRL`. Rebinding is the safer route — shade replaces the old bind for
 you, so you never have to match a string.
 
 ### Seeing your live keybindings
 
 <kbd>SUPER</kbd> + <kbd>/</kbd> reads the binds from the compositor itself, so
-it shows your own alongside HyDE's and reflects whatever replaced a default.
+it shows your own alongside shade's and reflects whatever replaced a default.
 This table describes the shipped defaults only.
 
 The list is cached, and the cache is refreshed when you close it — so right
 after adding a bind, the first press may still show the previous list. Press it
-twice, or run `hyde-shell keybinds_hint --reload`.
+twice, or run `shade-shell keybinds_hint --reload`.
 
 <!--
 <div align="right">

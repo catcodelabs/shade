@@ -1,6 +1,6 @@
 # Add user configurations here
-# For HyDE to not touch your beloved configurations,
-# we added a config file for you to customize HyDE
+# For shade to not touch your beloved configurations,
+# we added a config file for you to customize shade
 
 #  Aliases 
 # Override aliases here in 'config.fish' (already set )

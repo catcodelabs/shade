@@ -21,7 +21,7 @@ _term_cols() {
 vertL="$(printf '=%.0s' $(seq 1 "$(_term_cols)"))"
 
 box_me() {
-    local s="Hyde: $*"
+    local s="shade: $*"
     _tput setaf 3
     echo " ═${s//?/═}"
     echo "║$s ║"
@@ -231,7 +231,7 @@ For more information, visit: https://aur.chaotic.cx/
 CHAOS
     printf '%s\n' "${vertL}"
     echo
-    echo "HyDE is not affiliated with Chaotic AUR."
+    echo "shade is not affiliated with Chaotic AUR."
     echo
 
     read -p "Type 'yes' to continue [default] No : " add_chaotic

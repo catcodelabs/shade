@@ -7,7 +7,7 @@ if ! command -v uwsm >/dev/null 2>&1; then
 
 fi
 
-if command -v hyde-shell >/dev/null 2>&1; then
-    echo "Reloading Hyde shell shaders..."
-    hyde-shell shaders --reload
+if command -v shade-shell >/dev/null 2>&1; then
+    echo "Reloading shade shell shaders..."
+    shade-shell shaders --reload
 fi

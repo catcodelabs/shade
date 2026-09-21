@@ -1,4 +1,4 @@
-"${XDG_CACHE_HOME}/hyde/wallbash/wallbash.rasi"
+"${XDG_CACHE_HOME}/shade/wallbash/wallbash.rasi"
 
 * {
     wallbash-pry1:            #<wallbash_pry1>E6;

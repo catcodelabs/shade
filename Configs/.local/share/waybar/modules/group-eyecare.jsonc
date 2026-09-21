@@ -18,9 +18,9 @@
   "backlight#eyecare": {
     "format": "<span size='large'>{icon}</span>",
     "format-icons": ["", "", "", "", "", "", "", "", ""],
-    "on-click": "hyde-shell hyprsunset -t -P waybar:19",
-    "on-scroll-up": "hyde-shell brightnesscontrol i 1",
-    "on-scroll-down": "hyde-shell brightnesscontrol d 1",
+    "on-click": "shade-shell hyprsunset -t -P waybar:19",
+    "on-scroll-up": "shade-shell brightnesscontrol i 1",
+    "on-scroll-down": "shade-shell brightnesscontrol d 1",
     "tooltip": true,
     "min-length": 2,
     "tooltip-format": "Backlight: {icon} {percent}%\n\n󰺤 Scroll to change brightness\n󰳾 Click to toggle hyprsunset"
